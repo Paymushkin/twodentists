@@ -1,0 +1,57 @@
+.interests {
+
+	&__container {
+		padding: rem(61) rem(44) rem(78);
+
+		form {
+			display: flex;
+			gap: rem(282);
+		}
+	}
+
+	&__right {
+		flex: 0 0 percent(380, 1920);		
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: flex-start;
+		padding-top: rem(17);
+	}
+
+	&__left {
+		flex: 0 0 percent(950, 1920);
+	}
+
+	&__text {
+		max-width: rem(380);
+		line-height: 1.5;
+		letter-spacing: 0.5px;
+	}
+
+	&__btns {
+		display: flex;
+		flex-wrap: wrap;
+		gap: rem(15);
+
+		input[type=checkbox] {
+			position: absolute;
+			visibility: hidden;
+			opacity: 0;
+
+			&+label {
+				padding: rem(10);
+				border-radius: rem(30);
+				color: $decorColor;
+				background-color: transparent;
+				font-size: rem(24);
+				line-height: math.div(29, 24);
+				transition: 0.3s ease all;
+			}
+
+			&:checked+label {
+				color: #000000;
+				background-color: #EFF5F6;
+			}
+		}
+	}
+}

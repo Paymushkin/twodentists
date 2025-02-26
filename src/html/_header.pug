@@ -1,0 +1,106 @@
+header.header#header
+    .header__top
+        .header__container
+            .header__info
+                address.header__address
+                    include icons/_location
+                    a(href="https://yandex.ru/maps/?text=Санкт-Петербург Московский проспект 185/185 лит.Б" target="_blank").header__address-link
+                        span Санкт-Петербург,<wbr> Московский&nbsp;проспект&nbsp;185/185&nbsp;лит.Б
+                span.header__schedule Ежедневно с 8:00 до 22:00
+            .header__contacts
+                .header__messengers
+                    span Напишите нам
+                    a(href="https://t.me/dva_dantista_clinic" aria-label="Telegram").header__messenger
+                        img(src="@img/tg.png" alt="Telegram")
+                    a(href="https://wa.me/79310020317" aria-label="WhatsApp").header__messenger
+                        img(src="@img/wa.png" alt="WhatsApp")
+                .header__phones
+                    a(href="tel:+79130020317").header__phone
+                        include icons/_phone
+                        span +7 (913) 002-03-17
+                    a(href="tel:+79125175847").header__phone
+                        include icons/_phone
+                        span +7 (912) 517-58-47
+
+    .header__bottom
+        .header__container
+            a(href="/").header__logo
+                img(src="@img/logo-dark.png" alt="Два дантиста")
+            nav.header__menu.menu
+                ul.menu__list
+                    li.menu__item
+                        a(href="#").menu__link
+                            span Услуги
+                            include icons/_chevron-down
+                        ul.sub-menu
+                            li.sub-menu__item
+                                a(href="#").sub-menu__link Имплантация
+                            li.sub-menu__item
+                                a(href="#").sub-menu__link Протезирование
+                            li.sub-menu__item
+                                a(href="#").sub-menu__link Лечение зубов
+                            li.sub-menu__item
+                                a(href="#").sub-menu__link Хирургия
+                    li.menu__item
+                        a(href="#").menu__link
+                            span Цены
+                            include icons/_chevron-down
+                        ul.sub-menu
+                            li.sub-menu__item
+                                a(href="#").sub-menu__link Прайс на услуги
+                            li.sub-menu__item
+                                a(href="#").sub-menu__link Акции и скидки
+                    li.menu__item
+                        a(href="#").menu__link
+                            span Акции
+                    li.menu__item
+                        a(href="#").menu__link
+                            span Врачи
+                            include icons/_chevron-down
+                        ul.sub-menu
+                            li.sub-menu__item
+                                a(href="#").sub-menu__link Стоматологи-терапевты
+                            li.sub-menu__item
+                                a(href="#").sub-menu__link Ортопеды
+                            li.sub-menu__item
+                                a(href="#").sub-menu__link Хирурги
+                    li.menu__item
+                        a(href="#").menu__link
+                            span Наши работы
+                    li.menu__item
+                        a(href="#").menu__link
+                            span Отзывы
+                    li.menu__item
+                        a(href="#").menu__link
+                            span О нас
+                            include icons/_chevron-down
+                        ul.sub-menu
+                            li.sub-menu__item
+                                a(href="#").sub-menu__link О клинике
+                            li.sub-menu__item
+                                a(href="#").sub-menu__link Лицензии
+                            li.sub-menu__item
+                                a(href="#").sub-menu__link Оборудование
+                    li.menu__item
+                        a(href="#").menu__link
+                            span Контакты
+                            include icons/_chevron-down
+                        ul.sub-menu
+                            li.sub-menu__item
+                                a(href="#").sub-menu__link Как добраться
+                            li.sub-menu__item
+                                a(href="#").sub-menu__link Время работы
+                    li.menu__item.menu__item-more
+                        include icons/_options
+                        ul.sub-menu
+                            li.sub-menu__item
+                                a(href="#").sub-menu__link Как добраться
+                            li.sub-menu__item
+                                a(href="#").sub-menu__link Время работы
+            div.header__right
+                button(type="button").header__search
+                    include icons/_search
+                button(type="button").button.button--small.header__button
+                    span Записаться на прием
+            button(type="button").icon-menu
+                span

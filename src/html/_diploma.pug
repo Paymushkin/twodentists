@@ -1,0 +1,43 @@
+-
+    const diplomas = [
+        {
+            title: 'ТОП-10 лучших',
+            subtitle: 'стоматологий Санкт-Петербурга / Доктор Питер',
+            image: '01.png'
+        },
+        {
+            title: 'ТОП-20 частных стоматологий',
+            subtitle: 'Санкт-Петербурга /ПроДокторов / 32top.ru',
+            image: '02.png'
+        },
+        {
+            title: 'ТОП-100 стоматологических',
+            subtitle: 'клиник России / 32top.ru',
+            image: '03.png'
+        },
+        {
+            title: '1 место в рейтинге',
+            subtitle: '«Стоматолог-ортопед Санкт-Петербурга»',
+            image: '04.png'
+        },
+        {
+            title: '2 место в рейтинге',
+            subtitle: '«Стоматолог-ортодонт Санкт-Петербурга»',
+            image: '05.png'
+        },
+    ]
+
+section.diploma#diploma
+    .diploma__container
+        .diploma__header
+            h2.diploma__title Лауреат Национального конкурса «Лучшие стоматологии РФ»
+            a.button.diploma__button.tablet-hidden(href="#") 
+                span Все награды
+        
+        ul.diploma__list
+            each item in diplomas
+                include ./components/_diploma-item
+
+        .diploma__bottom.desktop-hidden
+            a.button.diploma__button(href="#") 
+                span Все награды

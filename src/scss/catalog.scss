@@ -1,0 +1,76 @@
+.section {
+
+	&__poster {
+		margin-bottom: rem(30);
+	}
+
+	&__filters {
+		margin-bottom: rem(30);
+	}
+
+// 	&__container {
+// 		display: flex;
+// 		flex-direction: column;
+// 		padding: rem(44) rem(53) rem(44) rem(42);
+// 	}
+
+// 	&__link {
+// 		display: inline-block;
+// 		margin-bottom: rem(33);
+// 		align-self: flex-end;
+// 		align-items: flex-end;
+// 		transition: 0.3s ease opacity;
+
+// 		@media (any-hover: hover){
+// 			&:hover{
+// 				opacity: 0.75;
+// 			}
+// 		}
+// 	}
+
+// 	&__list {
+// 		display: grid;
+// 		grid-template-columns: repeat(3, 1fr);
+// 		grid-template-rows: auto 1fr;
+// 		column-gap: rem(15);
+// 		row-gap: rem(32);
+
+// 		&-item {
+
+// 		}
+// 	}
+
+// 	.item {
+
+// 		&-list {
+
+// 			&__ibg {
+// 				display: block;
+// 				margin-bottom: rem(22.4);
+// 				padding-bottom: percent(683, 601);
+// 			}
+
+// 			&__body {
+// 				display: flex;
+// 				justify-content: space-between;
+// 				line-height: math.div(19.2, 16);
+// 				letter-spacing:  0.157px;
+// 			}
+
+// 			&__desc {
+// 				color: #979797;
+// 				font-size: rem(14);
+// 				line-height: math.div(19.2, 14);
+// 			}
+// 		}
+
+// 		&-body {
+
+// 			&__text {
+				
+// 			}
+			
+// 		}
+// 	}
+
+}

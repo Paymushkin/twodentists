@@ -1,0 +1,25 @@
+.tabs {
+	// .tabs__navigation
+	&__navigation {
+		display: flex;
+		gap: rem(22);
+	}
+	// .tabs__title
+	&__title {
+		font-weight: 600;
+		line-height: math.div(20, 23);
+		// border: 1px solid #eee;
+		// padding: rem(10) rem(15);
+		// border-radius: rem(5);
+		&._tab-active {
+		}
+	}
+	// .tabs__content
+	&__content {
+		// border: 1px solid #eee;
+		// padding: rem(10) rem(15);
+	}
+	// .tabs__body
+	&__body {
+	}
+}

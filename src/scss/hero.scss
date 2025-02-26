@@ -1,0 +1,110 @@
+.hero {
+	position: relative;
+	height: rem(850);
+	background: url('../img/hero/bg.png') center/cover no-repeat;
+
+    @media (max-width:$tablet) {
+        height: rem(585);
+    }
+
+    @media (max-width:$mobileSmall) {
+        padding: rem(30) 0;
+        height: rem(409);
+    }
+	
+	&__container {
+		position: relative;
+        display: flex;
+        align-items: center;
+        min-height: 100%;
+		z-index: 2;
+	}
+
+	&__content {
+		max-width: 1000px;
+	}
+
+	&__title {
+        margin-bottom: 14px;
+		color: #fff;
+	}
+
+	&__text {
+        margin-bottom: 45px;
+        max-width: rem(405);
+		color: #fff;
+
+        @media (max-width:$mobileSmall) {
+            margin-bottom: 20px;
+            font-size: rem(14);
+        }
+	}
+
+    &__buttons {
+        display: flex;
+        align-items: start;
+        flex-direction: column;
+        gap: rem(10);
+    }
+
+	&__button {
+        @media (max-width:$mobile) {
+            padding-left: rem(2);
+            padding-right: rem(2);
+            width: rem(162);
+        }
+
+        &-callback {
+            padding-left: rem(2);
+            padding-right: rem(2);
+            width: rem(162);
+            @media (min-width:$mobile) {
+                display: none;
+            }
+        }
+    }
+
+	&__examples {
+		position: absolute;
+		right: rem(20);
+		bottom: rem(184);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        padding: 15px 10px 10px;
+        width: rem(273);
+        border-radius: 5px;
+        border: 1px solid rgba(255, 255, 255, 0.20);
+        background: linear-gradient(101deg, rgba(255, 255, 255, 0.00) -10.67%, rgba(255, 255, 255, 0.10) 9.42%);
+        backdrop-filter: blur(35px);
+
+        @media (max-width:$tablet) {
+            bottom: rem(90);
+        }
+        @media (max-width:$mobile) {
+            display: none;
+        }
+	}
+
+	&__examples-image {
+		width: auto;
+        max-height: rem(42);
+		margin-bottom: 18px;
+	}
+
+	&__examples-title {
+        margin-bottom: 16px;
+		color: #fff;
+        text-align: left;
+		font-size: rem(36);
+        line-height: math.div(32, 36);
+
+        @media (max-width:$tablet) {
+            font-size: rem(32);
+        }
+		
+	}
+
+	&__examples-button {}
+}

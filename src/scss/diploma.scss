@@ -1,0 +1,117 @@
+.diploma {
+	padding: 98px 0 110px;
+
+    @media (max-width: em(1280)) {
+        padding: 70px 0;
+    }
+
+    @media (max-width: $mobile) {
+        padding: 50px 0;
+    }
+
+	&__header {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-end;
+		margin-bottom: 32px;
+	}
+
+	&__bottom {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+	&__title {
+        max-width: 945px;
+	}
+
+	&__list {
+		display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(234px, 1fr));
+        gap: 10px;
+        justify-content: center;
+
+        @media (max-width: $mobile) {
+            display: flex;
+            overflow-x: auto;
+            grid-template-columns: none;
+            justify-content: start;
+            padding-bottom: 20px;
+            margin-right: -20px;
+            margin-left: -20px;
+            padding-right: 20px;
+            padding-left: 20px;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+            &::-webkit-scrollbar {
+                display: none;
+            }
+        }
+	}
+
+	&__item {
+        flex: 1 1 234px;
+        display: flex;
+        flex-direction: column;
+        max-width: 280px;
+        margin: 0 auto;
+        width: 100%;
+        align-items: start;
+        padding: 15px 15px 0;
+        border-radius: 10px;
+        background-color: $bgColorBlueLight;
+
+		&-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            margin-bottom: 15px;
+			width: 21px;
+			height: 21px;
+            background-color: $highlightColor;
+            border-radius: 1px;
+			
+		}
+
+		&-title {
+            flex-grow: 1;
+            margin-bottom: 27px;
+			font-size: 16px;
+			line-height: 1.4;
+
+            span {
+                display: inline-block;
+                word-wrap: break-word;
+            }
+		}
+
+		&-image {
+			width: auto;
+			height: auto;
+            max-height: 161px;
+		}
+
+        @media (max-width: 768px) {
+            flex: 0 0 234px;
+            margin: 0;
+        }
+	}
+}
+
+@media (max-width: 768px) {
+	.diploma {
+		padding: 40px 0;
+
+		&__header {
+			flex-direction: column;
+			gap: 20px;
+			text-align: center;
+		}
+
+		&__title {
+			font-size: 32px;
+		}
+	}
+}

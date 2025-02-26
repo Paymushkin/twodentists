@@ -1,0 +1,129 @@
+#login {
+	.popup__close {
+		position: absolute;
+		top: rem(30);
+		right: rem(30);
+	}
+	.popup__content {
+		background-color: #fff;
+	}
+	.body {
+		padding: 0;
+		.login-wrapper {
+			-ms-flex: 1 1 auto;
+			flex: 1 1 auto;
+			padding: 3.125rem 1.875rem;
+			// background-color: #fff;
+			border-radius: 1.25rem;
+
+			h3 {
+				margin-bottom: 1rem;
+				font-size: 2rem;
+				font-weight: 600;
+				text-align: center;
+			}
+
+			ul {
+				margin: 0 auto 2.1875rem;
+				max-width: 18.75rem;
+
+				&.extra-login {
+					display: -ms-flexbox;
+					display: flex;
+					-ms-flex-pack: center;
+					justify-content: center;
+					gap: 1.875rem;
+
+					li {
+
+						a {
+							display: -ms-flexbox;
+							display: flex;
+							-ms-flex-pack: center;
+							justify-content: center;
+							-ms-flex-align: center;
+							align-items: center;
+							-ms-flex: 0 0 auto;
+							flex: 0 0 auto;
+							padding: 0;
+							width: 2.5rem;
+							height: 2.5rem;
+							border-radius: 50%;
+							background: -o-linear-gradient(140.91deg, #FFC11A -12.73%, #FFD569 100%);
+							background: linear-gradient(309.09deg, #FFC11A -12.73%, #FFD569 100%);
+						}
+					}
+				}
+
+				li {
+					padding: 0.5625rem 0;
+
+					a {
+						display: -ms-flexbox;
+						display: flex;
+						-ms-flex: 1 1 auto;
+						flex: 1 1 auto;
+						padding: 0.75rem 1rem;
+						border: 1px solid #FDD32A;
+						border-radius: 0.625rem;
+
+						span {
+							-ms-flex: 1 1 auto;
+							flex: 1 1 auto;
+							color: #4A4A4A;
+							font-size: 1rem;
+							line-height: 1.3125;
+							font-weight: 600;
+							text-align: center;
+						}
+					}
+
+					&::before {
+						content: "";
+						display: none;
+					}
+				}
+			}
+
+			.login-line {
+				position: relative;
+				margin: 0 auto 1.5625rem;
+				width: 100%;
+				max-width: 18.75rem;
+				height: 1px;
+				background-color: #000;
+
+				span {
+					position: absolute;
+					left: 50%;
+					padding: 0 1.875rem;
+					background-color: #fff;
+					font-size: 1rem;
+					font-weight: 600;
+					-webkit-transform: translate(-50%, -50%);
+					-ms-transform: translate(-50%, -50%);
+					transform: translate(-50%, -50%);
+				}
+			}
+
+			a {
+
+				&.terms {
+					display: inherit;
+					text-decoration: underline;
+					font-weight: 700;
+				}
+			}
+		}
+	}
+}
+
+#login .body .login-wrapper p,
+#login .body .login-wrapper a.terms {
+	margin: 0 auto 2.5rem;
+	max-width: 18.75rem;
+	color: #4A4A4A;
+	font-size: 0.625rem;
+	line-height: 1.4;
+	text-align: center;
+}

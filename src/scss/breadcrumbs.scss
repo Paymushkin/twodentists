@@ -1,0 +1,61 @@
+.breadcrumb {
+	display: flex;
+	margin-bottom: rem(30);
+	padding: rem(12) rem(25);
+	gap: rem(20);
+	background-color: $addColorGreen;
+	border-radius: rem(10);
+	&__list {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		gap: rem(6);
+	}
+	&__item {
+		position: relative;
+		display: flex;
+		align-items: center;
+		gap: rem(6);
+		color: #C4D3D0;
+		font-size: rem(14);
+		line-height: math.div(17, 14);
+		transition: 0.3s ease color;
+		@media (any-hover: hover){
+			&:hover{
+				color: $highlightColor;
+			}
+		}
+		&-current {
+			color: $highlightColor;
+			cursor: default;
+			a {
+				cursor: default;
+			}
+			// &::after{
+			// 	content:'';
+			// 	position: absolute;
+			// 	bottom: 0;
+			// 	width: 100%;
+			// 	height: rem(1);
+			// 	background-color: $highlightColor;
+			// }
+		}
+		&:not(:last-child) {
+			&::after {
+				content:'>';
+				line-height: 1;
+			}
+		}
+	}
+	&__link {
+
+	}
+	&__search-form {
+		flex: 1 1 auto;
+		display: flex;
+
+		@media (max-width:$tablet){
+			 display: none; 
+		}
+	}
+}

@@ -1,0 +1,149 @@
+// <SELECT>
+// Снипет (HTML): sel
+.select {
+	position: relative;
+
+	@media (any-hover: hover){
+		&:hover{
+			.select__title {
+				color: $highlightColor;
+			}
+		}
+	}
+	// .select__body
+	&__body {
+		position: relative;
+		width: auto;
+	}
+	// .select__title
+	&__title {
+		width: 100%;
+		color: inherit;
+		text-align: left;
+		// background-color: #fff;
+		// border: 1px solid #d9d9d9;
+		border-radius: 4px;
+		font-size: rem(14);
+		font-weight: 500;
+		line-height: math.div(17 , 14);
+		cursor: pointer;
+	}
+	// .select__value
+	&__value {
+		display: flex;
+		align-items: center;
+		height: rem(30);
+		padding: 0 rem(15);
+		gap: rem(10);
+		> * {
+			flex: 1 1 auto;
+		}
+		&:after {
+			content: url(../img/chevron-down.svg);
+			// align-self: stretch;
+			flex: 0 0 10px;
+			transform: translateY(2px);
+			transition: all 0.3s ease 0s;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			._select-open & {
+				transform: rotate(-180deg);
+			}
+		}
+		&._select-pseudo-label {
+			&::before {
+				content: attr(data-pseudo-label);
+				opacity: 0.5;
+			}
+		}
+	}
+	// .select__text
+	&__text {
+		flex: 1 1 auto;
+	}
+	&__input {
+		width: 100%;
+		background-color: transparent;
+		height: 100%;
+	}
+	// .select__options
+	&__options {
+		position: absolute;
+		top: rem(29);
+		left: 0;
+		padding: rem(30) rem(16);
+		min-width: 100%;
+		color: #000;
+		background-color: $addColorGreen;
+		border-radius: 0 0 rem(15) rem(15);
+		font-size: rem(14);
+		._first & {
+			left: rem(-20);
+			padding: rem(30) rem(16) rem(30) rem(36);
+		}
+	}
+	// .select__scroll
+	&__scroll {
+		overflow-y: auto;
+		overflow-x: hidden;
+		// Максимальная высота
+		max-height: 200px;
+		// Стили скроллбара
+		.simplebar-scrollbar {
+			&::before {
+				//opacity: 1;
+			}
+		}
+	}
+	// .select__option
+	&__option {
+		padding: 9px 0;
+		width: 100%;
+		border-bottom: 1px solid #E6ECEC;
+		color: inherit;
+		font-weight: 500;
+		text-align: left;
+		cursor: pointer;
+		transition: all 0.3s ease;
+		&._select-selected {
+			background-color: #eee;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				color: $highlightColor;
+				border-color: $highlightColor;
+			}
+		}
+	}
+
+	// Конструкция дополнительных данных
+	&__row {
+		display: inline-flex;
+		align-items: center;
+	}
+	&__asset {
+	}
+	&__text {
+	}
+
+	// Состояния селекта
+	&._select-open {
+		z-index: 5;
+	}
+	&._select-disabled {
+	}
+	&._select-active {
+	}
+	&._select-focus {
+	}
+	&._select-multiple {
+	}
+	&._select-checkbox {
+	}
+}
+
+// Тег
+._select-tag {
+	cursor: pointer;
+}

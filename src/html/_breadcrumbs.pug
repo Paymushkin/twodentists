@@ -1,0 +1,17 @@
+#breadcrumb.breadcrumb 
+	ol.breadcrumb__list 
+		li.breadcrumb__item
+			a(href="/catalog").breadcrumb__link  Каталог
+		li.breadcrumb__item
+			a(href="/playgrounds").breadcrumb__link Детские площадки
+		li.breadcrumb__item
+			a(href="/size-xl").breadcrumb__link Комплексы размера XL
+		li.breadcrumb__item.breadcrumb__item-current
+			a(href="/size-xl").breadcrumb__link Спортивный комплекс К1197
+	form(action="" method="post").breadcrumb__search-form
+		#search.filters__search.search
+			form(action="", method="post")
+				input#search-input.search__input(type="text", name="search-input" placeholder="Игровой комплекс")
+				svg#search-btn(xmlns='http://www.w3.org/2000/svg' width='22' height='22' viewbox='0 0 22 22' fill='none')
+					path(fill-rule='evenodd' clip-rule='evenodd' d='M8.77778 1.75C4.89644 1.75 1.75 4.89644 1.75 8.77778C1.75 12.6591 4.89644 15.8056 8.77778 15.8056C12.6591 15.8056 15.8056 12.6591 15.8056 8.77778C15.8056 4.89644 12.6591 1.75 8.77778 1.75ZM0.25 8.77778C0.25 4.06802 4.06802 0.25 8.77778 0.25C13.4875 0.25 17.3056 4.06802 17.3056 8.77778C17.3056 13.4875 13.4875 17.3056 8.77778 17.3056C4.06802 17.3056 0.25 13.4875 0.25 8.77778Z' fill='#383838')
+					path(fill-rule='evenodd' clip-rule='evenodd' d='M13.8029 13.803C14.0958 13.5101 14.5707 13.5101 14.8636 13.803L21.5302 20.4696C21.8231 20.7625 21.8231 21.2374 21.5302 21.5303C21.2374 21.8232 20.7625 21.8232 20.4696 21.5303L13.8029 14.8636C13.51 14.5707 13.51 14.0959 13.8029 13.803Z' fill='#383838')

@@ -1,0 +1,352 @@
+%ic {
+    font-family: 'icons';
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; 
+}
+
+[class*="_icon-"] {
+    &:before {
+        @extend %ic;
+        display: block;
+    }
+  }
+
+ 
+._icon-text:before {
+	content: "\e915";
+  }
+  ._icon-create:before {
+	content: "\e916";
+  }
+  ._icon-profile:before {
+	content: "\e917";
+  }
+  ._icon-play:before {
+	content: "\e918";
+  }
+  ._icon-bubbles:before {
+	content: "\e919";
+  }
+  ._icon-heart:before {
+	content: "\e91a";
+  }
+  ._icon-arrow-down:before {
+	content: "\e91b";
+  }
+  ._icon-refresh:before {
+	content: "\e91c";
+  }
+  ._icon-video:before {
+	content: "\e91d";
+  }
+  ._icon-person:before {
+	content: "\e91e";
+  }
+  ._icon-person-fill:before {
+	content: "\e91f";
+  }
+  ._icon-projector-2:before {
+	content: "\e920";
+  }
+  ._icon-images:before {
+	content: "\e921";
+  }
+  ._icon-grid:before {
+	content: "\e922";
+  }
+  ._icon-statistic:before {
+	content: "\e923";
+  }
+  ._icon-copy:before {
+	content: "\e924";
+  }
+  ._icon-freeze:before {
+	content: "\e925";
+  }
+  ._icon-buttons:before {
+	content: "\e928";
+  }
+  ._icon-image:before {
+	content: "\e929";
+  }
+  ._icon-polls:before {
+	content: "\e92b";
+  }
+  ._icon-upload:before {
+	content: "\e92c";
+  }
+  ._icon-module:before {
+	content: "\e92d";
+  }
+  ._icon-pulse:before {
+	content: "\e92e";
+  }
+  ._icon-webinar:before {
+	content: "\e92f";
+  }
+  ._icon-branding:before {
+	content: "\e930";
+  }
+  ._icon-presentation:before {
+	content: "\e931";
+  }
+  ._icon-lock:before {
+	content: "\e932";
+  }
+  ._icon-projector:before {
+	content: "\e933";
+  }
+  ._icon-settings:before {
+	content: "\e934";
+  }
+  ._icon-googleplay:before {
+	content: "\e935";
+  }
+  ._icon-home-1:before {
+	content: "\e936";
+  }
+  ._icon-home-2:before {
+	content: "\e937";
+  }
+  ._icon-home-3:before {
+	content: "\e938";
+  }
+  ._icon-menu:before {
+	content: "\e939";
+  }
+  ._icon-instagram:before {
+	content: "\e93a";
+  }
+  ._icon-checkmark:before {
+	content: "\e93c";
+  }
+  ._icon-appstore:before {
+	content: "\e93d";
+  }
+  ._icon-close:before {
+	content: "\e93e";
+  }
+  ._icon-options:before {
+	content: "\e93f";
+  }
+  ._icon-qr:before {
+	content: "\e940";
+  }
+  ._icon-login:before {
+	content: "\e941";
+  }
+  ._icon-logout:before {
+	content: "\e942";
+  }
+  ._icon-info:before {
+	content: "\e943";
+  }
+  ._icon-info-fill:before {
+	content: "\e944";
+  }
+  ._icon-location:before {
+	content: "\e945";
+  }
+  ._icon-calendar-number:before {
+	content: "\e946";
+  }
+  ._icon-bubble:before {
+	content: "\e947";
+  }
+  ._icon-guests:before {
+	content: "\e948";
+  }
+  ._icon-live:before {
+	content: "\e949";
+  }
+  ._icon-search:before {
+	content: "\e94a";
+  }
+  ._icon-plus1:before {
+	content: "\e94b";
+  }
+  ._icon-send:before {
+	content: "\e94c";
+  }
+  ._icon-calendar:before {
+	content: "\e94d";
+  }
+  ._icon-arrow-left:before {
+	content: "\e94e";
+  }
+  ._icon-video-camera1:before {
+	content: "\e900";
+  }
+  ._icon-arrow-thin-left:before {
+	content: "\e95d";
+  }
+  ._icon-arrow-thin-right:before {
+	content: "\e95e";
+  }
+  ._icon-bookmark:before {
+	content: "\e901";
+  }
+  ._icon-calendar1:before {
+	content: "\e94f";
+  }
+  ._icon-chart-pie:before {
+	content: "\e902";
+  }
+  ._icon-checkmark1:before {
+	content: "\e951";
+  }
+  ._icon-cheveron-left:before {
+	content: "\e95f";
+  }
+  ._icon-cheveron-right:before {
+	content: "\e960";
+  }
+  ._icon-document-add:before {
+	content: "\e903";
+  }
+  ._icon-film:before {
+	content: "\e904";
+  }
+  ._icon-hand-stop:before {
+	content: "\e905";
+  }
+  ._icon-menu1:before {
+	content: "\e958";
+  }
+  ._icon-navigation-more:before {
+	content: "\e906";
+  }
+  ._icon-news-paper:before {
+	content: "\e907";
+  }
+  ._icon-notifications:before {
+	content: "\e908";
+  }
+  ._icon-plugin:before {
+	content: "\e909";
+  }
+  ._icon-reply:before {
+	content: "\e90a";
+  }
+  ._icon-screen-full:before {
+	content: "\e952";
+  }
+  ._icon-share-alt:before {
+	content: "\e90b";
+  }
+  ._icon-shopping-cart:before {
+	content: "\e90c";
+  }
+  ._icon-stand-by:before {
+	content: "\e953";
+  }
+  ._icon-star-full:before {
+	content: "\e90d";
+  }
+  ._icon-thumbs-down:before {
+	content: "\e90e";
+  }
+  ._icon-thumbs-up:before {
+	content: "\e90f";
+  }
+  ._icon-usb:before {
+	content: "\e910";
+  }
+  ._icon-user-group:before {
+	content: "\e911";
+  }
+  ._icon-view-tile:before {
+	content: "\e912";
+  }
+  ._icon-wrench:before {
+	content: "\e913";
+  }
+  ._icon-pencil:before {
+	content: "\e959";
+  }
+  ._icon-pencil2:before {
+	content: "\e95a";
+  }
+  ._icon-camera:before {
+	content: "\e954";
+  }
+  ._icon-play1:before {
+	content: "\e955";
+  }
+  ._icon-video-camera:before {
+	content: "\e914";
+  }
+  ._icon-mic:before {
+	content: "\e95b";
+  }
+  ._icon-file-text2:before {
+	content: "\e926";
+  }
+  ._icon-file-picture:before {
+	content: "\e927";
+  }
+  ._icon-file-video:before {
+	content: "\e92a";
+  }
+  ._icon-copy1:before {
+	content: "\e956";
+  }
+  ._icon-folder:before {
+	content: "\e957";
+  }
+  ._icon-coin-dollar:before {
+	content: "\e93b";
+  }
+  ._icon-alarm:before {
+	content: "\e950";
+  }
+  ._icon-mobile:before {
+	content: "\e95c";
+  }
+  ._icon-undo:before {
+	content: "\e965";
+  }
+  ._icon-redo:before {
+	content: "\e966";
+  }
+  ._icon-user-plus:before {
+	content: "\e973";
+  }
+  ._icon-rocket:before {
+	content: "\e9a5";
+  }
+  ._icon-link:before {
+	content: "\e9cb";
+  }
+  ._icon-eye-blocked:before {
+	content: "\e9d1";
+  }
+  ._icon-plus:before {
+	content: "\ea0a";
+  }
+  ._icon-minus:before {
+	content: "\ea0b";
+  }
+  ._icon-enter:before {
+	content: "\ea13";
+  }
+  ._icon-exit:before {
+	content: "\ea14";
+  }
+  ._icon-embed2:before {
+	content: "\ea80";
+  }
+  ._icon-instagram1:before {
+	content: "\ea92";
+  }
+  ._icon-appleinc:before {
+	content: "\eabe";
+  }
+  ._icon-android:before {
+	content: "\eac0";
+  }

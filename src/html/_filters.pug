@@ -1,0 +1,108 @@
+.section__filters.filters
+	.filters__wrapper
+		.filters__icon-mobile#show-filters
+			svg(xmlns='http://www.w3.org/2000/svg' width='25' height='20' viewbox='0 0 25 20' fill='none')
+				path(d='M19.5303 0.46967C19.2374 0.176777 18.7626 0.176777 18.4697 0.46967L13.6967 5.24264C13.4038 5.53553 13.4038 6.01041 13.6967 6.3033C13.9896 6.59619 14.4645 6.59619 14.7574 6.3033L19 2.06066L23.2426 6.3033C23.5355 6.59619 24.0104 6.59619 24.3033 6.3033C24.5962 6.01041 24.5962 5.53553 24.3033 5.24264L19.5303 0.46967ZM18.25 19C18.25 19.4142 18.5858 19.75 19 19.75C19.4142 19.75 19.75 19.4142 19.75 19H18.25ZM18.25 1V19H19.75V1H18.25Z' fill='#383838')
+				path(d='M6.53033 19.5303C6.23744 19.8232 5.76256 19.8232 5.46967 19.5303L0.696699 14.7574C0.403806 14.4645 0.403806 13.9896 0.696699 13.6967C0.989593 13.4038 1.46447 13.4038 1.75736 13.6967L6 17.9393L10.2426 13.6967C10.5355 13.4038 11.0104 13.4038 11.3033 13.6967C11.5962 13.9896 11.5962 14.4645 11.3033 14.7574L6.53033 19.5303ZM5.25 1C5.25 0.585791 5.58579 0.250004 6 0.250004C6.41421 0.250004 6.75 0.585791 6.75 1H5.25ZM5.25 19V1H6.75V19H5.25Z' fill='#383838')
+
+		form(action="" method="post").filters__form#filters
+			ul.filters__list 
+				li._first
+					select(name="form[]").form
+						option(value="all", selected) Весь каталог
+						option(value="kids") Детские площадки
+						option(value="sports-eq") Спортивное оборудование
+						option(value="city") Городская инфраструктура
+
+						//- option(value="size-xl") Комплексы XL
+						//- option(value="size-l") Комплексы L
+						//- option(value="size-m") Комплексы M
+						//- option(value="size-s") Комплексы S
+						//- option(value="balance") Балансиры
+						//- option(value="swing") Качели
+						//- option(value="carousels") Карусели
+						//- option(value="springs") Пружины
+						//- option(value="workout") Воркаут площадки
+						//- option(value="trainers") Тренажеры
+						//- option(value="courts") Спортивные площадки
+						//- option(value="sheds") Теневые навесы
+						//- option(value="furniture") Парковая мебель
+						//- option(value="borders") Заборы и ограждения
+						//- option(value="containers") Контейнерные площадки
+				li
+					select(name="form[]").form
+						option(value="0", selected) Материал
+						option(value="metall") Металл
+						option(value="composite") Композит
+						option(value="all") Все
+				li
+					select(name="form[]").form
+						option(value="0", selected) Назначение
+						option(value="public-places") Общественные территории
+						option(value="kindergartens") Детские сады
+						option(value="all") Все
+				li
+					select(name="form[]").form
+						option(value="all", selected) Сортировать
+						option(value="popularity") По популярности
+						option(value="price") По цене
+						option(value="abc") По алфавиту
+			#search.filters__search.search
+				form(action="", method="post")
+					input#search-input.search__input(type="text", name="search-input" placeholder="Что найти")
+					svg#search-btn(xmlns='http://www.w3.org/2000/svg' width='22' height='22' viewbox='0 0 22 22' fill='none')
+						path(fill-rule='evenodd' clip-rule='evenodd' d='M8.77778 1.75C4.89644 1.75 1.75 4.89644 1.75 8.77778C1.75 12.6591 4.89644 15.8056 8.77778 15.8056C12.6591 15.8056 15.8056 12.6591 15.8056 8.77778C15.8056 4.89644 12.6591 1.75 8.77778 1.75ZM0.25 8.77778C0.25 4.06802 4.06802 0.25 8.77778 0.25C13.4875 0.25 17.3056 4.06802 17.3056 8.77778C17.3056 13.4875 13.4875 17.3056 8.77778 17.3056C4.06802 17.3056 0.25 13.4875 0.25 8.77778Z' fill='#383838')
+						path(fill-rule='evenodd' clip-rule='evenodd' d='M13.8029 13.803C14.0958 13.5101 14.5707 13.5101 14.8636 13.803L21.5302 20.4696C21.8231 20.7625 21.8231 21.2374 21.5302 21.5303C21.2374 21.8232 20.7625 21.8232 20.4696 21.5303L13.8029 14.8636C13.51 14.5707 13.51 14.0959 13.8029 13.803Z' fill='#383838')
+
+	form(action="" method="post").mobile-filters#mobile-filters
+			
+		#hide-filters.mobile-filters__title
+			svg#search-btn(xmlns='http://www.w3.org/2000/svg' width='21' height='22' viewbox='0 0 21 22' fill='none')
+				path(fill-rule='evenodd' clip-rule='evenodd' d='M0.469783 20.5303C0.17689 20.2374 0.17689 19.7626 0.469783 19.4697L19.4698 0.469669C19.7627 0.176776 20.2376 0.176775 20.5304 0.469669C20.8233 0.762562 20.8233 1.23744 20.5304 1.53033L1.53044 20.5303C1.23755 20.8232 0.762676 20.8232 0.469783 20.5303Z' fill='#383838')
+				path(fill-rule='evenodd' clip-rule='evenodd' d='M0.46967 1.0849C0.762563 0.792002 1.23744 0.792002 1.53033 1.0849L20.5303 20.0849C20.8232 20.3778 20.8232 20.8527 20.5303 21.1456C20.2374 21.4385 19.7626 21.4384 19.4697 21.1456L0.46967 2.14556C0.176777 1.85266 0.176777 1.37779 0.46967 1.0849Z' fill='#383838')
+
+		.mobile-filters__filter.options
+			.options__item
+				input#o-1_1.options__input(hidden='' type='radio' value='1' name='option-1')
+				label.options__label(for='o-1_1')
+					span.options__text Цена по возрастанию
+			.options__item
+				input#o-1_2.options__input(hidden='' type='radio' value='2' name='option-1')
+				label.options__label(for='o-1_2')
+					span.options__text Цена по убыванию
+			.options__item
+				input#o-1_3.options__input(hidden='' checked='' type='radio' value='3' name='option-1')
+				label.options__label(for='o-1_3')
+					span.options__text По алфавиту
+
+		.mobile-filters__filter.options
+			.options__item
+				input#o-2_1.options__input(hidden='' type='radio' value='1' name='option-2')
+				label.options__label(for='o-2_1')
+					span.options__text Общественные территории
+			.options__item
+				input#o-2_2.options__input(hidden='' type='radio' value='2' name='option-2')
+				label.options__label(for='o-2_2')
+					span.options__text Детские сады
+			.options__item
+				input#o-2_3.options__input(hidden='' checked='' type='radio' value='3' name='option-2')
+				label.options__label(for='o-2_3')
+					span.options__text Все
+
+		.mobile-filters__filter.options
+			.options__item
+				input#o-3_1.options__input(hidden='' type='radio' value='1' name='option-3')
+				label.options__label(for='o-3_1')
+					span.options__text Металл
+			.options__item
+				input#o-3_2.options__input(hidden='' type='radio' value='2' name='option-3')
+				label.options__label(for='o-3_2')
+					span.options__text Композит
+			.options__item
+				input#o-3_3.options__input(hidden='' checked='' type='radio' value='3' name='option-3')
+				label.options__label(for='o-3_3')
+					span.options__text Все
+		
+		button.mobile-filters__btn.button-black(type="submit")#submit-filters Применить
+			//- button.button-white(type="reset")#reset-filters Сбросить
+		

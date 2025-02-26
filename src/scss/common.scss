@@ -7,7 +7,7 @@ h1 {
 	max-width: 995px;
 	color: $textColorLight;
 	font-size: 78px;
-	line-height: 66 / 78;
+	line-height: 0.86;
 
 	@media (max-width:$tablet) {
 		max-width: 100%;

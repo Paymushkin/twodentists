@@ -430,7 +430,7 @@ body {
 }
 
 .button--small {
-  padding: 0.6875rem 1.875rem;
+  padding: 0.6875rem 1.25rem;
 }
 
 .button--transparent {
@@ -716,7 +716,7 @@ h1 {
   max-width: 995px;
   color: #ffffff;
   font-size: 78px;
-  line-height: 66/78;
+  line-height: 0.86;
 }
 
 h2 {

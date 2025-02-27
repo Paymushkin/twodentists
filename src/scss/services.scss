@@ -1,0 +1,190 @@
+.services {
+
+&__content {
+	display: flex;
+	flex-direction: column;
+	gap: 50px;
+
+	@media (max-width: 1280px) {
+		gap: 40px;
+	}
+
+	@media (max-width: $mobileSmall) {
+		gap: 20px;
+	}
+}
+  
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+
+    @media (max-width: $tablet) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: $mobileSmall) {
+      grid-template-columns: 1fr;
+	  gap: 15px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+	padding: 30px;
+	min-height: 493px;
+	background-color: $bgColorBlue;
+	border-radius: 10px;
+
+	@media (max-width: 1280px) {
+		min-height: 460px;
+	}
+
+	@media (max-width: $mobileSmall) {
+		padding: 15px;
+		min-height: unset;
+	}
+
+	&-header {
+		display: flex;
+		flex-direction: column;
+
+		@media (max-width: $mobileSmall) {
+			flex-direction: row;
+			align-items: center;
+			gap: 5px;
+		}
+	}
+
+	&-content {
+		display: flex;
+		flex-direction: column;
+		flex-grow: 1;
+
+		.active-item & {
+			display: flex;
+		}
+
+		@media (max-width: $mobileSmall) {
+			display: none;
+			margin-top: 20px;
+		}
+	}
+
+	&-icon {
+		display: none;
+
+		.active-item & {
+			rotate: 180deg;
+		}
+
+		@media (max-width: $mobileSmall) {
+			display: block;
+			margin-left: auto;
+		}
+	}
+  }
+
+  &__icon {
+    margin-bottom: 30px;
+	align-self: center;
+
+	@media (max-width: 1280px) {
+		margin-bottom: 18px;
+	}
+
+	@media (max-width: $mobileSmall) {
+		margin-bottom: 0;
+	}
+
+    img {
+      width: 120px;
+      height: 120px;
+
+	  @media (max-width: $mobileSmall) {
+		width: 52px;
+		height: 52px;
+	  }
+    }
+  }
+
+  &__title {
+    font-size: 32px;
+    margin-bottom: 10px;
+    line-height: 0.9;
+
+	@media (max-width: $mobileSmall) {
+		margin-bottom: 0;
+		font-size: 18px;
+	}
+  }
+
+  &__list {
+    flex: 1 1 auto;
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+	margin-bottom: 24px;
+  }
+
+  &__list-item {
+    a {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: $textColorAdd;
+      text-decoration: none;
+	  transition: color 0.3s ease;
+      
+      &:hover {
+        color: $highlightColor;
+      }
+
+	  @media (max-width: $mobileSmall) {
+		gap: 5px;
+		font-size: 14px;
+	  }
+    }
+  }
+
+  &__more {
+    display: flex;
+	justify-content: space-between;
+    align-items: center;
+	gap: 10px;
+    color: $mainColor;
+    text-decoration: none;
+    
+    span {
+	  color: $textColorAdd;
+	  font-size: 14px;
+	  text-decoration: underline;
+	  transition: color 0.3s ease;
+
+	  &:hover {
+		color: $highlightColor;
+	  }
+    }
+
+    svg {
+      width: 20px;
+      height: 20px;
+
+	  @media (max-width: $mobileSmall) {
+		display: none;
+	  }
+    }
+
+    &:hover {
+      color: $highlightColor;
+    }
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+	width: 200px;
+  }
+}

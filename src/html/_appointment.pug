@@ -1,0 +1,26 @@
+mixin appointment(desktopImage, tabletImage, mobileImage, index)
+  section.appointment
+    .appointment__container
+      .appointment__inner(
+        style=`--desktop-bg: url(../img/appointment-form/${desktopImage}); --tablet-bg: url(../img/appointment-form/${tabletImage}); --mobile-bg: url(../img/appointment-form/${mobileImage});`
+      )
+        .appointment__content
+          form.appointment__form(action="#")
+            .appointment__title Запишитесь на прием
+            .appointment__text Наш администратор свяжется с вами для согласования времени визита.
+            .appointment__fields
+              .appointment__input
+                input(type="text" name=`name-${index}` placeholder="Имя", required)
+              .appointment__input
+                input(type="tel" name=`phone-${index}` placeholder="Телефон", required)
+            .appointment__checkbox.policy-checkbox
+              input(type="checkbox" id=`appointment-policy-${index}` required)
+              label(for=`appointment-policy-${index}`) 
+                | Нажимая на кнопку, вы соглашаетесь 
+                | на обработку персональных данных 
+                | и с политикой конфиденциальности
+            button.button.appointment__button(type="submit") 
+              span Отправить
+
+        .appointment__image
+          img(src=`../img/appointment-form/${mobileImage}` alt="")

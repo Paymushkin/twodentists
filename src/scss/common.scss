@@ -9,6 +9,10 @@ h1 {
 	font-size: 78px;
 	line-height: 0.86;
 
+	@media (max-width: em(1280)) {
+		font-size: 64px;
+	}
+
 	@media (max-width:$tablet) {
 		max-width: 100%;
 		font-size: 58px;
@@ -30,23 +34,27 @@ h2 {
 	@media (max-width: em(1280)) {
 		font-size: 48px;
 	}
-	@media (max-width:$tablet) {
+	@media (max-width:$mobile) {
 		font-size: 40px;
 	}
 
-	@media (max-width:$mobile) {
+	@media (max-width:$mobileSmall) {
 		font-size: 24px;
 	}
     
 }
 
-// a {
-// 	text-decoration: none;
-// 	transition: all 0.3s ease;
-// 	&:hover {
-// 		text-decoration: underline;
-// 	}
-// }
+section {
+    margin-bottom: 110px;
+
+	@media (max-width: $tablet) {
+		margin-bottom: 70px;
+	}
+
+	@media (max-width: $mobile) {
+		margin-bottom: 50px;
+	}
+}
 
 address {
 	font-style: normal;
@@ -83,3 +91,133 @@ svg {
 	}
 }
 
+.policy-checkbox {
+	display: flex;
+	gap: 10px;
+	align-items: flex-start;
+
+
+	input {
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		margin: -1px;
+		border: 0;
+		padding: 0;
+		clip: rect(0 0 0 0);
+		overflow: hidden;
+
+		&:checked+label::before {
+			background: $highlightColor;
+			border-color: $highlightColor;
+		}
+
+		&:checked+label::after {
+			content: '';
+			position: absolute;
+			top: 4px;
+			left: 3px;
+			width: 10px;
+			height: 7px;
+			border-left: 2px solid #fff;
+			border-bottom: 2px solid #fff;
+			transform: rotate(-45deg);
+		}
+	}
+
+	label {
+		position: relative;
+		padding-left: 25px;
+		max-width: 360px;
+		color: $textColorLight;
+		font-size: 12px;
+		line-height: 1.3;
+		cursor: pointer;
+		transition: color 0.3s;
+
+		@media (max-width: em(767)) {
+			max-width: 200px;
+			font-size: 10px;
+		}
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			display: block;
+			width: 16px;
+			height: 16px;
+			background: transparent;
+			border: 1px solid currentColor;
+		}
+
+		&:hover {
+			color: $highlightColor;
+		}
+	}
+}
+
+.swiper-navigation {
+	display: flex;
+	justify-content: center;
+	gap: 10px;
+	width: 100%;
+
+	@media (max-width: $mobileSmall) {
+		position: absolute;
+		bottom: -50px;
+		margin: 0 auto;
+	}
+    
+    .prev,
+    .next {
+		display: flex;
+		transform-origin: center;
+		cursor: pointer;
+
+		@media (min-width: $mobileSmall) {
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+
+		svg {
+			transition: all 0.3s;
+
+			@media (min-width: $mobileSmall) {
+				width: 42px;
+				height: 42px;
+			}
+
+			circle {
+				@media (min-width: $mobileSmall) {
+					stroke: transparent;
+				}
+			}
+		}
+
+		&:hover {
+			svg circle {
+				fill: $highlightColor;
+			}
+
+			svg path {
+				stroke: #fff;
+			}
+		}
+    }
+	
+	.prev {
+		@media (min-width: $mobileSmall) {
+			left: -20px;
+			translateY: -50%;
+		}
+	}
+
+	.next {
+		@media (min-width: $mobileSmall) {
+			right: -20px;
+		}
+	}
+}	

@@ -89,7 +89,7 @@ import './libs/popup.js'
 // flsForms.formRating();
 
 /* Модуль работы с select. */
-import './libs/select.js'
+// import './libs/select.js'
 
 /* (В работе) Модуль работы с масками.*/
 /*
@@ -157,11 +157,11 @@ import * as flsScroll from "./files/scroll/scroll.js";
 
 // Плавная навигация по странице
 // Документация: https://template.fls.guru/template-docs/modul-plavnoj-navigacii-po-stranice.html
-flsScroll.pageNavigation();
+// flsScroll.pageNavigation();
 
 // Функционал добавления классов к хедеру при прокрутке
 // Документация: https://template.fls.guru/template-docs/modul-dobavleniya-klassov-k-shapke-pri-prokrutke-stranicy.html
-flsScroll.headerScroll();
+// flsScroll.headerScroll();
 
 // Функционал липкого блока
 // flsScroll.stickyBlock();
@@ -191,7 +191,8 @@ import "./libs/dynamic_adapt.js";
 // Прочее ========================================================================================================================================================================================================================================================
 // ========================================================================================================================================================================================================================================================
 /* Подключаем файлы со своим кодом */
-// import "./files/script.js";
+import "./files/script.js";
 // import './files/menu-overflow.js';
 import './files/header-scroll.js';
+// import './files/map.js';
 //============================================================================================================================================================================================================================================

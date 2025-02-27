@@ -33,6 +33,7 @@ $highlightColorLightest: #EFF9FD; // Цвет акцентов самый све
 $darkColor: #2A2D30; // Цвет точек
 $darkColorLight: #C7C7C7; // Цвет точек светлый
 $visitedColor: #BEB9B9; // Цвет посещенных ссылок
+$textColorAdd: #4E4E4E; // Цвет текста добавочный
 
  
 // Настройки ===========================================================================
@@ -53,6 +54,8 @@ $responsiveType: 1;
 $containerWidth: $maxWidthContainer + $containerPadding;
 // Брейк-поинты
 $pc: em($containerWidth); // ПК, ноутбука, некоторые планшеты в гор. положении
+$desktop1440: em(1440.98);
+$desktop1280: em(1280.98);
 $tablet: em(1024.98); // Планшеты, некоторые телефоны в гор.положении
 $mobile: em(768.98); // Телефоны L 
 $mobileSmall: em(576.98); // Телефоны S 
@@ -186,6 +189,7 @@ body {
 // Подключение базовых стилей, шаблонов (заготовок) и вспомогательных классов
 // Для подключения/отключения конкретных стилей смотри base.scss
 @import "base";
+@import "base/swiper";
 
 // Подключение стилей общих элементов проекта
 @import "common";
@@ -194,7 +198,10 @@ body {
 @import "header";
 @import "hero";
 @import "diploma";
-// @import "landing-about";
+@import "services";
+@import "appointment";
+@import "address";
+@import "offer";
 // @import "landing-numbers";
 // @import "landing-objects";
 // @import "landing-how";
@@ -213,4 +220,3 @@ body {
 @import "animation";
 
 // @import "libs/tippy"; 
-// @import "base/swiper"; 

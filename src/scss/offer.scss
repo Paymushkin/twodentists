@@ -1,35 +1,93 @@
 .offer {
 
-	&__container {
-		display: flex;
-		justify-content: space-between;
-		padding: rem(61) rem(44) rem(55);
-	}
+    @media (max-width: $mobile) {
+        padding-bottom: 50px;
+    }
 
-	&__left {
+    &__inner {
+        position: relative;
+    }
+}
 
-		h3 {
-			margin-left: 0;
-		}
 
-		span {
-			margin-left: 0;
-		}
+.offer-slide {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    width: 100%;
 
-	}
+    @media (max-width: $mobileSmall) {
+            flex-direction: column;
+        }
 
-	&__right {
-		margin-right: rem(229);
-		max-width: rem(360);
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        flex-grow: 1;
+        padding: 26px 38px;
+        min-height: 430px;
+        border: 1px solid $highlightColor;
+        border-radius: 10px;
+        background-color: $bgColor;
 
-		p {
-			display: inline-block;
-			margin-bottom: rem(38);
-			line-height: math.div(22.4, 16);
-		}
+        @media (max-width: $mobile) {
+            padding: 30px;
+            min-height: 414px;
+        }
 
-		a {
+        @media (max-width: $mobileSmall) {
+            padding: 15px;
+            min-height: unset;
+        }
 
-		}
-	}
+    }
+
+    &__date {
+        margin-bottom: 27px;
+        font-size: 14px;
+
+        @media (max-width: $mobile) {
+            margin-bottom: 17px;
+        }
+    }
+
+    &__title {
+        margin-bottom: 10px;
+        span {
+            color: $highlightColor;
+        }
+    }
+
+    &__text {
+        flex-grow: 1;
+        margin-bottom: 10px;
+
+        @media (max-width: $mobileSmall) {
+            margin-bottom: 30px;
+        }
+    }
+    
+    &__image {
+        flex-shrink: 0;
+        width: 466px;
+        border-radius: 10px;
+        overflow: hidden;
+
+        @media (max-width: $tablet) {
+            width: 273px;
+        }
+
+        @media (max-width: $mobileSmall) {
+            width: 100%;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    
+    
 }

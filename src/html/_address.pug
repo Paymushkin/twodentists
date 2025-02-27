@@ -1,0 +1,26 @@
+section.address
+  .address__container
+    .address__inner
+        .address__content
+            h2.address__title Будем рады<br>вас видеть!
+            .address__bottom
+                .address__image
+                    img(src="@img/address/team.png" alt="Наша команда")
+                ul.address__info
+                    li.address__item
+                        .address__icon
+                            include icons/_parking-icon
+                        .address__text Парковка для клиентов
+                    li.address__item
+                        .address__icon
+                            include icons/_locator
+                        .address__text Московский район Санкт-Петербурга, ЖК «Граф Орлов»
+        .address__map
+            iframe(
+                src="https://yandex.ru/map-widget/v1/org/dva_dantista/109590296635/?ll=30.315931%2C59.856451&z=16"
+                width="100%"
+                height="100%"
+                frameborder="0"
+                loading="lazy"
+                allow="fullscreen"
+            )

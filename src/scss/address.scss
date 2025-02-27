@@ -1,0 +1,146 @@
+.address {
+
+  &__container {
+    @media (max-width: $tablet) {
+      padding: 0;
+    }
+  }
+
+  // .address__inner
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 30px;
+    background-color: $bgColorGrey;
+    border-radius: 50px;
+    
+    @media (max-width: $tablet) {
+      flex-direction: column;
+      gap: 50px;
+      padding: 20px;
+      border-radius: 30px;
+    }
+
+    @media (max-width: $mobileSmall) {
+      gap: 20px;
+      padding-bottom: 50px;
+    }
+  }
+
+  // .address__content
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    padding-right: 30px;
+
+    @media (max-width: $tablet) {
+      padding-right: 0;
+      gap: 0;
+    }
+
+    @media (max-width: $mobileSmall) {
+      gap: 10px;
+    }
+  }
+
+  // .address__bottom
+  &__bottom {
+    display: flex;
+    align-items: flex-end;
+    gap: 20px;
+    
+    @media (max-width: $tablet) {
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    @media (max-width: $mobileSmall) {
+      flex-direction: column-reverse;
+      align-items: flex-start;
+    }
+  }
+
+  // .address__image
+  &__image {
+    img {
+        max-width: 100%;
+        height: auto;
+        max-height: 148px;
+
+        @media (max-width: $mobileSmall) {
+          max-height: 74px;
+        }
+    }
+  }
+
+  // .address__info
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+
+    @media (max-width: $mobileSmall) {
+      gap: 7px;
+    }
+  }
+
+  // .address__item
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    max-width: 300px;
+    color: $darkColor;
+    font-size: 20px;
+    line-height: 1.3;
+
+    @media (max-width: $mobileSmall) {
+      gap: 7px;
+      font-size: 14px;
+    }
+  }
+
+  // .address__icon
+  &__icon {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  // .address__map
+  &__map {
+    position: relative;
+    width: 690px;
+    aspect-ratio: 690 / 389;
+    border-radius: 12px;
+    overflow: hidden;
+    filter: grayscale(100%);
+
+    @media (max-width: $tablet) {
+      width: 100%;
+      aspect-ratio: 728 / 411;
+    }
+
+    @media (max-width: $mobileSmall) {
+      aspect-ratio: 300 / 171;
+    }
+
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+} 

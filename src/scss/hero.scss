@@ -79,8 +79,13 @@
         background: linear-gradient(101deg, rgba(255, 255, 255, 0.00) -10.67%, rgba(255, 255, 255, 0.10) 9.42%);
         backdrop-filter: blur(35px);
 
+        @media (max-width: em(1280)) {
+            right: 60px;
+            bottom: 100px;
+        }
+
         @media (max-width:$tablet) {
-            bottom: rem(90);
+            bottom: 90px;
         }
         @media (max-width:$mobile) {
             display: none;
@@ -100,7 +105,7 @@
 		font-size: rem(36);
         line-height: math.div(32, 36);
 
-        @media (max-width:$tablet) {
+        @media (max-width:em(1280)) {
             font-size: rem(32);
         }
 		

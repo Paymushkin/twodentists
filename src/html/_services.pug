@@ -1,0 +1,59 @@
+section.services
+  .services__container
+    -
+      const services = [
+        {
+          icon: 'treatment-icon.png',
+          alt: 'Лечение зубов',
+          title: 'Лечение зубов'
+        },
+        {
+          icon: 'esthetic-icon.png',
+          alt: 'Эстетическая стоматология',
+          title: 'Эстетическая стоматология'
+        },
+        {
+          icon: 'implantation-icon.png',
+          alt: 'Имплантация',
+          title: 'Имплантация'
+        },
+        {
+          icon: 'orthodontics-icon.png',
+          alt: 'Ортодонтия',
+          title: 'Ортодонтия (брекеты и элайнеры)'
+        },
+        {
+          icon: 'prosthetics-icon.png',
+          alt: 'Протезирование',
+          title: 'Протезирование (коронки на зубах/коронки на имплантатах)'
+        },
+        {
+          icon: 'prophylaxis-icon.png',
+          alt: 'Профилактика',
+          title: 'Профилактика — проф гигиена'
+        }
+      ]
+      const servicesList = ['Лечение зубов', 'Лечение десен', 'Профессиональная чистка', 'Удаление']
+    div.services__content
+        ul.services__items
+            each service in services
+                li.services__item
+                    .services__item-header
+                        .services__icon
+                            img(src=`@img/services/${service.icon}` alt=service.alt)
+                        h3.services__title!= service.title
+                        .services__item-icon
+                            include icons/_chevron-close
+                    .services__item-content
+                        ul.services__list
+                            each item in servicesList
+                                li.services__list-item
+                                    a(href="#")
+                                        include icons/_check-icon
+                                        span= item
+                        a(href="#").services__more
+                            span Посмотреть всё
+                            include icons/_chevron-right
+
+        a.button.services__button(href="#") 
+            span Все услуги

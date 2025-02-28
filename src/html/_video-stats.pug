@@ -1,0 +1,41 @@
+section.video-stats
+  .video-stats__container
+    .video-stats__content
+      .video-stats__icon 
+        img(src="@img/icons/play-icon.svg" alt="Воспроизвести видео")
+      h2.video-stats__title Посмотрите видео о нашей клинике
+
+  .video-stats__wrapper
+    .video-stats__video
+      video.video-stats__bg(autoplay muted loop playsinline poster="@img/video/poster.png")
+        source(src="https://storage.yandexcloud.net/videos-meyou/2dentists/bg-video.a.mp" type="video/mp4")
+      button.video-stats__play(type="button" aria-label="Воспроизвести видео")
+        include icons/_play-icon
+    
+    .video-stats__items(data-da=".video-stats__container ,767.98")
+      .video-stats__item.video-stats__item--1
+        .video-stats__icon
+          include icons/_tooth-icon
+        .video-stats__text
+          b ТОП-10 лучших 
+          | стоматологий Санкт-Петербурга / Доктор Питер
+      .video-stats__item.video-stats__item--2
+        .video-stats__icon
+          include icons/_medal-icon
+        .video-stats__text
+          b ТОП-20 частных
+          br 
+          | стоматологий Санкт-Петербурга / ПроДокторов / 32top.ru
+      .video-stats__item.video-stats__item--3
+        .video-stats__icon
+          include icons/_medal-icon
+        .video-stats__text
+            b ТОП-100
+            br
+            | стоматологических клиник России / 32top.ru
+      .video-stats__item.video-stats__item--4
+        .video-stats__icon
+          include icons/_awards-icon
+        .video-stats__text 
+            | Лауреат Национального конкурса 
+            b «Лучшие стоматологии РФ»

@@ -1664,7 +1664,6 @@ svg * {
   -ms-flex-pack: justify;
       justify-content: space-between;
   gap: 20px;
-  padding-right: 30px;
 }
 
 .address__bottom {
@@ -1695,7 +1694,7 @@ svg * {
   -ms-flex-align: center;
       align-items: center;
   gap: 12px;
-  max-width: 300px;
+  max-width: 325px;
   color: #2A2D30;
   font-size: 20px;
   line-height: 1.3;
@@ -1794,6 +1793,185 @@ svg * {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.video-stats {
+  position: relative;
+  height: calc(100vh - 83px);
+  min-height: 600px;
+}
+
+.video-stats__container {
+  position: relative;
+  display: none;
+  height: 100%;
+}
+
+.video-stats__content {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  gap: 20px;
+  margin-bottom: 50px;
+  padding: 16px;
+  background-color: #EFF9FD;
+  border-radius: 5px;
+}
+
+.video-stats__icon {
+  width: 64px;
+  height: 64px;
+}
+
+.video-stats__title {
+  font-size: 20px;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.video-stats__video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.video-stats__video::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.video-stats__bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.video-stats__bg[poster] {
+  -o-object-position: center;
+     object-position: center;
+  width: 100%;
+  height: 100%;
+}
+
+.video-stats__play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 50px;
+  height: 50px;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  -o-transition: transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+  cursor: pointer;
+}
+
+.video-stats__play::after {
+  content: "";
+  position: absolute;
+  top: -25px;
+  left: -25px;
+  width: calc(100% + 50px);
+  height: calc(100% + 50px);
+  border-radius: 50%;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  z-index: -1;
+}
+
+.video-stats__play:hover {
+  -webkit-transform: translate(-50%, -50%) scale(1.1);
+      -ms-transform: translate(-50%, -50%) scale(1.1);
+          transform: translate(-50%, -50%) scale(1.1);
+}
+
+.video-stats__play svg {
+  width: 100%;
+  height: 100%;
+}
+
+.video-stats__items {
+  z-index: 2;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  gap: 15px;
+}
+
+.video-stats__item {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-align: start;
+      align-items: start;
+  gap: 20px;
+  padding: 15px;
+  border-radius: 10px;
+  background: #EFF9FD;
+}
+
+.video-stats__item--1 {
+  top: 20%;
+  left: 12%;
+}
+
+.video-stats__item--2 {
+  bottom: 10%;
+  left: 34%;
+}
+
+.video-stats__item--3 {
+  bottom: 28%;
+  right: 21%;
+}
+
+.video-stats__item--4 {
+  top: 8%;
+  right: 13%;
+}
+
+.video-stats__icon {
+  width: 40px;
+  height: 40px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.video-stats__icon img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.video-stats__text {
+  line-height: 1.2;
+  text-align: left;
 }
 
 .footer {
@@ -2035,6 +2213,25 @@ svg * {
   }
 }
 
+@media (min-width: 47.99875em) {
+  .video-stats__item {
+    position: absolute;
+    gap: 25px;
+    max-width: 312px;
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: -o-linear-gradient(349deg, rgba(255, 255, 255, 0) -10.67%, rgba(255, 255, 255, 0.1) 9.42%);
+    background: linear-gradient(101deg, rgba(255, 255, 255, 0) -10.67%, rgba(255, 255, 255, 0.1) 9.42%);
+    -webkit-backdrop-filter: blur(35px);
+            backdrop-filter: blur(35px);
+  }
+
+  .video-stats__text {
+    color: #fff;
+    font-size: 22px;
+  }
+}
+
 @media (min-width: 48.06125em) {
   #sharing-popup .popup__content {
     min-width: 23.3125rem;
@@ -2062,6 +2259,22 @@ svg * {
 
   .header__phone {
     font-size: 16px;
+  }
+
+  .video-stats__item--1 {
+    left: 7%;
+  }
+
+  .video-stats__item--2 {
+    left: 15%;
+  }
+
+  .video-stats__item--3 {
+    right: 10%;
+  }
+
+  .video-stats__item--4 {
+    right: 7%;
   }
 }
 
@@ -2273,6 +2486,39 @@ svg * {
 
   .offer-slide__image {
     width: 273px;
+  }
+
+  .video-stats {
+    height: calc(100vh - 133px);
+    margin-bottom: 100px;
+  }
+
+  .video-stats__video {
+    margin-top: 50px;
+  }
+
+  .video-stats__play {
+    top: 0;
+  }
+
+  .video-stats__item--1 {
+    top: 30%;
+    left: 1%;
+  }
+
+  .video-stats__item--2 {
+    bottom: 15%;
+    left: 1%;
+  }
+
+  .video-stats__item--3 {
+    bottom: 7%;
+    right: 1%;
+  }
+
+  .video-stats__item--4 {
+    right: 1%;
+    top: 41%;
   }
 
   .footer {
@@ -2507,6 +2753,26 @@ svg * {
     min-width: 152px;
     max-height: 54px;
   }
+
+  .video-stats {
+    height: auto;
+    min-height: unset;
+    margin-bottom: 50px;
+  }
+
+  .video-stats__container {
+    display: block;
+  }
+
+  .video-stats__wrapper {
+    display: none;
+  }
+
+  .video-stats__item svg path,
+  .video-stats__item svg rect,
+  .video-stats__item svg path {
+    fill: #06AEEF;
+  }
 }
 
 @media (max-width: 36.06125em) {
@@ -2686,6 +2952,26 @@ svg * {
 
   .offer-slide__image {
     width: 100%;
+  }
+
+  .video-stats__item--1 {
+    -ms-flex-order: 3;
+        order: 3;
+  }
+
+  .video-stats__item--2 {
+    -ms-flex-order: 1;
+        order: 1;
+  }
+
+  .video-stats__item--3 {
+    -ms-flex-order: 0;
+        order: 0;
+  }
+
+  .video-stats__item--4 {
+    -ms-flex-order: 2;
+        order: 2;
   }
 
   .footer__left {

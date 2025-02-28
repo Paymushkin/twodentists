@@ -43,83 +43,85 @@
 	display: none !important;
 }
 
-.navigation {
+.swiper-pagination {
+	display: flex;
+	justify-content: center;
+	gap: 4px;
 
-	@media (max-width:$tablet) {
-		display: none;
-	}
-
-	img,
-	svg {
+	.swiper-pagination-bullet {
+		width: 8px;
+		height: 8px;
+		background: $darkColor;
+		border-radius: 50%;
+		transition: all 0.3s;
 		cursor: pointer;
-	}
 
-	.swiper-button-disabled {
-		opacity: 0.5;
-		cursor: not-allowed;
-	}
-
-	svg {
-		position: absolute;
-		top: 50%;
-		transform: translateY(-50%);
-		transition: 0.3s ease transform;
-		transform-origin: center;
-
-		@media (any-hover: hover) {
-			&:hover {
-				transform: translateY(-50%) scale(1.25);
-			}
-		}
-
-	}
-
-	.prev {
-		left: rem(33);
-		transform: translateY(-50%) rotate(-180deg);
-
-		@media (max-width:$mobile) {
-			left: rem(10);
-		}
-
-		@media (any-hover: hover) {
-			&:hover {
-				transform: translateY(-50%) scale(1.25) rotate(-180deg);
-			}
-		}
-	}
-
-	.next {
-		right: rem(33);
-
-		@media (max-width:$mobile) {
-			right: rem(10);
+		&-active {
+			background: $highlightColor;
 		}
 	}
 }
 
-.swiper-pagination {
-	position: absolute;
-	left: 50%;
+.swiper-navigation {
 	display: flex;
+	justify-content: center;
 	gap: 10px;
-	cursor: pointer;
-	transform: translateX(-50%);
+	width: 100%;
 
-	&-bullet {
-		position: relative;
-		width: 12px;
-		height: 12px;
-		border-radius: 50%;
-		background: #DCE4EA;
-		transition: 0.3s ease background;
+	@media (max-width: $mobileSmall) {
+		position: absolute;
+		bottom: -50px;
+		margin: 0 auto;
+	}
 
-		&-active {
-			background: linear-gradient(124deg, #00A0DB 10.09%, #86D06C 105.92%);
+	.prev,
+	.next {
+		display: flex;
+		transform-origin: center;
+		cursor: pointer;
+
+		@media (min-width: $mobileSmall) {
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+
+		svg {
+			transition: all 0.3s;
+
+			@media (min-width: $mobileSmall) {
+				width: 42px;
+				height: 42px;
+			}
+
+			// circle {
+			// 	@media (min-width: $mobileSmall) {
+			// 		stroke: transparent;
+			// 	}
+			// }
+		}
+
+		&:hover {
+			svg circle {
+				fill: $highlightColor;
+			}
+
+			svg path {
+				stroke: #fff;
+			}
 		}
 	}
 
-	.swiper-pagination-total {
-		color: #585858;
+	.prev {
+		@media (min-width: $mobileSmall) {
+			left: -20px;
+			translateY: -50%;
+		}
+	}
+
+	.next {
+		@media (min-width: $mobileSmall) {
+			right: -20px;
+		}
 	}
 }

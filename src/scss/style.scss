@@ -106,6 +106,10 @@ body {
 	// Сайт загружен
 	.loaded & {
 	}
+	&.lock {
+		overflow: hidden;
+		touch-action: none;
+	}
 }
 // Оболочка ============================================================================================================================================================================================================================================================================================================================================================================================================================================
 .wrapper {
@@ -205,6 +209,7 @@ body {
 @import "video-stats";
 @import "personal";
 @import "gallery";
+@import "cases";
 // @import "landing-numbers";
 // @import "landing-objects";
 // @import "landing-how";
@@ -216,6 +221,7 @@ body {
 // @import "breadcrumbs";
 // @import "cart";
 @import "footer";
+@import "mobile-menu";
 
 // @import "base/swiper";
 
@@ -223,3 +229,13 @@ body {
 @import "animation";
 
 // @import "libs/tippy"; 
+
+:root {
+    --header-height: 142px; // Высота шапки на десктопе
+    @media (max-width: $tablet) {
+        --header-height: 114px; // Высота шапки на планшете/мобильном
+    }
+	@media (max-width: $mobile) {
+		--header-height: 107px; // Высота шапки на планшете/мобильном
+	}
+} 

@@ -26,6 +26,14 @@ header.header#header
         .header__container
             a(href="/").header__logo
                 img(src="@img/logo-dark.png" alt="Два дантиста")
+
+            .mobile-nav
+                .mobile-nav__messengers
+                    a(href="https://t.me/dva_dantista_clinic" aria-label="Telegram")
+                        img(src="@img/tg.png" alt="Telegram")
+                    a(href="https://wa.me/79310020317" aria-label="WhatsApp")
+                        img(src="@img/wa.png" alt="WhatsApp")
+
             nav.header__menu.menu
                 ul.menu__list
                     li.menu__item
@@ -90,17 +98,25 @@ header.header#header
                                 a(href="#").sub-menu__link Как добраться
                             li.sub-menu__item
                                 a(href="#").sub-menu__link Время работы
-                    li.menu__item.menu__item-more
+                    li.menu__item-more
                         include icons/_options
-                        ul.sub-menu
-                            li.sub-menu__item
-                                a(href="#").sub-menu__link Как добраться
-                            li.sub-menu__item
-                                a(href="#").sub-menu__link Время работы
+                        ul.more-sub-menu
+                            li.more-sub-menu__item
+                                a(href="#").more-sub-menu__title Отзывы
+                            li.more-sub-menu__item
+                                a(href="#").more-sub-menu__title О нас
+                                a(href="#").more-sub-menu__link О клинике
+                                a(href="#").more-sub-menu__link Лицензии
+                                a(href="#").more-sub-menu__link Оборудование
+                            li.more-sub-menu__item
+                                a(href="#").more-sub-menu__title Контакты
+                                a(href="#").more-sub-menu__link Как добраться
+                                a(href="#").more-sub-menu__link Время работы
             div.header__right
                 button(type="button" aria-label="Поиск по сайту").header__search
                     include icons/_search
                 button(type="button").button.button--small.header__button
                     span Записаться на прием
-            button(type="button").icon-menu
-                span
+            button(type="button").button-menu
+                .icon-menu
+                    span

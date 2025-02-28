@@ -1,0 +1,69 @@
+section.cases#cases
+    .cases-header__container
+        h2.cases__title Истории<br>пациентов
+    
+    .cases__container
+        .cases__inner
+            .cases__slider.swiper
+                .cases__wrapper.swiper-wrapper
+                    -
+                        const cases = [
+                            {
+                                image: 'item-1.png',
+                                title: `Лечение<br>на элайнерах`,
+                                alt: 'Лечение на элайнерах'
+                            },
+                            {
+                                image: 'item-2.png',
+                                title: `Керамические виниры<br>и циркониевые коронки`,
+                                alt: 'Керамические виниры и циркониевые коронки'
+                            },
+                            {
+                                image: 'item-3.png',
+                                title: `Комплексное<br>лечение`,
+                                alt: 'Комплексное лечение'
+                            },
+                            {
+                                image: 'item-4.png',
+                                title: `Комплексная<br>реабилитация`,
+                                alt: 'Комплексная реабилитация'
+                            },
+                            {
+                                image: 'item-1.png',
+                                title: `Лечение<br>на элайнерах`,
+                                alt: 'Лечение на элайнерах'
+                            },
+                            {
+                                image: 'item-2.png',
+                                title: `Керамические виниры<br>и циркониевые коронки`,
+                                alt: 'Керамические виниры и циркониевые коронки'
+                            },
+                            {
+                                image: 'item-3.png',
+                                title: `Комплексное<br>лечение`,
+                                alt: 'Комплексное лечение'
+                            },
+                            {
+                                image: 'item-4.png',
+                                title: `Комплексная<br>реабилитация`,
+                                alt: 'Комплексная реабилитация'
+                            }
+                        ]
+
+                    each item in cases
+                        .cases__slide.swiper-slide
+                            .case-card
+                                .case-card__image
+                                    img(src=`@img/cases/${item.image}` alt=item.alt loading="lazy")
+                                h3.case-card__title!= item.title
+                                a(href="/22323232323.html").case-card__link 
+                                    span Посмотреть кейс
+                                    include icons/_next-icon
+
+            .cases__pagination.swiper-pagination
+
+            .cases__navigation.swiper-navigation
+                button(type="button").prev
+                    include icons/_prev-icon
+                button(type="button").next
+                    include icons/_next-icon

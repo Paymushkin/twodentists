@@ -1,0 +1,24 @@
+section.gallery#gallery
+    .gallery-header__container
+        .gallery__header.header-with-button
+            h2.gallery__title 
+                | Всё, что нужно для здоровья
+                br 
+                | вашей улыбки — в одном месте
+    .gallery__container
+        .gallery__inner
+            .gallery__slider.swiper
+                .gallery__wrapper.swiper-wrapper
+                    each i in [1, 2, 3, 1, 2, 3]
+                        .gallery__slide.swiper-slide
+                            img(src=`@img/gallery/item-${i}.png` loading="lazy" alt="Фото клиники")
+                                    
+            .gallery__navigation.swiper-navigation
+                button.prev(type="button" aria-label="Предыдущий слайд")
+                    include icons/_prev-icon
+                button.next(type="button" aria-label="Следующий слайд")
+                    include icons/_next-icon
+
+        .gallery__footer
+            a.button.gallery__button(href="#") 
+                span Смотреть все отзывы 

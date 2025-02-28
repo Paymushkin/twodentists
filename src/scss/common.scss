@@ -79,6 +79,12 @@ svg {
 	}
 }
 
+.mobile-hidden {
+	@media (max-width: $mobile) {
+		display: none;
+	}
+}
+
 .tablet-hidden {
 	@media (max-width: $tablet) {
 		display: none;
@@ -158,6 +164,12 @@ svg {
 	}
 }
 
+.header-with-button {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+}
+
 .swiper-navigation {
 	display: flex;
 	justify-content: center;
@@ -190,11 +202,11 @@ svg {
 				height: 42px;
 			}
 
-			circle {
-				@media (min-width: $mobileSmall) {
-					stroke: transparent;
-				}
-			}
+			// circle {
+			// 	@media (min-width: $mobileSmall) {
+			// 		stroke: transparent;
+			// 	}
+			// }
 		}
 
 		&:hover {

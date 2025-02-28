@@ -121,18 +121,18 @@ function initSliders() {
 		});
 	}
 
-	if (document.querySelector('.news__slider')) { // Указываем скласс нужного слайдера
+	if (document.querySelector('.personal__slider')) { // Указываем скласс нужного слайдера
 		// Создаем слайдер
-		new Swiper('.news__slider', { // Указываем скласс нужного слайдера
+		new Swiper('.personal__slider', { // Указываем скласс нужного слайдера
 			// Подключаем модули слайдера
 			// для конкретного случая
 			// modules: [Autoplay, Pagination],
 			observer: true,
 			observeParents: true,
 			observeSlideChildren: true,
-			slidesPerView: 4,
-			spaceBetween: 20,
-			autoHeight: true,
+			slidesPerView: 5,
+			spaceBetween: 16,
+			// autoHeight: true,
 			speed: 800,
 
 			//touchRatio: 0,
@@ -145,65 +145,63 @@ function initSliders() {
 
 			// Эффекты
 			// effect: 'fade',
-			autoplay: {
-				delay: 3000,
-				disableOnInteraction: false,
-			},
+			// autoplay: {
+			// 	delay: 3000,
+			// 	disableOnInteraction: false,
+			// },
 
 			// Пагинация
 
-			pagination: {
-				el: '.news__pagination',
-				clickable: true,
-				// type: "fraction",
+			// Кнопки "влево/вправо"
+			navigation: {
+				prevEl: '.personal__navigation .prev',
+				nextEl: '.personal__navigation .next',
 			},
 
 			// Брейкпоинты
 
 			breakpoints: {
 				320: {
-					slidesPerView: 1,
+					slidesPerView: 2.2,
 					spaceBetween: 0,
-					autoHeight: true,
 				},
 				576: {
-					slidesPerView: 1,
-					spaceBetween: 0,
-					autoHeight: true,
+					slidesPerView: 2.2,
+					spaceBetween: 5,
 				},
 				768: {
-					slidesPerView: 2,
-					spaceBetween: 10,
+					slidesPerView: 3,
+					spaceBetween: 15,
 				},
 				992: {
-					slidesPerView: 3,
+					slidesPerView: 4,
 					spaceBetween: 20,
 				},
 				1268: {
-					slidesPerView: 4,
+					slidesPerView: 5,
 					spaceBetween: 20,
 				},
 			},
 		});
 	}
 
-	if (document.querySelector('.spheres__slider')) { // Указываем скласс нужного слайдера
+	if (document.querySelector('.gallery__slider')) { // Указываем скласс нужного слайдера
 		// Создаем слайдер
-		new Swiper('.spheres__slider', { // Указываем скласс нужного слайдера
+		new Swiper('.gallery__slider', { // Указываем скласс нужного слайдера
 			// Подключаем модули слайдера
 			// для конкретного случая
 			// modules: [Autoplay, Pagination],
 			observer: true,
 			observeParents: true,
 			observeSlideChildren: true,
-			slidesPerView: 1,
-			spaceBetween: 0,
+			slidesPerView: 3,
+			spaceBetween: 24,
 			// autoHeight: true,
 			speed: 800,
 
 			//touchRatio: 0,
 			//simulateTouch: false,
-			// loop: true,
+			loop: true,
 			//preloadImages: false,
 			//lazy: true,
 			// parallax: true,
@@ -211,20 +209,10 @@ function initSliders() {
 
 			// Эффекты
 			// effect: 'fade',
-			autoplay: {
-				delay: 3000,
-				disableOnInteraction: false,
-			},
-
-
-			// Пагинация
-
-			pagination: {
-				el: '.spheres__pagination',
-				// clickable: true,
-				// type: "fraction",
-			},
-
+			// autoplay: {
+			// 	delay: 3000,
+			// 	disableOnInteraction: false,
+			// },
 
 			// Скроллбар
 			/*
@@ -235,33 +223,33 @@ function initSliders() {
 			*/
 
 			// Кнопки "влево/вправо"
-			// navigation: {
-			// 	prevEl: '.navigation .prev',
-			// 	nextEl: '.navigation .next',
-			// },
+			navigation: {
+				prevEl: '.gallery__navigation .prev',
+				nextEl: '.gallery__navigation .next',
+			},
 
 			// Брейкпоинты
 
 			breakpoints: {
 				320: {
-					slidesPerView: 2,
-					spaceBetween: 20,
+					slidesPerView: 1.2,
+					spaceBetween: 10,
 					autoHeight: true,
 				},
 				576: {
 					slidesPerView: 2,
-					spaceBetween: 20,
+					spaceBetween: 13,
 				},
 				768: {
-					slidesPerView: 4,
-					spaceBetween: 10,
+					slidesPerView: 3,
+					spaceBetween: 13,
 				},
 				992: {
-					slidesPerView: 4,
+					slidesPerView: 3,
 					spaceBetween: 20,
 				},
 				1268: {
-					slidesPerView: 4,
+					slidesPerView: 3,
 					spaceBetween: 20,
 				},
 			},
@@ -280,6 +268,8 @@ function initSliders() {
 			// }
 		});
 	}
+
+
 
 	if (document.querySelector('.body-events__slider')) { // Указываем скласс нужного слайдера
 		// Создаем слайдер

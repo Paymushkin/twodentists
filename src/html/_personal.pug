@@ -1,0 +1,84 @@
+section.personal#personal
+    .personal-header__container
+        .personal__header.header-with-button
+            h2.personal__title 
+                | Ваша улыбка 
+                br
+                | в надёжных руках
+            a.button.personal__button.mobile-hidden(href="#") 
+                span Все специалисты
+                
+    .personal__container  
+        .personal__inner
+            .personal__slider.swiper
+                .personal__wrapper.swiper-wrapper
+                    -
+                        const personal = [
+                            {
+                                image: 'item-1.png',
+                                name: 'Шабанов Рамазан Гасанович',
+                                speciality: 'Стоматолог-терапевт'
+                            },
+                            {
+                                image: 'item-2.png',
+                                name: 'Магомедов Магомед Магомедович',
+                                speciality: 'Стоматолог-ортопед'
+                            },
+                            {
+                                image: 'item-3.png',
+                                name: 'Алиев Али Алиевич',
+                                speciality: 'Стоматолог-хирург'
+                            },
+                            {
+                                image: 'item-4.png',
+                                name: 'Сотникова Юлия Анатольевна',
+                                speciality: 'Гигиенист, пародонтолог'
+                            },
+                            {
+                                image: 'item-5.png',
+                                name: 'Кожокарь Карина Васильевна',
+                                speciality: 'Стоматолог-терапевт, эндодонтист'
+                            },
+                                                        {
+                                image: 'item-1.png',
+                                name: 'Шабанов Рамазан Гасанович',
+                                speciality: 'Стоматолог-терапевт'
+                            },
+                            {
+                                image: 'item-2.png',
+                                name: 'Магомедов Магомед Магомедович',
+                                speciality: 'Стоматолог-ортопед'
+                            },
+                            {
+                                image: 'item-3.png',
+                                name: 'Алиев Али Алиевич',
+                                speciality: 'Стоматолог-хирург'
+                            },
+                            {
+                                image: 'item-4.png',
+                                name: 'Сотникова Юлия Анатольевна',
+                                speciality: 'Гигиенист, пародонтолог'
+                            },
+                            {
+                                image: 'item-5.png',
+                                name: 'Кожокарь Карина Васильевна',
+                                speciality: 'Стоматолог-терапевт, эндодонтист'
+                            }
+                        ]
+
+                    each person in personal
+                        .personal__slide.swiper-slide
+                            .personal-slide
+                                .personal-slide__image
+                                    img(src=`@img/personal/${person.image}` loading="lazy" alt=person.name)
+                                .personal-slide__content
+                                    h4.personal-slide__name= person.name
+                                    span.personal-slide__speciality= person.speciality
+                                    a.button.personal-slide__button(href="#")
+                                        span Записаться на прием
+
+            .personal__navigation.swiper-navigation
+                button.prev(type="button" aria-label="Предыдущий слайд")
+                    include icons/_prev-icon
+                button.next(type="button" aria-label="Следующий слайд")
+                    include icons/_next-icon

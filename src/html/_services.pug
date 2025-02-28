@@ -40,7 +40,7 @@ section.services
                 li.services__item
                     .services__item-header
                         .services__icon
-                            img(src=`@img/services/${service.icon}` alt=service.alt)
+                            img(src=`@img/services/${service.icon}` loading="lazy" alt=service.alt)
                         h3.services__title!= service.title
                         .services__item-icon
                             include icons/_chevron-close

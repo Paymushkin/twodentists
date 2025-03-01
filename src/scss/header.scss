@@ -1,5 +1,6 @@
 .header {
 	position: relative;
+	z-index: 69;
 
 	// .header__top
 	&__top {
@@ -164,7 +165,6 @@
 			position: fixed;
 			left: 0;
 			top: 0;
-			z-index: 50;
 			box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 			animation: slideDown 0.3s ease-out forwards;
 		}

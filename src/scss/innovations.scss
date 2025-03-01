@@ -1,0 +1,159 @@
+.innovations {
+
+  @media (max-width: em(767)) {
+    padding-bottom: 50px;
+  }
+  
+  &__title {
+    margin-bottom: 30px;
+  }
+
+  &__inner {
+    position: relative;
+  }
+
+  &__slider {
+    position: relative;
+    margin-bottom: 40px;
+
+    @media (max-width: $mobileSmall) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__slide {
+    display: flex;
+    gap: 15px;
+    overflow: hidden;
+
+    &-image {
+      flex: 1 1 58%;
+      border-radius: 10px;
+      overflow: hidden;
+
+      @media (max-width: em(767)) {
+        display: none;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    
+    &-content {
+      flex: 1 1 42%;
+      display: flex;
+      flex-direction: column;
+      padding: 30px;
+      background-color: $darkColor;
+      border-radius: 10px;
+      color: $textColorLight;
+
+      @media (max-width: $tablet) {
+        flex: 0 0 380px;
+        padding: 15px;
+      }
+
+      @media (max-width: em(767)) {
+        flex: 0 0 100%;
+      }
+    }
+
+    &-link {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+
+      &:hover {
+        span {
+          color: $highlightColor;
+        }
+      }
+
+      &:hover {
+        svg circle {
+          fill: $highlightColor;
+        }
+        svg path {
+          stroke: $textColorLight;
+        }
+      }
+
+      span {
+        text-decoration: underline !important;
+        transition: color 0.3s;
+
+        @media (max-width: $tablet) {
+          font-size: 14px;
+        }
+      }
+    }
+
+
+    &-icon {
+      margin-bottom: 30px;
+
+      @media (max-width: $tablet) {
+        svg {
+          max-height: 24px;
+        }
+      }
+    }
+
+    &-title {
+      margin-bottom: auto;
+      color: #fff;
+      font-size: 40px;
+      line-height: 0.9;
+
+      @media (max-width: $tablet) {
+        font-size: 32px;
+      }
+
+      @media (max-width: $mobileSmall) {
+        margin-bottom: 40px;
+        font-size: 22px;
+      }
+    }
+
+    &-text {
+      margin-top: 20px;
+      margin-bottom: 54px;
+
+      @media (max-width: $tablet) {
+        margin-bottom: 20px;
+        font-size: 16px;
+      }
+
+      @media (max-width: $mobileSmall) {
+        margin-top: 0;
+        margin-bottom: 21px;
+        font-size: 14px;
+      }
+    }
+
+    &-arrow {
+      display: flex;
+      width: 32px;
+      height: 32px;
+      cursor: pointer;
+    }
+  }
+}
+
+.innovations__navigation {
+  display: flex;
+  gap: 12px;
+
+  .prev,
+  .next {
+    position: relative;
+    top: unset;
+    left: unset;
+    right: unset;
+    transform: unset;
+  }
+}

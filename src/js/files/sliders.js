@@ -270,7 +270,6 @@ function initSliders() {
 	}
 
 
-
 	if (document.querySelector('.cases__slider')) { // Указываем скласс нужного слайдера
 		// Создаем слайдер
 		new Swiper('.cases__slider', { // Указываем скласс нужного слайдера
@@ -365,9 +364,11 @@ function initSliders() {
 		});
 	}
 
-	if (document.querySelector('.body-events__slider-2')) { // Указываем скласс нужного слайдера
+
+
+	if (document.querySelector('.awards__slider')) { // Указываем скласс нужного слайдера
 		// Создаем слайдер
-		new Swiper('.body-events__slider-2', { // Указываем скласс нужного слайдера
+		new Swiper('.awards__slider', { // Указываем скласс нужного слайдера
 			// Подключаем модули слайдера
 			// для конкретного случая
 			// modules: [Autoplay, Pagination],
@@ -375,130 +376,95 @@ function initSliders() {
 			observeParents: true,
 			observeSlideChildren: true,
 			slidesPerView: 3,
-			spaceBetween: 0,
+			spaceBetween: 20,
 			speed: 800,
 
 			// Пагинация
-
-			pagination: {
-				el: '.body-events__pagination',
-				// clickable: true,
-				// type: "fraction",
-			},
-
 			navigation: {
-				prevEl: '.body-events__navigation .prev',
-				nextEl: '.body-events__navigation .next',
+				prevEl: '.awards__navigation .prev',
+				nextEl: '.awards__navigation .next',
 			},
-
 			// Брейкпоинты
 
 			breakpoints: {
 				320: {
-					slidesPerView: 1,
+					slidesPerView: 1.2,
 					spaceBetween: 20,
 					autoHeight: true,
 				},
 				576: {
-					slidesPerView: 1,
+					slidesPerView: 2.2,
 					spaceBetween: 20,
 				},
 				768: {
-					slidesPerView: 2,
-					spaceBetween: 10,
-				},
-				992: {
-					slidesPerView: 2,
-					spaceBetween: 20,
-				},
-				1268: {
-					slidesPerView: 3,
-					spaceBetween: 20,
-				},
-			},
-		});
-	}
-
-	if (document.querySelector('.clients__slider')) { // Указываем скласс нужного слайдера
-		// Создаем слайдер
-		new Swiper('.clients__slider', { // Указываем скласс нужного слайдера
-			observer: true,
-			observeParents: true,
-			observeSlideChildren: true,
-			slidesPerView: 6,
-			spaceBetween: 0,
-			speed: 800,
-
-			// Пагинация
-
-			pagination: {
-				el: '.clients__pagination',
-				clickable: true,
-			},
-
-
-			// Скроллбар
-			scrollbar: {
-				el: '.swiper-scrollbar',
-				draggable: true,
-			},
-
-			// Брейкпоинты
-
-			breakpoints: {
-				320: {
-					slidesPerView: 2,
-					spaceBetween: 10,
-					autoHeight: true,
-				},
-				576: {
-					slidesPerView: 2,
-					spaceBetween: 10,
-				},
-				768: {
-					slidesPerView: 3,
-					spaceBetween: 10,
-				},
-				992: {
 					slidesPerView: 3,
 					spaceBetween: 10,
 				},
 				1025: {
-					slidesPerView: 6,
+					slidesPerView: 2,
 					spaceBetween: 20,
 				},
-				1440: {
-					slidesPerView: 6,
+				1268: {
+					slidesPerView: 3,
 					spaceBetween: 20,
 				},
 			},
 		});
 	}
 
-	if (document.querySelector('.laboratory__slider')) { // Указываем скласс нужного слайдера
+	if (document.querySelector('.innovations__slider')) { // Указываем скласс нужного слайдера
 		// Создаем слайдер
-		new Swiper('.laboratory__slider', { // Указываем скласс нужного слайдера
+		new Swiper('.innovations__slider', { // Указываем скласс нужного слайдера
 			observer: true,
 			observeParents: true,
 			observeSlideChildren: true,
 			slidesPerView: 1,
-			spaceBetween: 0,
+			spaceBetween: 20,
 			speed: 800,
+			loop: true,
+
+			navigation: {
+				prevEl: '.innovations__navigation .prev',
+				nextEl: '.innovations__navigation .next',
+			},
+		});
+	}
+
+	if (document.querySelector('.emotions__slider')) { // Указываем скласс нужного слайдера
+		// Создаем слайдер
+		new Swiper('.emotions__slider', { // Указываем скласс нужного слайдера
+			// Подключаем модули слайдера
+			// для конкретного случая
+			// modules: [Autoplay, Pagination],
+			observer: true,
+			observeParents: true,
+			observeSlideChildren: true,
+			slidesPerView: 3,
+			spaceBetween: 16,
+			// autoHeight: true,
+			speed: 800,
+
+			//touchRatio: 0,
+			//simulateTouch: false,
+			loop: true,
+			//preloadImages: false,
+			//lazy: true,
+			// parallax: true,
+
 
 			// Эффекты
 			// effect: 'fade',
-			autoplay: {
-				delay: 3000,
-				disableOnInteraction: false,
-			},
-
+			// autoplay: {
+			// 	delay: 3000,
+			// 	disableOnInteraction: false,
+			// },
 
 			// Пагинация
 
-			pagination: {
-				el: '.laboratory__pagination',
-				// clickable: true,
-				// type: "fraction",
+			// Кнопки "влево/вправо"
+			navigation: {
+				prevEl: '.emotions__navigation .prev',
+				nextEl: '.emotions__navigation .next',
 			},
 
 			// Брейкпоинты
@@ -507,7 +473,6 @@ function initSliders() {
 				320: {
 					slidesPerView: 1,
 					spaceBetween: 10,
-					autoHeight: true,
 				},
 				576: {
 					slidesPerView: 2,
@@ -515,67 +480,62 @@ function initSliders() {
 				},
 				768: {
 					slidesPerView: 2,
-					spaceBetween: 10,
+					spaceBetween: 15,
 				},
 				992: {
-					slidesPerView: 3,
-					spaceBetween: 10,
-				},
-				1024: {
-					slidesPerView: 3,
-					spaceBetween: 10,
+					slidesPerView: 2,
+					spaceBetween: 20,
 				},
 				1268: {
-					slidesPerView: 4,
+					slidesPerView: 3,
 					spaceBetween: 20,
 				},
 			},
 		});
 	}
 
-	if (document.querySelector('.product__slider')) { // Указываем скласс нужного слайдера
+	if (document.querySelector('.news__slider')) { // Указываем скласс нужного слайдера
 		// Создаем слайдер
-		new Swiper('.product__slider', { // Указываем скласс нужного слайдера
+		new Swiper('.news__slider', { // Указываем скласс нужного слайдера
 			observer: true,
 			observeParents: true,
 			observeSlideChildren: true,
-			slidesPerView: 1,
-			spaceBetween: 0,
+			slidesPerView: 3,
+			spaceBetween: 15,
 			// autoHeight: true,
 			speed: 800,
 
-			// Пагинация
-
-			pagination: {
-				el: '.product__pagination',
-				clickable: true,
-				// type: "fraction",
-			},
 
 			// Кнопки "влево/вправо"
 			navigation: {
-				// prevEl: '.hero-slide__prev',
-				// nextEl: '.hero-slide__next',
+				prevEl: '.news__navigation .prev',
+				nextEl: '.news__navigation .next',
 			},
 
-			// События
-			on: {
-				init: function (swiper) {
-					// работа с переключением главное изображения в продукте
-
-					const thumbnails = document.querySelectorAll('.product-gallery__item');
-					thumbnails.forEach(function (thumbnail, index) {
-						thumbnail.addEventListener('click', function () {
-							thumbnails.forEach(thumbnail => {
-								thumbnail.classList.remove("_current-slide")
-							})
-							thumbnail.classList.add("_current-slide")
-
-							swiper.slideTo(index); // Переключение на соответствующий слайд
-						});
-					});
+			// Брейкпоинты
+			breakpoints: {
+				320: {
+					slidesPerView: 1,
+					spaceBetween: 10,
 				},
-			}
+				576: {
+					slidesPerView: 1,
+					spaceBetween: 10,
+				},
+				768: {
+					slidesPerView: 2,
+					spaceBetween: 15,
+				},
+				992: {
+					slidesPerView: 2,
+					spaceBetween: 15,
+				},
+				1268: {
+					slidesPerView: 3,
+					spaceBetween: 15,
+				},
+			},
+			
 		});
 	}
 

@@ -79,6 +79,12 @@ svg {
 	}
 }
 
+.mobile-small-hidden {
+	@media (max-width: $mobileSmall) {
+		display: none;
+	}
+}
+
 .mobile-hidden {
 	@media (max-width: $mobile) {
 		display: none;

@@ -1,0 +1,31 @@
+section.emotions#emotions
+    .emotions-header__container
+        .emotions__header.header-with-button
+            h2.emotions__title 
+                | Эмоции наших 
+                br
+                | клиентов
+            a.button.emotions__button.mobile-small-hidden(href="#") 
+                span Смотреть все отзывы
+                
+    .emotions__container  
+        .emotions__inner
+            .emotions__slider.swiper
+                .emotions__wrapper.swiper-wrapper
+                    -
+                        const emotions = ['item-1.png', 'item-2.png', 'item-3.png', 'item-1.png', 'item-2.png']
+
+                    each emotion in emotions
+                        .emotions__slide.swiper-slide
+                            .emotions__slide
+                                video(src=`https://storage.yandexcloud.net/videos-meyou/2dentists/bg-video.a.mp4` controls loading="lazy" alt="video" poster=`@img/emotions/${emotion}`)
+
+            .emotions__navigation.swiper-navigation
+                button.prev(type="button" aria-label="Предыдущий слайд")
+                    include icons/_prev-icon
+                button.next(type="button" aria-label="Следующий слайд")
+                    include icons/_next-icon
+
+        .emotions__footer
+            a.button.emotions__button(href="#") 
+                span Смотреть все отзывы 

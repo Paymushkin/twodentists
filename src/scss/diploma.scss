@@ -50,16 +50,13 @@
         background-color: $bgColorBlueLight;
 
 		&-icon {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-            margin-bottom: 15px;
-			width: 21px;
-			height: 21px;
-            background-color: $highlightColor;
-            border-radius: 1px;
-			
+
+            img {
+                margin-bottom: 15px;
+                width: 21px;
+                height: 21px; 
+            }
+           
 		}
 
 		&-title {

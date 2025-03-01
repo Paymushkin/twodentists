@@ -1,0 +1,46 @@
+section.innovations#innovations
+  .innovations__container
+    h2.innovations__title 
+      | Инновационные методологии
+      br
+      | и технологичное оборудования
+    .innovations__inner
+      .innovations__slider.swiper
+        .swiper-wrapper
+          -
+            const innovations = [
+              {
+                img: 'item-1.png',
+                title: 'Цифровая<br>стоматология',
+                text: 'Создание наиболее экологичных,<br>подходящих человеку коронок, протезов.<br>Самые лучшие материалы.'
+              },
+              {
+                img: 'item-1.png',
+                title: 'Цифровая<br>стоматология',
+                text: 'Создание наиболее экологичных,<br>подходящих человеку коронок, протезов.<br>Самые лучшие материалы.'
+              },
+              {
+                img: 'item-1.png',
+                title: 'Цифровая<br>стоматология',
+                text: 'Создание наиболее экологичных,<br>подходящих человеку коронок, протезов.<br>Самые лучшие материалы.'
+              }
+            ]
+          each item in innovations
+            .swiper-slide.innovations__slide
+              .innovations__slide-image
+                img(src=`@img/innovations/${item.img}` alt="innovation" loading="lazy")
+              .innovations__slide-content
+                .innovations__slide-icon
+                  include icons/_implant-icon
+                h3.innovations__slide-title!= item.title
+                p.innovations__slide-text!= item.text
+                a.innovations__slide-link(href="#") 
+                  span Оставить заявку
+                  .innovations__slide-arrow
+                    include icons/_next-icon
+        
+      .innovations__navigation.swiper-navigation
+        button.prev
+          include icons/_prev-icon
+        button.next
+          include icons/_next-icon 

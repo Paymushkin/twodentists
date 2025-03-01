@@ -1,0 +1,64 @@
+section.awards#awards
+    .awards__container
+        h2.awards__title 
+            | Сертификаты 
+            br
+            | и награды
+        .awards__inner
+            .awards__slider.swiper
+                .awards__wrapper.swiper-wrapper
+                    -
+                        const awards = [
+                            {
+                                image: 'item-1.png',
+                                title: 'ТОП-20 частных стоматологий',
+                                description: 'Санкт-Петербурга / ПроДокторов / 32top.ru'
+                            },
+                            {
+                                image: 'item-2.png',
+                                title: 'ТОП-100 частных стоматологий',
+                                description: 'Санкт-Петербурга / ПроДокторов / 32top.ru'
+                            },
+                            {
+                                image: 'item-3.png',
+                                title: 'Лауреат Национального конкурса «Лучшие стоматологии РФ — 2022»',
+                                description: ''
+                            },
+                            {
+                                image: 'item-1.png',
+                                title: 'ТОП-20 частных стоматологий',
+                                description: 'Санкт-Петербурга / ПроДокторов / 32top.ru'
+                            },
+                            {
+                                image: 'item-2.png',
+                                title: 'ТОП-100 частных стоматологий',
+                                description: 'Санкт-Петербурга / ПроДокторов / 32top.ru'
+                            },
+                            {
+                                image: 'item-3.png',
+                                title: 'Лауреат Национального конкурса «Лучшие стоматологии РФ — 2022»',
+                                description: ''
+                            }
+                        ]
+
+                    each award in awards
+                        .awards__slide.award-slide.swiper-slide
+                            .award-slide__image
+                                img(src=`@img/awards/${award.image}` alt=award.title loading="lazy")
+                            .award-slide__content
+                                .award-slide__icon
+                                    img(src="@img/logo-mini.png" alt="logo" loading="lazy")
+                                h3.award-slide__title
+                                    b= award.title
+                                    if award.description
+                                        = award.description
+
+            .awards__navigation.swiper-navigation
+                button.prev(type="button" aria-label="Предыдущий слайд")
+                    include icons/_prev-icon
+                button.next(type="button" aria-label="Следующий слайд")
+                    include icons/_next-icon
+
+        .awards__footer
+            a.button.awards__button(href="#") 
+                span Все награды 

@@ -5,11 +5,13 @@
 
     @media (max-width:$tablet) {
         height: rem(585);
+        background: url('../img/hero/bg-tablet.png') center/cover no-repeat;
     }
 
     @media (max-width:$mobileSmall) {
         padding: rem(30) 0;
         height: rem(409);
+        background: url('../img/hero/bg-mobile.png') center/cover no-repeat;
     }
 	
 	&__container {
@@ -94,8 +96,14 @@
 
 	&__examples-image {
 		width: auto;
-        max-height: rem(42);
+        max-width: 132px;
+        max-height: 42px;
 		margin-bottom: 18px;
+
+        // @media (max-width:$mobile) {
+        //     max-width: 100px;
+        //     max-height: 32px;
+        // }
 	}
 
 	&__examples-title {

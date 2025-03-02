@@ -179,9 +179,12 @@
 		z-index: 5;
 		img {
 			max-width: 150px;
+			max-height: 40px;
 
 			@media (max-width: $tablet) {
 				max-width: 120px;
+				max-height: 32px;
+
 			}
 		}
 	}

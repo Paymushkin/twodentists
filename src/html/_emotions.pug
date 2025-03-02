@@ -18,7 +18,21 @@ section.emotions#emotions
                     each emotion in emotions
                         .emotions__slide.swiper-slide
                             .emotions__slide
-                                video(src=`https://storage.yandexcloud.net/videos-meyou/2dentists/bg-video.a.mp4` controls loading="lazy" alt="video" poster=`@img/emotions/${emotion}`)
+                                video(
+                                    src=`https://storage.yandexcloud.net/videos-meyou/2dentists/bg-video.a.mp4` 
+                                    controls 
+                                    loading="lazy" 
+                                    alt="video" 
+                                    poster=`@img/emotions/${emotion}`
+                                    aria-label="Видео отзыв клиента"
+                                    title="Видео отзыв клиента"
+                                )
+                                    track(
+                                        kind="captions"
+                                        label="Субтитры отсутствуют"
+                                        srclang="ru"
+                                        default
+                                    )
 
             .emotions__navigation.swiper-navigation
                 button.prev(type="button" aria-label="Предыдущий слайд")

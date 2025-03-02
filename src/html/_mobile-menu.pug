@@ -1,17 +1,21 @@
-.mobile-menu
+.mobile-menu(
+    role="dialog" 
+    aria-modal="true" 
+    aria-label="Навигация по сайту"
+)
     .mobile-menu__body
-        nav.mobile-menu__nav
-            ul.mobile-menu__list
-                li.mobile-menu__item
-                    a(href="#").mobile-menu__link Услуги
-                    ul.mobile-menu__sub-list
-                        li
+        nav.mobile-menu__nav(aria-label="Основное меню")
+            ul.mobile-menu__list(role="menu")
+                li.mobile-menu__item(role="menuitem")
+                    a(href="#" aria-haspopup="true").mobile-menu__link Услуги
+                    ul.mobile-menu__sub-list(role="menu")
+                        li(role="menuitem")
                             a(href="#") Имплантация
-                        li
+                        li(role="menuitem")
                             a(href="#") Протезирование
-                        li
+                        li(role="menuitem")
                             a(href="#") Лечение зубов
-                        li
+                        li(role="menuitem")
                             a(href="#") Хирургия
                 li.mobile-menu__item
                     a(href="#").mobile-menu__link Цены
@@ -52,13 +56,13 @@
                         li
                             a(href="#") Время работы
 
-        .mobile-menu__contacts
+        .mobile-menu__contacts(role="complementary" aria-label="Контактная информация")
             .mobile-menu__phones
-                a(href="tel:+79130020317").mobile-menu__phone
+                a(href="tel:+79130020317" aria-label="Позвонить по номеру +7 (913) 002-03-17").mobile-menu__phone
                     include icons/_phone
                     span +7 (913) 002-03-17
-                a(href="tel:+79125175847").mobile-menu__phone
+                a(href="tel:+79125175847" aria-label="Позвонить по номеру +7 (912) 517-58-47").mobile-menu__phone
                     include icons/_phone
                     span +7 (912) 517-58-47
             
-            .mobile-menu__schedule Ежедневно с 8:00 до 22:00 
+            .mobile-menu__schedule(aria-label="График работы") Ежедневно с 8:00 до 22:00 

@@ -122,22 +122,22 @@
               </button>
               <button class="button button--small header__button" type="button"><span>Записаться на прием</span></button>
             </div>
-            <button class="button-menu" type="button">
+            <button class="button-menu" type="button" aria-label="Открыть меню сайта" aria-expanded="false">
               <div class="icon-menu"><span></span></div>
             </button>
           </div>
         </div>
       </header>
-      <div class="mobile-menu">
+      <div class="mobile-menu" role="dialog" aria-modal="true" aria-label="Навигация по сайту">
         <div class="mobile-menu__body">
-          <nav class="mobile-menu__nav">
-            <ul class="mobile-menu__list">
-              <li class="mobile-menu__item"><a class="mobile-menu__link" href="#">Услуги</a>
-                <ul class="mobile-menu__sub-list">
-                  <li><a href="#">Имплантация</a></li>
-                  <li><a href="#">Протезирование</a></li>
-                  <li><a href="#">Лечение зубов</a></li>
-                  <li><a href="#">Хирургия</a></li>
+          <nav class="mobile-menu__nav" aria-label="Основное меню">
+            <ul class="mobile-menu__list" role="menu">
+              <li class="mobile-menu__item" role="menuitem"><a class="mobile-menu__link" href="#" aria-haspopup="true">Услуги</a>
+                <ul class="mobile-menu__sub-list" role="menu">
+                  <li role="menuitem"><a href="#">Имплантация</a></li>
+                  <li role="menuitem"><a href="#">Протезирование</a></li>
+                  <li role="menuitem"><a href="#">Лечение зубов</a></li>
+                  <li role="menuitem"><a href="#">Хирургия</a></li>
                 </ul>
               </li>
               <li class="mobile-menu__item"><a class="mobile-menu__link" href="#">Цены</a>
@@ -171,13 +171,13 @@
               </li>
             </ul>
           </nav>
-          <div class="mobile-menu__contacts">
-            <div class="mobile-menu__phones"><a class="mobile-menu__phone" href="tel:+79130020317"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <div class="mobile-menu__contacts" role="complementary" aria-label="Контактная информация">
+            <div class="mobile-menu__phones"><a class="mobile-menu__phone" href="tel:+79130020317" aria-label="Позвонить по номеру +7 (913) 002-03-17"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
 <path d="M14.9101 10.7098C14.0974 10.0395 13.3518 9.71364 12.6308 9.71364C11.5879 9.71364 10.8369 10.3945 10.1571 11.0921C10.0789 11.1724 9.9842 11.2098 9.85918 11.2098C9.28627 11.2098 8.2784 10.4735 6.86356 9.02131C5.19907 7.31296 4.56975 6.22641 4.99292 5.79195C6.14007 4.61504 6.49819 3.43522 4.74183 1.19348C4.11306 0.39034 3.49789 0 2.86116 0C2.00247 0 1.34971 0.704441 0.773792 1.32601C0.674224 1.43346 0.580168 1.53496 0.487951 1.6296C-0.162975 2.29758 -0.162641 3.75458 0.488897 5.52728C1.20375 7.4723 2.61519 9.58814 4.46328 11.4851C5.89249 12.9517 7.44755 14.1371 8.96045 14.9329C10.2813 15.6277 11.5625 16 12.568 16C12.5681 16 12.5682 16 12.5684 16C13.1977 16 13.7088 15.8591 14.0464 15.5726C14.7321 14.9908 16.0085 13.913 16 12.6328C15.9953 11.9462 15.6287 11.3028 14.9101 10.7098Z" fill="#06AEEF"/>
-</svg><span>+7 (913) 002-03-17</span></a><a class="mobile-menu__phone" href="tel:+79125175847"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+</svg><span>+7 (913) 002-03-17</span></a><a class="mobile-menu__phone" href="tel:+79125175847" aria-label="Позвонить по номеру +7 (912) 517-58-47"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
 <path d="M14.9101 10.7098C14.0974 10.0395 13.3518 9.71364 12.6308 9.71364C11.5879 9.71364 10.8369 10.3945 10.1571 11.0921C10.0789 11.1724 9.9842 11.2098 9.85918 11.2098C9.28627 11.2098 8.2784 10.4735 6.86356 9.02131C5.19907 7.31296 4.56975 6.22641 4.99292 5.79195C6.14007 4.61504 6.49819 3.43522 4.74183 1.19348C4.11306 0.39034 3.49789 0 2.86116 0C2.00247 0 1.34971 0.704441 0.773792 1.32601C0.674224 1.43346 0.580168 1.53496 0.487951 1.6296C-0.162975 2.29758 -0.162641 3.75458 0.488897 5.52728C1.20375 7.4723 2.61519 9.58814 4.46328 11.4851C5.89249 12.9517 7.44755 14.1371 8.96045 14.9329C10.2813 15.6277 11.5625 16 12.568 16C12.5681 16 12.5682 16 12.5684 16C13.1977 16 13.7088 15.8591 14.0464 15.5726C14.7321 14.9908 16.0085 13.913 16 12.6328C15.9953 11.9462 15.6287 11.3028 14.9101 10.7098Z" fill="#06AEEF"/>
 </svg><span>+7 (912) 517-58-47</span></a></div>
-            <div class="mobile-menu__schedule">Ежедневно с 8:00 до 22:00 </div>
+            <div class="mobile-menu__schedule" aria-label="График работы">Ежедневно с 8:00 до 22:00 </div>
           </div>
         </div>
       </div>
@@ -212,23 +212,23 @@
             <ul class="diploma__list">
               <li class="diploma__item">
                 <div class="diploma__item-icon"><img src="img/logo-mini.png" loading="lazy" alt="Лого"/></div>
-                <h4 class="diploma__item-title"> <b>ТОП-10 лучших</b><span>стоматологий Санкт-Петербурга / Доктор Питер</span></h4><img class="diploma__item-image" src="img/diplomas/01.png" loading="lazy" alt="Диплом"/>
+                <h3 class="diploma__item-title"> <b>ТОП-10 лучших</b><span>стоматологий Санкт-Петербурга / Доктор Питер</span></h3><img class="diploma__item-image" src="img/diplomas/01.png" loading="lazy" alt="Диплом"/>
               </li>
               <li class="diploma__item">
                 <div class="diploma__item-icon"><img src="img/logo-mini.png" loading="lazy" alt="Лого"/></div>
-                <h4 class="diploma__item-title"> <b>ТОП-20 частных стоматологий</b><span>Санкт-Петербурга /ПроДокторов / 32top.ru</span></h4><img class="diploma__item-image" src="img/diplomas/02.png" loading="lazy" alt="Диплом"/>
+                <h3 class="diploma__item-title"> <b>ТОП-20 частных стоматологий</b><span>Санкт-Петербурга /ПроДокторов / 32top.ru</span></h3><img class="diploma__item-image" src="img/diplomas/02.png" loading="lazy" alt="Диплом"/>
               </li>
               <li class="diploma__item">
                 <div class="diploma__item-icon"><img src="img/logo-mini.png" loading="lazy" alt="Лого"/></div>
-                <h4 class="diploma__item-title"> <b>ТОП-100 стоматологических</b><span>клиник России / 32top.ru</span></h4><img class="diploma__item-image" src="img/diplomas/03.png" loading="lazy" alt="Диплом"/>
+                <h3 class="diploma__item-title"> <b>ТОП-100 стоматологических</b><span>клиник России / 32top.ru</span></h3><img class="diploma__item-image" src="img/diplomas/03.png" loading="lazy" alt="Диплом"/>
               </li>
               <li class="diploma__item">
                 <div class="diploma__item-icon"><img src="img/logo-mini.png" loading="lazy" alt="Лого"/></div>
-                <h4 class="diploma__item-title"> <b>1 место в рейтинге</b><span>«Стоматолог-ортопед Санкт-Петербурга»</span></h4><img class="diploma__item-image" src="img/diplomas/04.png" loading="lazy" alt="Диплом"/>
+                <h3 class="diploma__item-title"> <b>1 место в рейтинге</b><span>«Стоматолог-ортопед Санкт-Петербурга»</span></h3><img class="diploma__item-image" src="img/diplomas/04.png" loading="lazy" alt="Диплом"/>
               </li>
               <li class="diploma__item">
                 <div class="diploma__item-icon"><img src="img/logo-mini.png" loading="lazy" alt="Лого"/></div>
-                <h4 class="diploma__item-title"> <b>2 место в рейтинге</b><span>«Стоматолог-ортодонт Санкт-Петербурга»</span></h4><img class="diploma__item-image" src="img/diplomas/05.png" loading="lazy" alt="Диплом"/>
+                <h3 class="diploma__item-title"> <b>2 место в рейтинге</b><span>«Стоматолог-ортодонт Санкт-Петербурга»</span></h3><img class="diploma__item-image" src="img/diplomas/05.png" loading="lazy" alt="Диплом"/>
               </li>
             </ul>
             <div class="diploma__bottom desktop-hidden"><a class="button diploma__button" href="#"> <span>Все награды</span></a></div>

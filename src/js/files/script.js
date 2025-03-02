@@ -194,5 +194,63 @@ function manageThirdPartyScripts(enable) {
     return Promise.resolve();
 }
 
+// Управление поисковой строкой
+function initHeaderSearch() {
+    const searchOpenBtn = document.getElementById('header-search-open');
+    const searchCloseBtn = document.getElementById('header-search-close');
+    const searchForm = document.getElementById('header-search-form');
+    const headerNav = document.getElementById('header-nav');
+
+    console.log(searchOpenBtn, searchCloseBtn, searchForm, headerNav);
+    
+    if (!searchOpenBtn || !searchCloseBtn || !searchForm) {
+        console.warn('Не найдены элементы поиска');
+        return;
+    }
+
+    // Показать поиск
+    function showSearch() {
+        searchOpenBtn.style.display = 'none';
+        searchCloseBtn.style.display = 'flex';
+        searchForm.style.display = 'flex';
+        headerNav.style.display = 'none';
+    }
+
+    // Скрыть поиск
+    function hideSearch() {
+        searchOpenBtn.style.display = 'flex';
+        searchCloseBtn.style.display = 'none';
+        searchForm.style.display = 'none';
+        headerNav.style.display = 'flex';
+    }
+
+    // Обработчики событий
+    searchOpenBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        showSearch();
+    });
+
+    searchCloseBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        hideSearch();
+    });
+
+    // Закрытие по Escape
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && searchForm.style.display === 'flex') {
+            hideSearch();
+        }
+    });
+    
+    // Предотвращаем отправку формы
+    searchForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        // Здесь можно добавить логику обработки поиска
+    });
+    
+}
+
+initHeaderSearch();
+
 // Инициализация при загрузке страницы
-document.addEventListener('DOMContentLoaded', checkCookieConsent);
+document.addEventListener('DOMContentLoaded', checkCookieConsent,);

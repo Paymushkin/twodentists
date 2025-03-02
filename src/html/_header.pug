@@ -35,7 +35,7 @@ header.header#header
                         img(src="@img/wa.png" alt="WhatsApp")
 
             nav.header__menu.menu
-                ul.menu__list
+                ul#header-nav.menu__list
                     li.menu__item
                         a(href="#").menu__link
                             span Услуги
@@ -112,9 +112,25 @@ header.header#header
                                 a(href="#").more-sub-menu__title Контакты
                                 a(href="#").more-sub-menu__link Как добраться
                                 a(href="#").more-sub-menu__link Время работы
+                
+                form#header-search-form.header__search-form(role="search" aria-label="Поиск по сайту" style="display: none;")
+                    input(
+                        type="search" 
+                        placeholder="Поиск по сайту" 
+                        aria-label="Поиск" 
+                        name="search"
+                        autocomplete="off"
+                    )
+                    button.button.button--small(
+                        type="submit" 
+                        aria-label="Искать"
+                    )
+                        span Искать
             div.header__right
-                button(type="button" aria-label="Поиск по сайту").header__search
+                button#header-search-open(type="button" aria-label="Открыть поиск по сайту").header__search
                     include icons/_search
+                button#header-search-close(type="button" aria-label="Закрыть поиск" style="display: none;").header__search
+                    include icons/_close
                 button(type="button").button.button--small.header__button
                     span Записаться на прием
             button(

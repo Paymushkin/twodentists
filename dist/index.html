@@ -1296,5 +1296,35 @@
       </footer>
     </div>
     <script src="js/app.min.js" defer="defer"></script>
+    <script src="https://myreviews.dev/widget/dist/index.js" defer="defer"></script>
+    <script>
+      (function() {
+      	var myReviewsInit = function() {
+      		new window.myReviews.BlockWidget({
+      			uuid: "aedc1a00-efbc-447f-933e-95e846d00f71",
+      			name: "g69812717",
+      			additionalFrame: "none",
+      			lang: "ru",
+      			widgetId: "2",
+      			iframeTitle: "Виджет отзывов"
+      		}).init()
+      
+      		setTimeout(function() {
+      			var iframe = document.getElementById('myReviews__block-widgetg69812717');
+      			if (iframe) {
+      				iframe.title = "Виджет отзывов";
+      			}
+      		}, 100);
+      	}
+      
+      	if (document.readyState === "loading") {
+      		document.addEventListener('DOMContentLoaded', function() {
+      			myReviewsInit()
+      		})
+      	} else {
+      		myReviewsInit()
+      	}
+      })()
+    </script>
   </body>
 </html>

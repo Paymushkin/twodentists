@@ -37,9 +37,12 @@ section.case-steps
                 ]
 
             each step in steps
-                .case-steps__item
+                .case-steps__item.accordion-item
                     .case-steps__item-header
-                        span.case-steps__item-number= step.number
+                        .case-steps__item-header-top.accordion-item-header
+                            span.case-steps__item-number= step.number
+                            button(type="button", aria-label="Открыть/закрыть").case-steps__item-icon
+                                include ../icons/_chevron-close
                         h3.case-steps__item-title!= step.title
                         p.case-steps__item-text!= step.text
                     .case-steps__item-image

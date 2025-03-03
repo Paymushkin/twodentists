@@ -1,9 +1,20 @@
 .case-hero {
 
+    &__container {
+        
+        @media (max-width: $mobileSmall) {
+            padding: 0;
+        }
+    }
+
     &__body {
         display: flex;
         justify-content: space-between;
         gap: 20px;
+
+        @media (max-width: $tablet) {
+            flex-direction: column;
+        }
     }
 
     &__content {
@@ -13,17 +24,40 @@
         padding: 30px;
         background-color: $bgColorGrey;
         border-radius: 20px;
+
+        @media (max-width: $mobileSmall) {
+            padding: 15px;
+        }
         
     }
 
     &__title {
         color: #000000;
         margin-bottom: 30px;
+
+        @media (max-width: $tablet) {
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: $mobileSmall) {
+            margin-bottom: 15px;
+            font-size: 28px;
+        }
     }
 
     &__patient {
         font-size: 24px;
         margin-bottom: 30px;
+
+        @media (max-width: $tablet) {
+            margin-bottom: 20px;
+            font-size: 22px;
+        }
+
+        @media (max-width: $mobileSmall) {
+            margin-bottom: 15px;
+            font-size: 14px;
+        }
     }
 
     &__info {
@@ -31,6 +65,17 @@
         grid-template-columns: repeat(3, 1fr);
         gap: 15px;
         margin-bottom: 60px;
+
+        @media (max-width: $tablet) {
+            margin-bottom: 50px;
+        }
+
+        @media (max-width: $mobileSmall) {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
     }
 
     &__info-item {
@@ -40,6 +85,18 @@
         padding: 15px;
         background-color: $bgColor;
         border-radius: 5px;
+
+        @media (max-width: $mobileSmall) {
+            
+            &:nth-child(1) {
+                flex: 1 1 100%;
+            }
+
+            // начиная со второго элемента (n+2)
+            &:nth-child(n+2) {
+                flex: 0 0 calc(50% - 5px);
+            }
+        }
     }
 
     &__info-icon {
@@ -59,11 +116,32 @@
         flex: 1;
     }
 
+    &__info-label {
+
+        @media (max-width: $mobileSmall) {
+            font-size: 14px;
+        }
+    }
+
+    &__info-text {
+        @media (max-width: $mobileSmall) {
+            font-size: 14px;
+        }
+    }
+
     // Description
     &__description {
         margin-top: auto;
         font-size: 18px;
-        line-height: 1.5;
+        line-height: 1.3;
+
+        @media (max-width: $tablet) {
+            font-size: 16px;
+        }
+
+        @media (max-width: $mobileSmall) {
+            font-size: 14px;
+        }
     }
 
     // Image
@@ -76,54 +154,6 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-        }
-    }
-
-    // Media queries
-    @media (max-width: 1200px) {
-        padding: 80px 0;
-
-        &__container {
-            flex-direction: column;
-        }
-
-        &__content {
-            max-width: 100%;
-        }
-
-        &__title {
-            font-size: 60px;
-        }
-
-        &__image {
-            width: 100%;
-            height: auto;
-            aspect-ratio: 1/1;
-        }
-    }
-
-    @media (max-width: 768px) {
-        padding: 40px 0;
-
-        &__title {
-            font-size: 40px;
-        }
-
-        &__patient {
-            font-size: 18px;
-            margin-bottom: 40px;
-        }
-
-        &__info {
-            margin-bottom: 40px;
-        }
-
-        &__info-text {
-            font-size: 16px;
-        }
-
-        &__description {
-            font-size: 16px;
         }
     }
 }

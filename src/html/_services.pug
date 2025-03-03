@@ -37,8 +37,8 @@ section.services
     div.services__content
         ul.services__items
             each service in services
-                li.services__item
-                    .services__item-header
+                li.services__item.accordion-item
+                    .services__item-header.accordion-item-header
                         .services__icon
                             img(src=`@img/services/${service.icon}` loading="lazy" alt="Иконка")
                         h3.services__title!= service.title

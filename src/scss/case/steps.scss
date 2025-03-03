@@ -8,6 +8,15 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 24px;
+
+        @media (max-width: $tablet) {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+
+        @media (max-width: $mobileSmall) {
+            grid-template-columns: repeat(1, 1fr);
+        }
     }
 
     &__item {
@@ -21,14 +30,36 @@
             display: flex;
             flex-direction: column;
             align-items: flex-start;
+            margin-bottom: 5px;
             padding: 20px;
+
+            @media (max-width: $tablet) {
+                margin-bottom: 10px;
+                padding: 15px;
+            }
+
+            @media (max-width: $mobileSmall) {
+                margin-bottom: 0px;
+            }
+
+            &-top {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 10px;
+                margin-bottom: 20px;
+                width: 100%;
+
+                svg {
+                    display: flex;
+                }
+            }
         }
 
         &-number {
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 20px;
             width: 36px;
             height: 36px;
             background: $highlightColor;
@@ -40,18 +71,37 @@
             margin-bottom: 10px;
             font-size: 32px;
             font-weight: 500;
+
+            @media (max-width: $mobileSmall) {
+                font-size: 20px;
+            }
         }
 
         &-text {
             font-size: 18px;
             line-height: 1.5;
-            margin-bottom: 30px;
-            color: #333333;
+
+            .active-item & {
+                    display: flex;
+                }
+            
+                @media (max-width: $mobileSmall) {
+                    display: none;
+                    font-size: 14px;
+                }
+
+            @media (max-width: $tablet) {
+                font-size: 16px;
+            }
         }
 
         &-image {
             border-radius: 10px;
             overflow: hidden;
+
+            @media (max-width: $mobileSmall) {
+                max-height: 158px;
+            }
             
             img {
                 width: 100%;
@@ -59,39 +109,17 @@
                 display: block;
             }
         }
-    }
 
-    @media (max-width: 1200px) {
-        padding: 80px 0;
+        &-icon {
+            display: none;
 
-        &__title {
-            font-size: 60px;
-            margin-bottom: 40px;
-        }
-
-        &__item {
-            padding: 30px;
-        }
-    }
-
-    @media (max-width: 768px) {
-        padding: 40px 0;
-
-        &__title {
-            font-size: 40px;
-            margin-bottom: 30px;
-        }
-
-        &__item {
-            padding: 20px;
-
-            &-title {
-                font-size: 20px;
+            .active-item & {
+                rotate: 180deg;
             }
 
-            &-text {
-                font-size: 16px;
-                margin-bottom: 20px;
+            @media (max-width: $mobileSmall) {
+                display: block;
+                margin-left: auto;
             }
         }
     }

@@ -1,7 +1,7 @@
 .cases {
     
     &__container {
-        @media (max-width: $mobile) {
+        @media (max-width: $mobileSmall) {
             padding: 0;
         }
     }
@@ -17,7 +17,7 @@
     &__slider {
         margin-bottom: 40px;
 
-        @media (max-width: $mobile) {
+        @media (max-width: $mobileSmall) {
             padding-left: 20px;
         }
     }

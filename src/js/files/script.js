@@ -5,22 +5,22 @@ import { flsModules } from "./modules.js";
 
 // Обработка аккордеона для мобильной версии services
 function initServicesAccordion() {
-  const serviceItems = document.querySelectorAll('.services__item');
+  const accordionItems = document.querySelectorAll('.accordion-item');
   
-  if (!serviceItems.length) return; // Проверяем наличие элементов
+  if (!accordionItems.length) return; // Проверяем наличие элементов
 
   // Добавляем класс первому элементу по умолчанию
-  serviceItems[0].classList.add('active-item');
+  accordionItems[0].classList.add('active-item');
 
-  serviceItems.forEach(item => {
+  accordionItems.forEach(item => {
     item.addEventListener('click', function(e) {
       // Проверяем, что клик был по заголовку
-      if (!e.target.closest('.services__item-header')) return;
+      if (!e.target.closest('.accordion-item-header')) return;
 
       const isActive = this.classList.contains('active-item');
       
       // Закрываем все активные элементы
-      serviceItems.forEach(item => {
+      accordionItems.forEach(item => {
         item.classList.remove('active-item');
       });
 
@@ -215,8 +215,6 @@ function initHeaderSearch() {
     const searchCloseBtn = document.getElementById('header-search-close');
     const searchForm = document.getElementById('header-search-form');
     const headerNav = document.getElementById('header-nav');
-
-    console.log(searchOpenBtn, searchCloseBtn, searchForm, headerNav);
     
     if (!searchOpenBtn || !searchCloseBtn || !searchForm) {
         console.warn('Не найдены элементы поиска');
@@ -315,7 +313,6 @@ initHeaderSearch();
 
 const popupShowElements = document.querySelectorAll("[data-popup]") || null
 const popupHideElements = document.querySelectorAll(".popup__close") || null
-console.log(popupShowElements, popupHideElements)
 
 function popupClose(element) {
     const popup = element.closest('.popup');

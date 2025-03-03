@@ -1,0 +1,47 @@
+section.case-hero#case-hero
+    .case-hero__container
+        .case-hero__body
+            .case-hero__content
+                h1.case-hero__title Лечение 
+                    br
+                    | на элайнерах
+                p.case-hero__patient Анастасия, 34 года
+
+                - 
+                    const infoItems = [
+                        {
+                            label: 'Процедура',
+                            text: 'Ортодонтическое лечение на элайнерах'
+                        },
+                        {
+                            label: 'Срок',
+                            text: '1 год'
+                        },
+                        {
+                            label: 'Стоимость',
+                            text: 'от 300 000 руб.'
+                        },
+                    ]
+
+                .case-hero__info
+                    each item in infoItems
+                        .case-hero__info-item
+                            .case-hero__info-icon
+                                img(src="@img/logo-mini.png" alt="иконка")
+                            .case-hero__info-content
+                                b.case-hero__info-label= item.label
+                                p.case-hero__info-text= item.text
+
+                p.case-hero__description
+                    | Анастасия проходила ортодонтическое лечение на брекет-системе в
+                    br
+                    | подростковом возрасте, но из-за нарушения ретенционного периода во 
+                    br
+                    | взрослом возрасте, вновь возникла скученность зубов. С помощью 
+                    br
+                    | элайнеров была исправлена скученность зубов, скорректирован 
+                    br
+                    | наклон, создана гармоничная и функциональная улыбка.
+
+            .case-hero__image
+                img(src="@img/case/image-1.png" alt="фото пациента")

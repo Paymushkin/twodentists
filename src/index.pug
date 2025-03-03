@@ -19,8 +19,7 @@ html(lang="ru")
 				include html/_offer
 				include html/_services
 				include html/_appointment
-				+appointment('image-3.png', 'image-3-tablet.png', 'image-3-mobile.png', 0)
-				include html/_appointment
+				+appointment('image-3.png', 'image-3-tablet.png', 'image-3-mobile.png',null, 0)
 				include html/_video-stats
 				include html/_personal
 				include html/_gallery
@@ -31,7 +30,8 @@ html(lang="ru")
 				include html/_seo-content
 				include html/_reviews
 				include html/_emotions
-				+appointment('image-4.png', 'image-4-tablet.png', 'image-4-mobile.png', 1)
+				include html/_appointment
+				+appointment('image-4.png', 'image-4-tablet.png', 'image-4-mobile.png', null, 0)
 				include html/_news
 				include html/_address
 

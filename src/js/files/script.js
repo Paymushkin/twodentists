@@ -96,27 +96,42 @@ const thirdPartyScripts = [
     {
         src: 'https://myreviews.dev/widget/dist/index.js',
         callback: () => {
-            if (window.myReviews) {
-                new window.myReviews.BlockWidget({
-                    uuid: "aedc1a00-efbc-447f-933e-95e846d00f71",
-                    name: "g69812717",
-                    additionalFrame: "none",
-                    lang: "ru",
-                    widgetId: "2",
-                    iframeTitle: "Виджет отзывов",
-                    cookieSettings: {
-                        sameSite: 'Strict',
-                        secure: true
-                    }
-                }).init();
-
-                setTimeout(function() {
-                    var iframe = document.getElementById('myReviews__block-widgetg69812717');
-                    if (iframe) {
-                        iframe.title = "Виджет отзывов";
-                    }
-                }, 100);
+            // Проверяем наличие секции отзывов на странице
+            const reviewsSection = document.querySelector('#reviews');
+            if (!reviewsSection) {
+                console.log('Секция отзывов отсутствует на странице');
+                return;
             }
+
+            setTimeout(() => {
+                if (window.myReviews) {
+                    try {
+                        const widget = new window.myReviews.BlockWidget({
+                            uuid: "aedc1a00-efbc-447f-933e-95e846d00f71",
+                            name: "g69812717",
+                            additionalFrame: "none",
+                            lang: "ru",
+                            widgetId: "2",
+                            iframeTitle: "Виджет отзывов",
+                            cookieSettings: {
+                                sameSite: 'Strict',
+                                secure: true
+                            }
+                        }).init();
+
+                        setTimeout(function() {
+                            const iframe = document.getElementById('myReviews__block-widgetg69812717');
+                            if (iframe) {
+                                iframe.title = "Виджет отзывов";
+                            }
+                        }, 100);
+                    } catch (error) {
+                        console.log('Ошибка при инициализации виджета:', error);
+                    }
+                } else {
+                    console.log('Библиотека myReviews не загружена');
+                }
+            }, 0);
         }
     },
     {
@@ -249,8 +264,132 @@ function initHeaderSearch() {
     });
     
 }
-
 initHeaderSearch();
+
+// let popups = document.querySelectorAll(".popup")
+
+// popups.forEach(popup => {
+//     const inputName = popup.querySelector("input[name='name']" || null)
+//     const inputPhone = popup.querySelector("input[name='number']" || null)
+//     const inputCode = popup.querySelector("input[name='code']" || null)
+//     // const inputEmail = popup.querySelector("input[name='email']" || null)
+//     const submitButton = popup.querySelector("button[type='submit']") || null
+
+//     if (submitButton) {
+//         submitButton.addEventListener("click", (event) => {
+//             event.preventDefault()
+//             popupClose(submitButton)
+//         })
+//     }
+
+
+//     if (inputName) {
+//         inputName.addEventListener('input', toggleButtonState);
+//     }
+
+//     if (inputPhone) {
+//         inputPhone.addEventListener('input', toggleButtonState);
+//     }
+
+//     if (inputCode) {
+//         inputCode.addEventListener('input', toggleButtonState);
+//     }
+
+//     function toggleButtonState() {
+
+//         if (inputCode) {
+//             if (inputName.value.trim() !== '' && inputPhone.value.trim() !== '' && inputCode.value.trim() !== '') {
+//                 submitButton.removeAttribute('disabled');
+//             } else {
+//                 submitButton.setAttribute('disabled', 'disabled');
+//             }
+//         } else {
+//             if (inputName.value.trim() !== '' && inputPhone.value.trim() !== '') {
+//                 submitButton.removeAttribute('disabled');
+//             } else {
+//                 submitButton.setAttribute('disabled', 'disabled');
+//             }
+//         }
+//     }
+// });
+
+const popupShowElements = document.querySelectorAll("[data-popup]") || null
+const popupHideElements = document.querySelectorAll(".popup__close") || null
+console.log(popupShowElements, popupHideElements)
+
+function popupClose(element) {
+    const popup = element.closest('.popup');
+    if (!popup) return;
+
+    if (popup.dataset.single === "true" || element.classList.contains("popup__close")) {
+        popup.classList.remove('popup_show');
+        document.documentElement.classList.remove('lock');
+        document.documentElement.classList.remove('popup-show');
+    } else {
+        element.closest('.popup').classList.remove('popup_show');
+    }
+}
+
+function popupShow(element) {
+    let popupId = element.getAttribute("data-popup");
+    const currentPopup = document.querySelector(`#${popupId}`);
+    currentPopup.classList.add('popup_show')
+    document.documentElement.classList.add('lock');
+    document.documentElement.classList.add('popup-show');
+    const nextPopup = currentPopup.querySelectorAll("[data-popup]") || null
+
+    // Обработчик клика на wrapper
+    const wrapper = currentPopup.querySelector('.popup__wrapper');
+    if (wrapper) {
+        wrapper.addEventListener('click', function(e) {
+            // Проверяем, что клик был именно по wrapper, а не по его содержимому
+            if (e.target === wrapper) {
+                popupClose(currentPopup.querySelector(".popup__close"));
+            }
+        });
+    }
+
+    if (nextPopup.length) {
+        nextPopup.forEach(el => {
+            el.addEventListener("click", (event) => {
+                event.preventDefault()
+
+                const nextPopupId = el.getAttribute("data-popup")
+                popupClose(currentPopup)
+                popupShow(document.querySelector(`[data-popup="${nextPopupId}"]`))
+            })
+        });
+    }
+}
+
+if (popupShowElements.length) {
+    popupShowElements.forEach(element => {
+        element.addEventListener("click", () => {
+            popupShow(element)
+        })
+    });
+}
+
+if (popupHideElements.length) {
+    popupHideElements.forEach(element => {
+        element.addEventListener("click", () => {
+            popupClose(element)
+        })
+    })
+}
+
+
+
+ const sliderCompare = document.querySelector('.slider-compare');
+ const rangeCompare = document.querySelector('.slider-compare__range-js');
+
+if (sliderCompare && rangeCompare) {
+    rangeCompare.addEventListener('input', () => {
+        sliderCompare.style.setProperty('--value', rangeCompare.value + '%');
+    });
+} else {
+    console.log('Элементы слайдера сравнения не найдены на странице');
+}
 
 // Инициализация при загрузке страницы
 document.addEventListener('DOMContentLoaded', checkCookieConsent,);

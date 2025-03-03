@@ -52,7 +52,8 @@ section.news
                 img(src=`@img/news/${item.img}` alt=item.title)
               .news__slide-content
                 .news__slide-date= item.date
-                h3.news__slide-title= item.title
+                a.news__slide-link(href="#")
+                  h3= item.title
                 p.news__slide-text= item.text
                 a.button.news__slide-button(href="#") 
                   span Читать полностью

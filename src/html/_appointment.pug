@@ -1,10 +1,17 @@
-mixin appointment(desktopImage, tabletImage, mobileImage, index)
+mixin appointment(desktopImage, tabletImage, mobileImage, doctor, index)
   section.appointment
     .appointment__container
       .appointment__inner(
         style=`--desktop-bg: url(../img/appointment-form/${desktopImage}); --tablet-bg: url(../img/appointment-form/${tabletImage}); --mobile-bg: url(../img/appointment-form/${mobileImage});`
       )
         .appointment__content
+          if doctor
+            .appointment__label
+              .appointment__label-image
+                img(src="@img/logo-mini.png" loading="lazy" alt="лого")
+              .appointment__label-content
+                h4.appointment__label-title= doctor.name
+                span.appointment__label-text= doctor.position
           form.appointment__form(action="#")
             .appointment__title Запишитесь на прием
             .appointment__text Наш администратор свяжется с вами для согласования времени визита.
@@ -17,8 +24,10 @@ mixin appointment(desktopImage, tabletImage, mobileImage, index)
               input(type="checkbox" id=`appointment-policy-${index}` required)
               label(for=`appointment-policy-${index}`) 
                 | Нажимая на кнопку, вы соглашаетесь 
-                | на обработку персональных данных 
-                | и с политикой конфиденциальности
+                | на обработку 
+                a(href="#", target="_blank") персональных данных
+                |  и с 
+                a(href="#", target="_blank") политикой конфиденциальности
             button.button.appointment__button(type="submit") 
               span Отправить
 

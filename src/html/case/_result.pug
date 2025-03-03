@@ -1,0 +1,20 @@
+section.case-result 
+    .case-result__container
+        h2.case-result__title Финальный результат
+        .case-result__content
+            .case-result__compare.slider-compare
+                img.slider-compare__img.slider-compare__img--before(src='@img/case/result-big-1.png' alt='До')
+                img.slider-compare__img.slider-compare__img--after(src='@img/case/result-big-2.png' alt='После')
+                input#slider-range.slider-compare__range-js(type='range' min='0' max='100' value='50' step='1')
+                label.visually-hidden(for='slider-range')
+                .slider__range-visible
+
+            .case-result__gallery
+                .case-result__gallery-item
+                    img(src="@img/case/result-1.png" alt="Результат 1")
+                .case-result__gallery-item
+                    img(src="@img/case/result-2.png" alt="Результат 2")
+                .case-result__gallery-item
+                    img(src="@img/case/result-3.png" alt="Результат 3")
+                .case-result__gallery-item
+                    img(src="@img/case/result-4.png" alt="Результат 4")

@@ -304,7 +304,7 @@ function initSliders() {
 
 			pagination: {
 				el: '.cases__pagination',
-				// clickable: true,
+				clickable: true,
 				// type: "fraction",
 			},
 
@@ -363,8 +363,6 @@ function initSliders() {
 			// }
 		});
 	}
-
-
 
 	if (document.querySelector('.awards__slider')) { // Указываем скласс нужного слайдера
 		// Создаем слайдер

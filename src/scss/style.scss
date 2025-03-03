@@ -113,10 +113,12 @@ body {
 // Оболочка ============================================================================================================================================================================================================================================================================================================================================================================================================================================
 .wrapper {
 	// min-height: 100%;
+	position: relative;
+
 	max-width: $maxWidth;
 	display: flex;
 	flex-direction: column;
-	overflow: hidden;
+	// overflow: hidden;
 	margin: 0 auto;
 	// Прижимаем footer
 	> main {
@@ -222,6 +224,14 @@ body {
 @import "case/hero";
 @import "case/steps";
 @import "case/result";
+
+@import "service/hero";
+@import "service/about";
+@import "service/city";
+@import "service/valuation";
+@import "service/pricing";
+@import "service/why-us";
+@import "service/benefits";
 
 // @import "landing-numbers";
 // @import "landing-objects";

@@ -1,0 +1,14 @@
+.benefits {
+    padding: 110px 0;
+    background-color: $bgColorGrey;
+    border-radius: 50px;
+
+    @media (max-width: $tablet) {
+        padding: 70px 0;
+    }
+
+    @media (max-width: $mobileSmall) {
+        padding: 50px 0;
+    }
+}
+

@@ -1,0 +1,39 @@
+section.about
+    .about__container
+        .about__header
+            h2.about__title Что такое<br>стоматологический<br>туризм?
+            p.about__description В целом, в медицинском туризме, сюда относятся и стоматологические путешествия, есть три основных направления:
+
+        .about__content
+            -
+                const aboutItems = [
+                    {
+                        icon: 'about-mini-1.png',
+                        title: 'Внутренний',
+                        text: 'Пациенты отправляются<br> в соседний город'
+                    },
+                    {
+                        icon: 'about-mini-1.png',
+                        title: 'Выездной в другую страну',
+                        text: 'Пациенты едут отдыхать и лечиться<br> в другую страну'
+                    },
+                    {
+                        icon: 'about-mini-1.png',
+                        title: 'Выездной по России',
+                        text: 'Когда пациенты из-за границы приезжают в Россию. Если говорить о стоматологическом туризме, то в России чаще всего лечатся жители Азии'
+                    }
+                ]
+
+            .about__cards
+                each item in aboutItems
+                    .about__item
+                        .about__icon
+                            img(src=`@img/service/${item.icon}` alt=item.title loading="lazy")
+                        h3.about__subtitle= item.title
+                        p.about__text!= item.text
+
+        .about__image
+            picture
+                source(media="(max-width: 576px)" srcset="@img/service/about-1-mobile.png")
+                source(media="(max-width: 1024px)" srcset="@img/service/about-1-tablet.png")
+                img(src="@img/service/about-1.png" alt="Наши специалисты" loading="lazy")

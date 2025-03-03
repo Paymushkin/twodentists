@@ -7,11 +7,13 @@ if casePage == true
             li.breadcrumbs__item 
                 .breadcrumbs__link Лечение на элайнерах
 
-//- else if cartPage == true
+else if servicePage == true
 
-//-     .breadcrumbs.catalog__breadcrumbs
-//-         ul.breadcrumbs__list
-//-             li.breadcrumbs__item 
-//-                 a(href="/").breadcrumbs__link Главная
-//-             li.breadcrumbs__item 
-//-                 .breadcrumbs__link Корзина 
+    .breadcrumbs.catalog__breadcrumbs
+        ul.breadcrumbs__list
+            li.breadcrumbs__item 
+                a(href="/").breadcrumbs__link Главная
+            li.breadcrumbs__item
+                a(href="./services.html").breadcrumbs__link Услуги
+            li.breadcrumbs__item 
+                .breadcrumbs__link Стоматологический туризм

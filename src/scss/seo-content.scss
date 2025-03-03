@@ -33,6 +33,7 @@
 
             @media (max-width: $mobileSmall) {
                 grid-template-columns: 1fr;
+                grid-template-rows: -webkit-max-content;
             }
         }
 

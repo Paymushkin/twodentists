@@ -2,7 +2,7 @@ section.video-stats
   .video-stats__container
     .video-stats__content
       .video-stats__icon 
-        img(src="@img/icons/play-icon.svg" loading="lazy" alt="Воспроизвести видео")
+        img(src="@img/icons/play-icon.svg" loading="lazy" alt="Воспроизвести видео" data-popup="video-popup")
       h2.video-stats__title Посмотрите видео о нашей клинике
 
   .video-stats__wrapper
@@ -17,7 +17,7 @@ section.video-stats
         poster="@img/video/poster.png"
       )
         source(src="https://storage.yandexcloud.net/videos-meyou/2dentists/bg-video.a.mp4" type="video/mp4")
-      button.video-stats__play(type="button" aria-label="Воспроизвести видео")
+      button.video-stats__play(type="button" aria-label="Воспроизвести видео" data-popup="video-popup")
         include icons/_play-icon
     
     .video-stats__items(data-da=".video-stats__container ,767.98")

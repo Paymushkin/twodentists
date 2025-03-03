@@ -318,6 +318,13 @@ function popupClose(element) {
     const popup = element.closest('.popup');
     if (!popup) return;
 
+    if(popup.querySelector('iframe')) {
+        const iframe = popup.querySelector('iframe');
+        // Останавливаем видео путем перезагрузки iframe
+        const iframeSrc = iframe.src;
+        iframe.src = iframeSrc;
+    }
+
     if (popup.dataset.single === "true" || element.classList.contains("popup__close")) {
         popup.classList.remove('popup_show');
         document.documentElement.classList.remove('lock');
@@ -328,8 +335,10 @@ function popupClose(element) {
 }
 
 function popupShow(element) {
+    
     let popupId = element.getAttribute("data-popup");
     const currentPopup = document.querySelector(`#${popupId}`);
+    console.log(currentPopup)
     currentPopup.classList.add('popup_show')
     document.documentElement.classList.add('lock');
     document.documentElement.classList.add('popup-show');
@@ -370,6 +379,7 @@ if (popupShowElements.length) {
 if (popupHideElements.length) {
     popupHideElements.forEach(element => {
         element.addEventListener("click", () => {
+            console.log(element)
             popupClose(element)
         })
     })
@@ -390,3 +400,4 @@ if (sliderCompare && rangeCompare) {
 
 // Инициализация при загрузке страницы
 document.addEventListener('DOMContentLoaded', checkCookieConsent,);
+

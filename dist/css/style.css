@@ -728,9 +728,13 @@ svg * {
      object-position: right;
 }
 
+.no-webp .slider-compare__range-js::-moz-range-thumb{
+  background-image: url(../img/compare-icon.png); }
+
 .slider-compare__range-js::-moz-range-thumb {
-  width: 50px;
-  height: 50px;
+  width: 62px;
+  height: 25px;
+  background-color: transparent;
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -738,6 +742,8 @@ svg * {
   transform: translateX(calc(var(--value) - 50%));
   -moz-appearance: none;
        appearance: none;
+  box-shadow: none;
+  outline: none;
 }
 
 .no-webp .slider-compare__range-js::-webkit-slider-thumb{
@@ -746,6 +752,7 @@ svg * {
 .slider-compare__range-js::-webkit-slider-thumb {
   width: 62px;
   height: 25px;
+  background-color: transparent;
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -753,6 +760,9 @@ svg * {
           transform: translateX(calc(var(--value) - 50%));
   -webkit-appearance: none;
   appearance: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  outline: none;
 }
 
 .slider-compare__range-js {
@@ -4813,6 +4823,8 @@ svg * {
     color: #06AEEF;
   }
 }
+
+.webp .slider-compare__range-js::-moz-range-thumb{ background-image: url(../img/compare-icon.webp); }
 
 .webp .slider-compare__range-js::-webkit-slider-thumb{ background-image: url(../img/compare-icon.webp); }
 

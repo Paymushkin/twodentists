@@ -1,0 +1,47 @@
+section.method
+    .method__container
+        h2.method__title 
+            | В чем суть метода<br>отбеливания 
+            span amazing white ?
+
+        .method__content
+            -
+                const features = [
+                    {
+                        icon: 'icon-tooth.png',
+                        text: 'Механизм отбеливания системы amazing white основан на принципе выделения из перекисиводорода атомарного кислорода.'
+                    },
+                    {
+                        icon: 'icon-tooth.png',
+                        text: 'Используется усиленный отбеливающий гель 36%H202, в котором концентрация перекиси водорода незначительна. Поэтому он бережет эмаль практически исключая вредное воздействие на зубы.'
+                    },
+                ]
+
+            -
+                const features2 = [
+                    {
+                        icon: 'icon-tooth.png',
+                        text: 'Лампы в отбеливании зубов играют роль активатора химического процесса. Отбеливающий гель amazing white становится активным под действием специальной светодиодной лампы, излучающей холодный свет.'
+                    },
+                    {
+                        icon: 'icon-tooth.png',
+                        text: 'Отбеливание зубов происходит на эмалево-дентинной границе, сам дентин не отбеливается.'
+                    }
+                ]
+
+            .method__features
+                each feature in features
+                    .method__feature
+                        .method__icon
+                            img(src=`@img/campaign/${feature.icon}` alt="Иконка")
+                        p.method__text= feature.text
+
+            .method__image
+                img(src="@img/campaign/method.png" alt="Метод отбеливания")
+
+            .method__features
+                each feature in features2
+                    .method__feature
+                        .method__icon
+                            img(src=`@img/campaign/${feature.icon}` alt="Иконка")
+                        p.method__text= feature.text

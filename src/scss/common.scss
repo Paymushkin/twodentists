@@ -209,85 +209,83 @@ svg {
 	margin: 0 auto;
 	color: #ffffff;
 	aspect-ratio: 818/668;
-}
 
-.slider-compare__img {
-	position: absolute;
-	top: 0;
-	max-width: none;
-	height: 100%;
-	object-fit: cover;
-}
+	&--mini {
+		aspect-ratio: 292/317;
+	}
 
-.slider-compare__img--before {
-	left: 0;
-	width: var(--value);
-	border-right: 5px solid #fff;
-	object-position: left;
-}
+	&__img {
+		position: absolute;
+		top: 0;
+		max-width: none;
+		height: 100%;
+		object-fit: cover;
 
-.slider-compare__img--after {
-	right: 0;
-	width: calc(100% - var(--value));
-	border-left: 5px solid #fff;
-	object-position: right;
-}
+		&--before {
+			left: 0;
+			width: var(--value);
+			border-right: 5px solid #fff;
+			object-position: left;
+		}
 
-.slider-compare__range-js::-moz-range-thumb {
-	width: 62px;
-	height: 25px;
-	background-color: transparent;
-	background-image: url(../img/compare-icon.png);
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: contain;
-	border-radius: 50%;
-	transform: translateX(calc(var(--value) - 50%));
-	appearance: none;
-	box-shadow: none;
-	outline: none;
-}
+		&--after {
+			right: 0;
+			width: calc(100% - var(--value));
+			border-left: 5px solid #fff;
+			object-position: right;
+		}
+	}
 
-.slider-compare__range-js::-webkit-slider-thumb {
-	width: 62px;
-	height: 25px;
-	background-color: transparent;
-	background-image: url(../img/compare-icon.png);
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: contain;
-	transform: translateX(calc(var(--value) - 50%));
-	-webkit-appearance: none;
-	appearance: none;
-	box-shadow: none;
-	outline: none;
-}
+	&__range-js {
+		position: absolute;
+		margin: 0;
+		background-color: transparent;
+		outline: 0;
+		cursor: col-resize;
+		-webkit-appearance: none;
+		appearance: none;
+		inset: 0;
 
-.slider-compare__range-js {
-	position: absolute;
-	margin: 0;
-	background-color: transparent;
-	outline: 0;
-	cursor: col-resize;
-	-webkit-appearance: none;
-	appearance: none;
-	inset: 0;
-}
+		&::-webkit-slider-thumb {
+			width: 62px;
+			height: 25px;
+			background-color: transparent;
+			background-image: url(../img/compare-icon.png);
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: contain;
+			transform: translateX(calc(var(--value) - 50%));
+			-webkit-appearance: none;
+			appearance: none;
+			box-shadow: none;
+			outline: none;
+		}
 
-.slider-compare__range-js:hover {
-	color: #4f4f4f;
-}
+		&::-moz-range-thumb {
+			width: 62px;
+			height: 25px;
+			background-color: transparent;
+			background-image: url(../img/compare-icon.png);
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: contain;
+			border-radius: 50%;
+			transform: translateX(calc(var(--value) - 50%));
+			appearance: none;
+			box-shadow: none;
+			outline: none;
+		}
 
-.slider-compare__range-js:active {
-	color: #888888;
-}
+		&:focus-visible {
+			&::-webkit-slider-thumb {
+				outline: auto;
+			}
 
-.slider-compare__range-js:focus-visible::-moz-range-thumb {
-	outline: auto;
-}
-
-.slider-compare__range-js:focus-visible::-webkit-slider-thumb {
-	outline: auto;
+			&::-moz-range-thumb {
+				outline: auto;
+			}
+		}
+	}
 }
 
 .faq {
@@ -313,7 +311,8 @@ svg {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		padding: 35px 35px 35px 25px;
+		gap: 20px;
+		padding: 25px;
 		background-color: #363B3F;
 		border-radius: 10px;
 		transition: background-color 0.3s;
@@ -338,6 +337,7 @@ svg {
 		}
 
 		span {
+			color: #fff;
 			font-size: 24px;
 			line-height: 1.2;
 
@@ -380,7 +380,7 @@ svg {
 
 
 	&__body {
-		padding: 25px 25px 35px 25px;
+		padding: 25px;
 		background-color: #363B3F;
 		border-radius: 10px;
 		color: #fff;
@@ -438,6 +438,13 @@ svg {
 		@media (max-width: $tablet) {
 			margin-bottom: 10px;
 		}
+
+		&.mb-small {
+			margin-bottom: 10px;
+			@media (max-width: $mobileSmall) {
+				margin-bottom: 20px;
+			}
+		}
 	}
 
 	&__content {
@@ -487,6 +494,7 @@ svg {
 		flex: 1 1 auto;
 		display: flex;
 		flex-direction: column;
+		align-items: flex-start;
 		padding: 30px;
 		background-color: $bgColor;
 		border-radius: 20px;
@@ -507,13 +515,31 @@ svg {
 	}
 
 	&__paragraph {
+		flex: 1 1 auto;
 		display: flex;
 		flex-direction: column;
+		justify-content: flex-end;
 		gap: 10px;
 		margin-top: auto;
 
+		&._content-start {
+			justify-content: flex-start;
+		}
+
 		@media (max-width: $tablet) {
 			max-width: 560px;
+		}
+	}
+
+	&__button {
+		margin-top: 50px;
+
+		@media (max-width: $tablet) {
+			margin-top: 30px;
+		}
+
+		@media (max-width: $mobileSmall) {
+			margin-top: 20px;
 		}
 	}
 }

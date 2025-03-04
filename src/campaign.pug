@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+html(lang="ru")
+	include html/_head
+	body
+		.wrapper
+			include html/_header
+			include html/_mobile-menu
+			main.main-content
+				.case__container
+					- const campaignPage = true;
+					include html/_breadcrumbs
+				include html/campaign/_hero
+				include html/campaign/_method
+				include html/campaign/_why
+				include html/campaign/_doctors
+				
+				//- include html/_appointment
+				//- +appointment(
+				//- 	'image-3.png', 
+				//- 	'image-3-tablet.png', 
+				//- 	'image-3-mobile.png',
+				//- 	null,
+				//- 	0,
+				//- )
+
+				include html/campaign/_why-us
+				include html/campaign/_before-after
+				include html/campaign/_about
+				include html/_reviews
+				include html/_emotions
+				include html/campaign/_questions
+
+				include html/_appointment
+				+appointment(
+					'image-4.png', 
+					'image-4-tablet.png', 
+					'image-4-mobile.png',
+					null,
+					0,
+				)
+				include html/_address
+
+			include html/_footer
+			include html/_cookie-banner
+		include html/_popup
+		//- script.
+		//- 	window.onload = function() {
+		//- 		document.getElementById('slider-placeholder').style.display = 'none'; // Скрыть изображение
+		//- 		document.getElementById('slider').style.display = 'block'; // Показать слайдер
+		//- 	};
+		script(src="js/app.min.js")

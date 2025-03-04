@@ -1,0 +1,29 @@
+section.doctors
+    .doctors__container
+        h2.doctors__title Кто проводит<br>гигиену
+        p.doctors__subtitle Профессиональную гигиену и отбеливание проводят наши лучшие специалисты:
+
+        .doctors__grid
+            -
+                const doctors = [
+                    {
+                        image: 'doctor-1.png',
+                        name: 'Сотникова Юлия Анатольевна',
+                        position: 'Стоматолог-гигиенист',
+                    },
+                    {
+                        image: 'doctor-2.png',
+                        name: 'Шаширина Александра Юрьевна',
+                        position: 'Гигиенист, пародонтолог',
+                    }
+                ]
+
+            each doctor in doctors
+                .doctors__card
+                    .doctors__image
+                        img(src=`@img/campaign/${doctor.image}` alt=doctor.name)
+                    .doctors__info
+                        h3.doctors__name= doctor.name
+                        p.doctors__position= doctor.position
+                        a.button.doctors__button(href="#", data-popup="appointment-request") 
+                            span Записаться на прием

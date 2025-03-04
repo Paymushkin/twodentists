@@ -264,53 +264,6 @@ function initHeaderSearch() {
 }
 initHeaderSearch();
 
-// let popups = document.querySelectorAll(".popup")
-
-// popups.forEach(popup => {
-//     const inputName = popup.querySelector("input[name='name']" || null)
-//     const inputPhone = popup.querySelector("input[name='number']" || null)
-//     const inputCode = popup.querySelector("input[name='code']" || null)
-//     // const inputEmail = popup.querySelector("input[name='email']" || null)
-//     const submitButton = popup.querySelector("button[type='submit']") || null
-
-//     if (submitButton) {
-//         submitButton.addEventListener("click", (event) => {
-//             event.preventDefault()
-//             popupClose(submitButton)
-//         })
-//     }
-
-
-//     if (inputName) {
-//         inputName.addEventListener('input', toggleButtonState);
-//     }
-
-//     if (inputPhone) {
-//         inputPhone.addEventListener('input', toggleButtonState);
-//     }
-
-//     if (inputCode) {
-//         inputCode.addEventListener('input', toggleButtonState);
-//     }
-
-//     function toggleButtonState() {
-
-//         if (inputCode) {
-//             if (inputName.value.trim() !== '' && inputPhone.value.trim() !== '' && inputCode.value.trim() !== '') {
-//                 submitButton.removeAttribute('disabled');
-//             } else {
-//                 submitButton.setAttribute('disabled', 'disabled');
-//             }
-//         } else {
-//             if (inputName.value.trim() !== '' && inputPhone.value.trim() !== '') {
-//                 submitButton.removeAttribute('disabled');
-//             } else {
-//                 submitButton.setAttribute('disabled', 'disabled');
-//             }
-//         }
-//     }
-// });
-
 const popupShowElements = document.querySelectorAll("[data-popup]") || null
 const popupHideElements = document.querySelectorAll(".popup__close") || null
 
@@ -385,17 +338,26 @@ if (popupHideElements.length) {
     })
 }
 
+// Находим все слайдеры на странице
+const compareSliders = document.querySelectorAll('.slider-compare');
 
-
- const sliderCompare = document.querySelector('.slider-compare');
- const rangeCompare = document.querySelector('.slider-compare__range-js');
-
-if (sliderCompare && rangeCompare) {
-    rangeCompare.addEventListener('input', () => {
-        sliderCompare.style.setProperty('--value', rangeCompare.value + '%');
+// Если слайдеры найдены, добавляем функционал для каждого
+if (compareSliders.length) {
+    compareSliders.forEach(slider => {
+        // Находим range input внутри конкретного слайдера
+        const range = slider.querySelector('.slider-compare__range-js');
+        
+        if (range) {
+            // Добавляем обработчик для каждого range
+            range.addEventListener('input', () => {
+                slider.style.setProperty('--value', range.value + '%');
+            });
+        } else {
+            console.log('Range input не найден в слайдере');
+        }
     });
 } else {
-    console.log('Элементы слайдера сравнения не найдены на странице');
+    console.log('Слайдеры сравнения не найдены на странице');
 }
 
 // Инициализация при загрузке страницы

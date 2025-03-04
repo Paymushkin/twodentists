@@ -1,7 +1,6 @@
 .pricing {
     padding: 80px 0;
-    background-color: #2A2D30;
-    color: #fff;
+    background-color: $darkColor;
     border-radius: 50px 50px 0 0;
 
     @media (max-width: $tablet) {
@@ -16,6 +15,7 @@
 
     &__title {
         margin-bottom: 30px;
+        color: #fff;
 
         @media (max-width: $tablet) {
             margin-bottom: 20px;

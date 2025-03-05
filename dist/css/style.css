@@ -1022,6 +1022,14 @@ svg * {
   transition: height 0.3s ease-out;
 }
 
+.sticky-mobile-button {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  border-radius: 0;
+}
+
 .header {
   position: relative;
   z-index: 69;
@@ -1578,6 +1586,14 @@ svg * {
   padding-left: 0.125rem;
   padding-right: 0.125rem;
   width: 10.125rem;
+}
+
+.hero__button-mobile {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  border-radius: 0;
 }
 
 .hero__examples {
@@ -4620,7 +4636,15 @@ svg * {
 }
 
 @media (min-width: 48.06125em) {
+  .sticky-mobile-button {
+    display: none;
+  }
+
   .hero__button-callback {
+    display: none;
+  }
+
+  .hero__button-mobile {
     display: none;
   }
 
@@ -5709,7 +5733,7 @@ svg * {
   }
 
   .footer {
-    padding: 50px 0;
+    padding: 50px 0 80px;
     border-radius: 20px 20px 0 0;
   }
 

@@ -6135,6 +6135,10 @@ svg * {
     width: 100%;
   }
 
+  .video__content {
+    margin-bottom: 0;
+  }
+
   .video__item--1 {
     -ms-flex-order: 3;
         order: 3;

@@ -41,6 +41,10 @@
     padding: 16px;
     background-color: $bgColorBlueLight;
     border-radius: 5px;
+
+    @media (max-width: $mobileSmall) {
+        margin-bottom: 0;
+    }
   }
 
   // .video__icon

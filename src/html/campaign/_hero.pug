@@ -1,6 +1,20 @@
-section.campaign-hero#campaign-hero
+section.campaign-hero
     .campaign-hero__container
         .campaign-hero__body
             .campaign-hero__content
-                h1.campaign-hero__title 
-                    | Супер акция для вашей белоснежной улыбки
+                .campaign-hero__label
+                    img(src="@img/logo-mini.png" alt="Логотип")
+                    span Акция действительна<br>до 31 декабря 2024 года
+
+                h1.campaign-hero__title Супер акция для<br>вашей белоснежной<br>улыбки
+
+                p.campaign-hero__text Комплексный подход для достижения идеального результата — профессиональная гигиена и отбеливание по супер цене! Успейте по акции!
+
+                a.button.campaign-hero__button(href="#")
+                    span Записаться на прием
+
+            .campaign-hero__image
+                picture
+                    source(media="(max-width: 576px)" srcset="@img/campaign/hero-mobile.png")
+                    source(media="(max-width: 1024px)" srcset="@img/campaign/hero-tablet.png")
+                    img(src="@img/campaign/hero.png" alt="Стоматологические инструменты" loading="lazy")

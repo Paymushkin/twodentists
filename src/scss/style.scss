@@ -208,7 +208,7 @@ body {
 @import "appointment";
 @import "address";
 @import "offer";
-@import "video-stats";
+@import "video";
 @import "personal";
 @import "gallery";
 @import "cases";
@@ -233,7 +233,7 @@ body {
 @import "service/why-us";
 @import "service/benefits";
 
-@import "campaign/hero";
+@import "campaign/campaign-hero";
 @import "campaign/questions";
 // @import "campaign/about-clinic";
 @import "campaign/before-after";
@@ -242,6 +242,7 @@ body {
 @import "campaign/method";
 @import "campaign/why-block";
 @import "campaign/about-offer";
+@import "campaign/select-offer";
 
 @import "footer";
 @import "mobile-menu";

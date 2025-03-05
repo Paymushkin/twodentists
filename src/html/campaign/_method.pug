@@ -33,15 +33,15 @@ section.method
                 each feature in features
                     .method__feature
                         .method__icon
-                            img(src=`@img/campaign/${feature.icon}` alt="Иконка")
+                            img(src=`@img/campaign/${feature.icon}` alt="Иконка" loading="lazy")
                         p.method__text= feature.text
 
             .method__image
-                img(src="@img/campaign/method.png" alt="Метод отбеливания")
+                img(src="@img/campaign/method.png" alt="Метод отбеливания" loading="lazy")
 
             .method__features
                 each feature in features2
                     .method__feature
                         .method__icon
-                            img(src=`@img/campaign/${feature.icon}` alt="Иконка")
+                            img(src=`@img/campaign/${feature.icon}` alt="Иконка" loading="lazy")
                         p.method__text= feature.text

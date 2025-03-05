@@ -1,4 +1,4 @@
-.video-stats {
+.video {
   position: relative;
   height: calc(100vh - 83px);
   min-height: 600px;
@@ -14,7 +14,7 @@
         margin-bottom: 50px;
     }
   
-  // .video-stats__container
+  // .video__container
   &__container {
     position: relative;
     display: none;
@@ -25,14 +25,14 @@
     }
   }
 
-  // .video-stats__wrapper
+  // .video__wrapper
   &__wrapper {
     @media (max-width: em(767)) {
         display: none
     }
   }
 
-  // .video-stats__content
+  // .video__content
   &__content {
     display: flex;
     align-items: center;
@@ -43,20 +43,20 @@
     border-radius: 5px;
   }
 
-  // .video-stats__icon
+  // .video__icon
   &__icon {
     width: 64px;
     height: 64px;
   }
 
-  // .video-stats__title    
+  // .video__title    
   &__title {
     font-size: 20px;
     line-height: 1.2;
     text-align: center;
   }
   
-  // .video-stats__video
+  // .video__video
   &__video {
     position: absolute;
     top: 0;
@@ -80,7 +80,7 @@
     }
   }
 
-  // .video-stats__bg
+  // .video__bg
   &__bg {
     position: absolute;
     top: 50%;
@@ -100,7 +100,7 @@
     }
   }
 
-  // .video-stats__play
+  // .video__play
   &__play {
     position: absolute;
     top: 50%;
@@ -139,7 +139,7 @@
     }
   }
 
-  // .video-stats__items
+  // .video__items
   &__items {
     z-index: 2;
     display: flex;
@@ -147,7 +147,7 @@
     gap: 15px;
   }
 
-  // .video-stats__item
+  // .video__item
   &__item {
     display: flex;
     flex-direction: column;
@@ -248,7 +248,7 @@
     }   
   }
 
-  // .video-stats__icon
+  // .video__icon
   &__icon {
     width: 40px;
     height: 40px;
@@ -261,7 +261,7 @@
     }
   }
 
-  // .video-stats__text
+  // .video__text
   &__text {
     line-height: 1.2;
     text-align: left;

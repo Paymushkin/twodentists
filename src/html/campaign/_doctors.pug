@@ -21,7 +21,7 @@ section.doctors
             each doctor in doctors
                 .doctors__card
                     .doctors__image
-                        img(src=`@img/campaign/${doctor.image}` alt=doctor.name)
+                        img(src=`@img/campaign/${doctor.image}` alt=doctor.name loading="lazy")
                     .doctors__info
                         h3.doctors__name= doctor.name
                         p.doctors__position= doctor.position

@@ -1,0 +1,21 @@
+section.video#video-block
+  .video__container
+    .video__content
+      .video__icon 
+        img(src="@img/icons/play-icon.svg" loading="lazy" alt="Воспроизвести видео" data-popup="video-popup")
+      h2.video__title Посмотрите видео о нашей клинике
+
+  .video__wrapper
+    .video__video
+      video.video__bg(
+        autoplay 
+        muted 
+        loop 
+        playsinline 
+        loading="lazy"
+        preload="none"
+        poster="@img/video/poster.png"
+      )
+        source(src="https://storage.yandexcloud.net/videos-meyou/2dentists/bg-video.a.mp4" type="video/mp4")
+      button.video__play(type="button" aria-label="Воспроизвести видео" data-popup="video-popup")
+        include icons/_play-icon

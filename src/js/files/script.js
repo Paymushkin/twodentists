@@ -7,26 +7,47 @@ import { flsModules } from "./modules.js";
 function initServicesAccordion() {
   const accordionItems = document.querySelectorAll('.accordion-item');
   
-  if (!accordionItems.length) return; // Проверяем наличие элементов
+  if (!accordionItems.length) return;
 
-  // Добавляем класс первому элементу по умолчанию
+  // Функция для установки высоты контента
+  function setContentHeight(content, isOpen) {
+    if (isOpen) {
+      const height = content.scrollHeight;
+      content.style.height = `${height}px`;
+    } else {
+      content.style.height = '0px';
+    }
+  }
+
+  // Инициализация первого элемента
+  const firstContent = accordionItems[0].querySelector('.accordion-item-content');
   accordionItems[0].classList.add('active-item');
+  setContentHeight(firstContent, true);
 
+  // Инициализация остальных элементов
   accordionItems.forEach(item => {
+    const content = item.querySelector('.accordion-item-content');
+    if (!item.classList.contains('active-item')) {
+      setContentHeight(content, false);
+    }
+
     item.addEventListener('click', function(e) {
-      // Проверяем, что клик был по заголовку
       if (!e.target.closest('.accordion-item-header')) return;
 
       const isActive = this.classList.contains('active-item');
+      const currentContent = this.querySelector('.accordion-item-content');
       
       // Закрываем все активные элементы
-      accordionItems.forEach(item => {
-        item.classList.remove('active-item');
+      accordionItems.forEach(otherItem => {
+        const otherContent = otherItem.querySelector('.accordion-item-content');
+        otherItem.classList.remove('active-item');
+        setContentHeight(otherContent, false);
       });
 
       // Если элемент не был активен, открываем его
       if (!isActive) {
         this.classList.add('active-item');
+        setContentHeight(currentContent, true);
       }
     });
   });

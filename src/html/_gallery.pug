@@ -11,7 +11,8 @@ section.gallery#gallery
                 .gallery__wrapper.swiper-wrapper
                     each i in [1, 2, 3, 1, 2, 3]
                         .gallery__slide.swiper-slide
-                            img(src=`@img/gallery/item-${i}.png` loading="lazy" alt="Фото клиники")
+                            a(href=`@img/gallery/item-${i}.png` data-fancybox="gallery" data-caption="Фото клиники")
+                                img(src=`@img/gallery/item-${i}.png` loading="lazy" alt="Фото клиники")
                                     
             .gallery__navigation.swiper-navigation
                 button.prev(type="button" aria-label="Предыдущий слайд")
@@ -21,4 +22,4 @@ section.gallery#gallery
 
         .gallery__footer
             a.button.gallery__button(href="#") 
-                span Смотреть все отзывы 
+                span Смотреть все фото 

@@ -44,7 +44,8 @@ section.awards#awards
                     each award in awards
                         .awards__slide.award-slide.swiper-slide
                             .award-slide__image
-                                img(src=`@img/awards/${award.image}` alt=award.title loading="lazy")
+                                a(href=`@img/awards/${award.image}` data-fancybox="awards" data-caption=award.title)
+                                    img(src=`@img/awards/${award.image}` alt=award.title loading="lazy")
                             .award-slide__content
                                 .award-slide__icon
                                     img(src="@img/logo-mini.png" alt="logo" loading="lazy")

@@ -137,6 +137,16 @@
 		margin-bottom: 0;
 		font-size: 18px;
 	}
+
+	a {
+		transition: color 0.3s ease;
+	}
+
+	&:hover {
+		a {
+			color: $highlightColor;
+		}
+	}
   }
 
   &__list {

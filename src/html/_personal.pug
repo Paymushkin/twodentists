@@ -72,7 +72,8 @@ section.personal#personal
                                 .personal-slide__image
                                     img(src=`@img/personal/${person.image}` loading="lazy" alt=person.name)
                                 .personal-slide__content
-                                    h3.personal-slide__name= person.name
+                                    h3.personal-slide__name
+                                        a(href="#")= person.name
                                     span.personal-slide__speciality= person.speciality
                                     a.button.personal-slide__button(href="#")
                                         span Записаться на прием

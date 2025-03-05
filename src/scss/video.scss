@@ -254,6 +254,11 @@
     height: 40px;
     flex-shrink: 0;
 
+    @media (max-width: $mobileSmall) {
+      width: 63px;
+      height: 63px;
+    }
+
     img {
       width: 100%;
       height: 100%;

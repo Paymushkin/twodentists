@@ -41,10 +41,11 @@ section.services
                     .services__item-header.accordion-item-header
                         .services__icon
                             img(src=`@img/services/${service.icon}` loading="lazy" alt="Иконка")
-                        h3.services__title!= service.title
+                        h3.services__title
+                          a(href="#")!= service.title
                         .services__item-icon
                             include icons/_chevron-close
-                    .services__item-content
+                    .services__item-content.accordion-item-content
                         ul.services__list
                             each item in servicesList
                                 li.services__list-item

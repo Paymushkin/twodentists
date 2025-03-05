@@ -75,6 +75,11 @@
 			width: auto;
 			height: auto;
             max-height: 161px;
+
+            img {
+                max-width: 100%;
+                object-fit: cover;
+            }
 		}
 
         @media (max-width: 768px) {

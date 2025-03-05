@@ -1,0 +1,84 @@
+.about-offer {
+    padding: 80px 0;
+    background-color: #F8FAFF;
+
+    &__container {
+        max-width: 1230px;
+        margin: 0 auto;
+        padding: 0 15px;
+    }
+
+    &__title {
+        font-size: 48px;
+        line-height: 1.2;
+        margin-bottom: 40px;
+        max-width: 1000px;
+
+        @media (max-width: 991.98px) {
+            font-size: 36px;
+        }
+
+        @media (max-width: 767.98px) {
+            font-size: 28px;
+        }
+    }
+
+    &__title-accent {
+        color: #60A5FA;
+    }
+
+    &__content {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 30px;
+
+        @media (max-width: 991.98px) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    &__additional {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    &__text {
+        font-size: 16px;
+        line-height: 1.5;
+        color: #666;
+
+        &:last-of-type {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 16px 32px;
+        background: #60A5FA;
+        color: #fff;
+        border-radius: 10px;
+        font-size: 16px;
+        line-height: 1.5;
+        text-decoration: none;
+        transition: background-color 0.3s;
+        align-self: flex-start;
+
+        &:hover {
+            background-color: #3B82F6;
+        }
+
+        @media (max-width: 767.98px) {
+            width: 100%;
+        }
+    }
+}

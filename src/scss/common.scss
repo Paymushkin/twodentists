@@ -99,6 +99,18 @@ svg {
 	}
 }
 
+.only-mobile {
+	@media (min-width: $tablet) {
+		display: none!important;
+	}
+}
+
+.only-desktop {
+	@media (max-width: $tablet) {
+		display: none!important;
+	}
+}
+
 .policy-checkbox {
 	display: flex;
 	gap: 10px;

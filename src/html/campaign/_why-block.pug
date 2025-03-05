@@ -1,0 +1,43 @@
+section.why-block#why-block
+    .why-block__container
+        .why-block__body
+            .why-block__content
+                h2.why-block__title Зачем нужно делать профессиональную гигиену полости рта?
+                .why-block__image.tablet-hidden
+                    img(src="@img/campaign/why-block-1.png" alt="Профессиональная гигиена" loading="lazy")
+            
+            .why-block__list-wrapper
+                .why-block__list
+                    -
+                        const reasons = [
+                            {
+                                number: '1',
+                                text: 'Профессиональная гигиена помогает предотвратить кариес, гингивит и другие заболевания десен. Регулярное удаление налета и зубного камня снижает риск серьезных стоматологических проблем.'
+                            },
+                            {
+                                number: '2',
+                                text: 'Профилактика заболеваний зубов и десен может снизить риск сердечно-сосудистых заболеваний и других системных проблем.'
+                            },
+                            {
+                                number: '3',
+                                text: 'Процедуры чистки делают зубы более белыми и свежими, что улучшает внешний вид улыбки и общее самочувствие.'
+                            },
+                            {
+                                number: '4',
+                                text: 'Во время профессиональной гигиены гигиенист дает советы по уходу за полостью рта, что помогает пациентам лучше понимать, как заботиться о своих зубах.'
+                            },
+                            {
+                                number: '5',
+                                text: 'Регулярная чистка зубов и десен помогает устранить причины неприятного запаха изо рта, повышая уверенность в себе.'
+                            }
+                        ]
+
+                    each reason in reasons
+                        .why-block__item
+                            .why-block__number= reason.number
+                            p.why-block__text= reason.text
+                
+                .why-block__image.only-mobile
+                    picture
+                        source(media="(max-width: 576px)" srcset="@img/campaign/why-block-1.png")
+                        img(src="@img/campaign/why-block-1-tablet.png" alt="Профессиональная гигиена" loading="lazy")

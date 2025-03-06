@@ -40,7 +40,7 @@ $textColorAdd: #4E4E4E; // Цвет текста добавочный
 // Минимальная ширина страницы
 $minWidth: 320;
 // Ширина полотна (макета)
-$maxWidth: 100%;
+$maxWidth: 1920px;
 // Ширина ограничивающего контайнера (0 = нет ограничения)
 $maxWidthContainer: 1440;
 // Общий отступ у контейнера
@@ -132,6 +132,19 @@ body {
 		overflow: unset;
 	}
 }
+
+// [class*=__container] {
+// 	max-width: 1440px!important;
+// 	padding: 0 40px!important;
+
+// 	@media (max-width: $tablet) {
+// 		padding: 0 20px!important;
+// 	}
+
+// 	@media (max-width: $mobile) {
+// 		padding: 0 10px!important;
+// 	}
+// }
 
 // Ограничения контейнера ================================================
 

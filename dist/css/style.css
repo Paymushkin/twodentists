@@ -142,7 +142,7 @@ body.lock {
 
 .wrapper {
   position: relative;
-  max-width: 100%;
+  max-width: 1920px;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
@@ -2272,6 +2272,7 @@ table tr:not(:last-child) td {
 .video {
   position: relative;
   height: calc(100vh - 83px);
+  max-height: 1000px;
   min-height: 600px;
 }
 

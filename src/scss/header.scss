@@ -429,33 +429,39 @@
 
 .menu__item-more {
 	padding: 10px;
+	cursor: pointer;
+
+
+
+	&:hover {
+		svg rect {
+			fill: $darkColor;
+			stroke: $darkColor;
+		}
+	}
 }
 
 .more-sub-menu {
 	position: absolute;
-	top: 100%;
+	top: calc(100% - 32px);
 	left: 0;
 	right: 0;
-	display: flex;
-	gap: 40px;
-	background-color: #fff;
-	padding: 15px;
-	width: 100%;
+	padding-top: 20px;
+	background-color: transparent;
+	min-width: 220px;
 	opacity: 0;
-	border-top: 1px solid #E0E0E0;	
 	visibility: hidden;
 	transform: translateY(10px);
 	transition: all 0.3s;
 	z-index: 100;
 
-	&::before {
-		content: "";
-		position: absolute;
-		top: -20px;
-		left: 0;
-		width: 100%;
-		height: 20px;
-		background-color: transparent;
+	&__list {
+		display: flex;
+		justify-content: flex-end;
+		gap: 45px;
+		padding: 20px;
+		background-color: #fff;
+		box-shadow: 0px 0px 9.2px 0px rgba(0, 0, 0, 0.10);
 	}
 
 	.menu__item-more:hover & {
@@ -471,20 +477,32 @@
 	}
 
 	&__title {
-		font-size: 18px;
-		font-weight: 700;
-		color: #333;
+		margin-bottom: 10px;
+		font-size: 24px;
+		transition: color 0.3s;
+
+		&:hover {
+			color: $highlightColor;
+		}
 	}
 
 	&__link {
+		display: flex;
+		align-items: center;
+		gap: 10px;
 		color: #333;
+		font-size: 14px;
 		transition: color 0.3s;
 		
-			@media (any-hover: hover) {
-				&:hover {
-					color: #00A3FF;
-				}
+		@media (any-hover: hover) {
+			&:hover {
+				color: $highlightColor;
 			}
+		}
+
+		svg circle {
+			fill: $bgColorBlue;
+		}
 	}
 }
 
@@ -493,16 +511,21 @@
 	position: absolute;
 	top: 100%;
 	left: 0;
-	background-color: #fff;
-	padding: 15px;
+	padding-top: 20px;
+	background-color: transparent;
 	min-width: 220px;
-	border-radius: 8px;
-	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
 	opacity: 0;
 	visibility: hidden;
 	transform: translateY(10px);
 	transition: all 0.3s;
 	z-index: 100;
+
+	&__list {
+		padding: 20px;
+		background-color: #fff;
+		box-shadow: 0px 0px 9.2px 0px rgba(0, 0, 0, 0.10);
+		border-radius: 8px;
+	}
 	// Показываем подменю при наведении на родительский пункт
 	.menu__item:hover & {
 		opacity: 1;
@@ -519,8 +542,15 @@
 
 	// .sub-menu__link
 	&__link {
+		display: flex;
+		align-items: center;
+		gap: 10px;
 		color: #333;
 		transition: color 0.3s;
+
+		svg circle {
+			fill: $bgColorBlue;
+		}
 		
 		@media (any-hover: hover) {
 			&:hover {

@@ -40,24 +40,38 @@ header.header#header
                         a(href="#").menu__link
                             span Услуги
                             include icons/_chevron-down
-                        ul.sub-menu
-                            li.sub-menu__item
-                                a(href="#").sub-menu__link Имплантация
-                            li.sub-menu__item
-                                a(href="#").sub-menu__link Протезирование
-                            li.sub-menu__item
-                                a(href="#").sub-menu__link Лечение зубов
-                            li.sub-menu__item
-                                a(href="#").sub-menu__link Хирургия
+                        .sub-menu
+                            ul.sub-menu__list
+                                li.sub-menu__item
+                                    a(href="#").sub-menu__link
+                                        include icons/_circle
+                                        span Имплантация
+                                li.sub-menu__item
+                                    a(href="#").sub-menu__link
+                                        include icons/_circle
+                                        span Протезирование
+                                li.sub-menu__item
+                                    a(href="#").sub-menu__link
+                                        include icons/_circle
+                                        span Лечение зубов
+                                li.sub-menu__item
+                                    a(href="#").sub-menu__link
+                                        include icons/_circle
+                                        span Хирургия
                     li.menu__item
                         a(href="#").menu__link
                             span Цены
                             include icons/_chevron-down
-                        ul.sub-menu
-                            li.sub-menu__item
-                                a(href="#").sub-menu__link Прайс на услуги
-                            li.sub-menu__item
-                                a(href="#").sub-menu__link Акции и скидки
+                        .sub-menu
+                            ul.sub-menu__list
+                                li.sub-menu__item
+                                    a(href="#").sub-menu__link
+                                        include icons/_circle
+                                        span Прайс на услуги
+                                li.sub-menu__item
+                                    a(href="#").sub-menu__link
+                                        include icons/_circle
+                                        span Акции и скидки
                     li.menu__item
                         a(href="#").menu__link
                             span Акции
@@ -65,13 +79,20 @@ header.header#header
                         a(href="#").menu__link
                             span Врачи
                             include icons/_chevron-down
-                        ul.sub-menu
-                            li.sub-menu__item
-                                a(href="#").sub-menu__link Стоматологи-терапевты
-                            li.sub-menu__item
-                                a(href="#").sub-menu__link Ортопеды
-                            li.sub-menu__item
-                                a(href="#").sub-menu__link Хирурги
+                        .sub-menu
+                            ul.sub-menu__list
+                                li.sub-menu__item
+                                    a(href="#").sub-menu__link
+                                        include icons/_circle
+                                        span Стоматологи-терапевты
+                                li.sub-menu__item
+                                    a(href="#").sub-menu__link
+                                        include icons/_circle
+                                        span Ортопеды
+                                li.sub-menu__item
+                                    a(href="#").sub-menu__link
+                                        include icons/_circle
+                                        span Хирурги
                     li.menu__item
                         a(href="#").menu__link
                             span Наши работы
@@ -82,36 +103,59 @@ header.header#header
                         a(href="#").menu__link
                             span О нас
                             include icons/_chevron-down
-                        ul.sub-menu
-                            li.sub-menu__item
-                                a(href="#").sub-menu__link О клинике
-                            li.sub-menu__item
-                                a(href="#").sub-menu__link Лицензии
-                            li.sub-menu__item
-                                a(href="#").sub-menu__link Оборудование
+                        .sub-menu
+                            ul.sub-menu__list
+                                li.sub-menu__item
+                                    a(href="#").sub-menu__link
+                                        include icons/_circle
+                                        span О клинике
+                                li.sub-menu__item
+                                    a(href="#").sub-menu__link
+                                        include icons/_circle
+                                        span Лицензии
+                                li.sub-menu__item
+                                    a(href="#").sub-menu__link
+                                        include icons/_circle
+                                        span Оборудование
                     li.menu__item
                         a(href="#").menu__link
                             span Контакты
                             include icons/_chevron-down
-                        ul.sub-menu
-                            li.sub-menu__item
-                                a(href="#").sub-menu__link Как добраться
-                            li.sub-menu__item
-                                a(href="#").sub-menu__link Время работы
+                        .sub-menu
+                            ul.sub-menu__list
+                                li.sub-menu__item
+                                    a(href="#").sub-menu__link
+                                        include icons/_circle
+                                        span Как добраться
+                                li.sub-menu__item
+                                    a(href="#").sub-menu__link
+                                        include icons/_circle
+                                        span Время работы
                     li.menu__item-more
                         include icons/_options
-                        ul.more-sub-menu
-                            li.more-sub-menu__item
-                                a(href="#").more-sub-menu__title Отзывы
-                            li.more-sub-menu__item
-                                a(href="#").more-sub-menu__title О нас
-                                a(href="#").more-sub-menu__link О клинике
-                                a(href="#").more-sub-menu__link Лицензии
-                                a(href="#").more-sub-menu__link Оборудование
-                            li.more-sub-menu__item
-                                a(href="#").more-sub-menu__title Контакты
-                                a(href="#").more-sub-menu__link Как добраться
-                                a(href="#").more-sub-menu__link Время работы
+                        .more-sub-menu
+                            ul.more-sub-menu__list
+                                li.more-sub-menu__item
+                                    a(href="#").more-sub-menu__title Отзывы
+                                li.more-sub-menu__item
+                                    a(href="#").more-sub-menu__title О нас
+                                    a(href="#").more-sub-menu__link
+                                        include icons/_circle
+                                        span О клинике
+                                    a(href="#").more-sub-menu__link
+                                        include icons/_circle
+                                        span Лицензии
+                                    a(href="#").more-sub-menu__link
+                                        include icons/_circle
+                                        span Оборудование
+                                li.more-sub-menu__item
+                                    a(href="#").more-sub-menu__title Контакты
+                                    a(href="#").more-sub-menu__link
+                                        include icons/_circle
+                                        span Как добраться
+                                    a(href="#").more-sub-menu__link
+                                        include icons/_circle
+                                        span Время работы
                 
                 form#header-search-form.header__search-form(role="search" aria-label="Поиск по сайту" style="display: none;")
                     input(

@@ -109,6 +109,7 @@
     &__icon {
         width: 120px;
         height: 120px;
+        margin-bottom: 20px;
 
         @media (max-width: $tablet) {
             width: 90px;
@@ -129,7 +130,7 @@
     }
 
     &__subtitle {
-        margin-top: auto;
+        // margin-top: auto;
         font-size: 32px;
         line-height: 0.9;
 

@@ -43,7 +43,7 @@
     border-radius: 5px;
 
     @media (max-width: $mobileSmall) {
-        margin-bottom: 0;
+        margin-bottom: 50px;
     }
   }
 
@@ -188,7 +188,7 @@
       }
 
       @media (max-width: $tablet) {
-        top: 30%;
+        top: 25%;
         left: 1%;
       }
 
@@ -206,7 +206,7 @@
       }
 
       @media (max-width: $tablet) {
-        bottom: 15%;
+        bottom: 7%;
         left: 1%;
       }
 
@@ -224,7 +224,7 @@
       }
 
       @media (max-width: $tablet) {
-        bottom: 7%;
+        bottom: 4%;
         right: 1%;
       }
 
@@ -243,7 +243,7 @@
 
       @media (max-width: $tablet) {
         right: 1%;
-        top: 41%;
+        top: 33%;
       }
 
       @media (max-width: $mobileSmall) {

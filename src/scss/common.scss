@@ -75,6 +75,7 @@ svg {
 	}
 }
 
+
 .mobile-small-hidden {
 	@media (max-width: $mobileSmall) {
 		display: none;
@@ -309,6 +310,15 @@ svg {
 	}
 }
 
+summary {
+	cursor: pointer;
+	list-style: none;
+}
+
+summary::-webkit-details-marker {
+	display: none;
+}
+
 .faq {
 	display: flex;
 	flex-direction: column;
@@ -406,6 +416,8 @@ svg {
 		background-color: #363B3F;
 		border-radius: 10px;
 		color: #fff;
+		overflow: hidden;
+		transition: height 0.3s ease-out;
 
 		@media (max-width: $tablet) {
 			padding: 15px;
@@ -455,7 +467,7 @@ svg {
 .block-text-image {
 
 	&__title {
-		margin-bottom: 59px;
+		margin-bottom: 30px;
 
 		@media (max-width: $tablet) {
 			margin-bottom: 10px;
@@ -540,9 +552,9 @@ svg {
 		flex: 1 1 auto;
 		display: flex;
 		flex-direction: column;
-		justify-content: flex-end;
+		// justify-content: flex-end;
 		gap: 10px;
-		margin-top: auto;
+		// margin-top: auto;
 
 		&._content-start {
 			justify-content: flex-start;
@@ -583,5 +595,64 @@ svg {
 	@media (min-width:$mobile) {
 		display: none;	
 
+	}
+}
+
+table {
+	width: 100%;
+	background: #F8FAFF;
+	border-radius: 7px;
+	overflow: hidden;
+	font-size: 20px;
+	border-collapse: collapse;
+
+	@media (max-width: $mobileSmall) {
+		font-size: 14px;
+	}
+
+	thead {
+		color: #fff;
+		background: $highlightColor;
+	}
+
+	tbody {
+		background: $bgColorBlueLight;
+	}
+
+	th,
+	td {
+		padding: 30px;
+		text-align: left;
+
+		@media (max-width: $mobileSmall) {
+			padding: 24px 12px;
+		}
+
+		&:first-child {
+			width: 25%;
+			border-right: 4px solid #fff;
+
+			@media (max-width: $tablet) {
+				width: 40%;
+			}
+
+			@media (max-width: $mobile) {
+				width: 60%;
+			}
+
+			@media (max-width: $mobileSmall) {
+				border-width: 2px;
+			}
+		}
+	}
+
+	tr:not(:last-child) {
+		td {
+			border-bottom: 4px solid #fff;
+
+			@media (max-width: $mobileSmall) {
+				border-width: 2px;
+			}
+		}
 	}
 }

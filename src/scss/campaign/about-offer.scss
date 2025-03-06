@@ -53,5 +53,14 @@
     }
 
     &__text {
+        font-size: 24px;
+
+        @media (max-width: $tablet) {
+            font-size: 16px;
+        }
+
+        @media (max-width: $mobileSmall) {
+            font-size: 14px;
+        }
     }
 }

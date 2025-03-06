@@ -385,9 +385,64 @@ document.querySelectorAll('.mobile-menu__button').forEach(button => {
     button.addEventListener('click', () => {
         const expanded = button.getAttribute('aria-expanded') === 'true';
         button.setAttribute('aria-expanded', !expanded);
+        
+        // Находим связанное подменю
+        const submenu = button.nextElementSibling;
+        if (submenu && submenu.classList.contains('mobile-menu__sub-list')) {
+            // Устанавливаем высоту для анимации
+            if (!expanded) {
+                submenu.classList.add('open');
+                submenu.style.height = submenu.scrollHeight + 'px';
+            } else {
+                submenu.classList.remove('open');
+                submenu.style.height = '0px';
+            }
+        }
+    });
+});
+
+document.querySelectorAll('.faq').forEach(faq => {
+    const summary = faq.querySelector('.faq__header');
+    const content = faq.querySelector('.faq__body');
+    
+    summary.addEventListener('click', (e) => {
+        e.preventDefault(); // Предотвращаем стандартное поведение details
+        
+        if (faq.hasAttribute('open')) {
+            // Закрываем
+            const height = content.offsetHeight;
+            content.style.height = height + 'px';
+            content.style.display = 'block';
+            
+            setTimeout(() => {
+                content.style.height = '0px';
+            }, 1);
+            
+            setTimeout(() => {
+                faq.removeAttribute('open');
+                content.style = '';
+            }, 300);
+        
+        } else {
+            // Открываем
+            faq.setAttribute('open', '');
+            const height = content.offsetHeight;
+            content.style.height = '0px';
+            content.style.display = 'block';
+            
+            setTimeout(() => {
+                content.style.height = height + 'px';
+            }, 1);
+            
+            setTimeout(() => {
+                content.style = '';
+            }, 300);
+            
+        }
     });
 });
 
 // Инициализация при загрузке страницы
 document.addEventListener('DOMContentLoaded', checkCookieConsent,);
+
 

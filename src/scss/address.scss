@@ -48,6 +48,7 @@
   // .address__bottom
   &__bottom {
     display: flex;
+    flex-direction: column;
     align-items: flex-end;
     gap: 20px;
     
@@ -63,18 +64,27 @@
     }
   }
 
-  // .address__image
-  &__image {
-    img {
-        max-width: 100%;
-        height: auto;
-        max-height: 148px;
+  // .address__title
+  &__title {
+    margin-bottom: 40px;
 
-        @media (max-width: $mobileSmall) {
-          max-height: 74px;
-        }
+    @media (max-width: $mobileSmall) {
+      margin-bottom: 20px;
     }
   }
+
+  // .address__image
+  // &__image {
+  //   img {
+  //       max-width: 100%;
+  //       height: auto;
+  //       max-height: 148px;
+
+  //       @media (max-width: $mobileSmall) {
+  //         max-height: 74px;
+  //       }
+  //   }
+  // }
 
   // .address__info
   &__info {

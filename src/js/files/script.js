@@ -401,46 +401,49 @@ document.querySelectorAll('.mobile-menu__button').forEach(button => {
     });
 });
 
-document.querySelectorAll('.faq').forEach(faq => {
-    const summary = faq.querySelector('.faq__header');
-    const content = faq.querySelector('.faq__body');
+// document.querySelectorAll('.faq').forEach(faq => {
+//     const summary = faq.querySelector('.faq__header');
+//     const content = faq.querySelector('.faq__body');
     
-    summary.addEventListener('click', (e) => {
-        e.preventDefault(); // Предотвращаем стандартное поведение details
+//     summary.addEventListener('click', (e) => {
+//         e.preventDefault(); // Предотвращаем стандартное поведение details
         
-        if (faq.hasAttribute('open')) {
-            // Закрываем
-            const height = content.offsetHeight;
-            content.style.height = height + 'px';
-            content.style.display = 'block';
+//         if (faq.hasAttribute('open')) {
+//             // Закрываем
+//             const height = content.offsetHeight;
+//             content.style.height = height + 'px';
+//             content.style.display = 'block';
             
-            setTimeout(() => {
-                content.style.height = '0px';
-            }, 1);
+//             setTimeout(() => {
+//                 content.style.height = '0px';
+//             }, 1);
             
-            setTimeout(() => {
-                faq.removeAttribute('open');
-                content.style = '';
-            }, 300);
+//             setTimeout(() => {
+//                 faq.removeAttribute('open');
+//                 content.style = '';
+//             }, 300);
         
-        } else {
-            // Открываем
-            faq.setAttribute('open', '');
-            const height = content.offsetHeight;
-            content.style.height = '0px';
-            content.style.display = 'block';
+//         } else {
+//             // Открываем
+//             faq.setAttribute('open', '');
+//             const height = content.offsetHeight;
+//             content.style.height = '0px';
+//             content.style.display = 'block';
             
-            setTimeout(() => {
-                content.style.height = height + 'px';
-            }, 1);
+//             setTimeout(() => {
+//                 content.style.height = height + 'px';
+//             }, 1);
             
-            setTimeout(() => {
-                content.style = '';
-            }, 300);
+//             setTimeout(() => {
+//                 content.style = '';
+//             }, 300);
             
-        }
-    });
-});
+//         }
+//     });
+// });
+
+
+
 
 // Инициализация при загрузке страницы
 document.addEventListener('DOMContentLoaded', checkCookieConsent,);

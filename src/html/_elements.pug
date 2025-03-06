@@ -1,0 +1,97 @@
+.elements
+	.elements__container
+		h1 Заголовок H1
+		br
+		h2 Заголовок H2
+		br
+		h3 Заголовок H3
+		br
+		h4 Заголовок H4
+		br
+		h5 Заголовок H5
+		br
+		h6 Заголовок H6
+		br
+		div(style="width: 200px;")
+			select
+				option(value="1") Опция 1
+				option(value="2") Опция 2
+				option(value="3") Опция 3
+				option(value="4") Опция 4
+				option(value="5") Опция 5
+		br
+		br
+		.dropdown-hover
+			.dropdown-hover__item
+				span.dropdown-hover__text Список 1
+				.dropdown-hover__content
+					.dropdown-hover__content-item Подпункт 1
+					.dropdown-hover__content-item Подпункт 2
+					.dropdown-hover__content-item Подпункт 3
+		br
+		div(style="display: flex; gap: 10px; background-color: #363B3F; padding: 20px;")
+			button.button(type="button") 
+				span Кнопка
+			button.button.button--transparent(type="button")
+				span Кнопка
+		br
+		a.link(href="https://google.com" target="_blank") Переход по ссылке
+		br
+		div(style="height: 50px;")
+		table.service-price__table
+			thead
+				tr.service-price__table-header
+					th.service-price__table-col Типы виниров
+					th.service-price__table-col Стоимость, руб.
+			tbody.service-price__table-body
+				tr.service-price__table-row
+					td.service-price__table-col Керамические виниры
+					td.service-price__table-col от 25000
+				tr.service-price__table-row
+					td.service-price__table-col Виниры E.max
+					td.service-price__table-col от 25000
+				tr.service-price__table-row
+					td.service-price__table-col Виниры Empress
+					td.service-price__table-col от 25000
+				tr.service-price__table-row
+					td.service-price__table-col Композитные виниры
+					td.service-price__table-col от 25000
+		div(style="height: 50px;")
+		article.article
+			h2 Заголовок H1
+			.article__content
+				.article-text
+					p GUIDED BIOFILM THERAPY — это методичное, предсказуемое решение 
+						a(href="https://google.ru" target="_blank") для управления зубной биоплёнкой 
+						| в профессиональной профилактике с использованием современных технологий AIRFLOW®, PERIOFLOW® и PIEZON®. Данное решение подтверждено научными исследованиями.
+					p Биопленка является основным этиологическим фактором развития кариеса, 
+						a(href="https://google.ru" target="_blank") пародонтальных и периимплантатных инфекций. 
+						| Пародонтит может увеличить риск развития системных заболеваний таких, как, сердечно- сосудистые заболевания и заболевания органов дыхательной системы, артрит или сахарный диабет.
+				.article__image
+					picture
+						source(media="(max-width: 576px)" srcset="@img/article-1.png")
+						source(media="(max-width: 1024px)" srcset="@img/article-1.png")
+						img(src="@img/article-1.png" alt="Статья" loading="lazy")
+		div(style="height: 50px;")
+		ul.list
+			li.list__item
+				.list__image
+					img(src="@img/logo-mini.png" alt="иконка" loading="lazy")
+				span.list__text Данное решение подтверждено научными исследованиями.
+			li.list__item
+				.list__image
+					img(src="@img/logo-mini.png" alt="иконка" loading="lazy")
+				span.list__text Данное решение подтверждено научными исследованиями.
+			li.list__item
+				.list__image
+					img(src="@img/logo-mini.png" alt="иконка" loading="lazy")
+				span.list__text Данное решение подтверждено научными исследованиями.
+		div(style="height: 50px;")
+		ol.list
+			li.list__item
+				span.list__text Данное решение подтверждено научными исследованиями.
+			li.list__item
+				span.list__text Данное решение подтверждено научными исследованиями.
+			li.list__item
+				span.list__text Данное решение подтверждено научными исследованиями.
+		div(style="height: 50px;")

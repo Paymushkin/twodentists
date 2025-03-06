@@ -1,0 +1,27 @@
+section.single-slider
+	.single-slider__container
+		.single-slider__inner
+			.single-slider__slider.swiper
+				.swiper-wrapper
+					-
+						const slides = [
+							{
+								img: 'slider-1.png',
+							},
+							{
+								img: 'slider-1.png',
+							},
+							{
+								img: 'slider-1.png',
+							}
+						]
+					each item in slides
+						.swiper-slide.single-slider__slide
+							.single-slider__slide-image
+								img(src=`@img/${item.img}` alt="innovation" loading="lazy")
+
+			.single-slider__navigation.swiper-navigation
+				button.prev
+					include icons/_prev-icon
+				button.next
+					include icons/_next-icon 

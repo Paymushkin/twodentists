@@ -279,4 +279,6 @@ body {
 	@media (max-width: $mobile) {
 		--header-height: 107px; // Высота шапки на планшете/мобильном
 	}
+
+	interpolate-size: allow-keywords;
 } 

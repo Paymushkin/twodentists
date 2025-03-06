@@ -536,6 +536,25 @@ function initSliders() {
 		});
 	}
 
+	if (document.querySelector('.single-slider__slider')) { // Указываем скласс нужного слайдера
+		// Создаем слайдер
+		new Swiper('.single-slider__slider', { // Указываем скласс нужного слайдера
+			observer: true,
+			observeParents: true,
+			observeSlideChildren: true,
+			slidesPerView: 1,
+			spaceBetween: 20,
+			speed: 800,
+			loop: true,
+			autoHeight: true,
+
+			navigation: {
+				prevEl: '.single-slider__navigation .prev',
+				nextEl: '.single-slider__navigation .next',
+			},
+		});
+	}
+
 }
 // Скролл на базе слайдера (по классу swiper_scroll для оболочки слайдера)
 

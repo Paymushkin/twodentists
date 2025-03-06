@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+html(lang="ru")
+	include html/_head
+	body
+		.wrapper
+			include html/_header
+			include html/_mobile-menu
+			main.main-content
+				.breadcrumbs__container
+					include html/_breadcrumbs
+				include html/_elements
+				include html/_appointment
+				include html/_seo-content
+				+appointment(
+					'image-6.png', 
+					'image-6-tablet.png', 
+					'image-6-mobile.png',
+					{
+						name: 'Джексенбаева Зарина Касымканова',
+						position: 'Лечащий врач'
+					},
+					2,
+				)
+				include html/_single-slider
+				include html/service/_steps
+				include html/_gallery
+				include html/_address
+
+			include html/_footer
+			include html/_cookie-banner
+		include html/_popup
+		//- script.
+		//- 	window.onload = function() {
+		//- 		document.getElementById('slider-placeholder').style.display = 'none'; // Скрыть изображение
+		//- 		document.getElementById('slider').style.display = 'block'; // Показать слайдер
+		//- 	};
+		script(src="js/app.min.js")
+		script(src="https://code.jquery.com/jquery-3.2.1.min.js")
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js")

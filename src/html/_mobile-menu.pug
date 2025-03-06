@@ -7,62 +7,94 @@
         nav.mobile-menu__nav(aria-label="Основное меню")
             ul.mobile-menu__list(role="menu")
                 li.mobile-menu__item(role="menuitem")
-                    a(href="#" aria-haspopup="true").mobile-menu__link Услуги
-                    ul.mobile-menu__sub-list(role="menu")
-                        li(role="menuitem")
-                            a(href="#") Имплантация
-                        li(role="menuitem")
-                            a(href="#") Протезирование
-                        li(role="menuitem")
-                            a(href="#") Лечение зубов
-                        li(role="menuitem")
-                            a(href="#") Хирургия
-                li.mobile-menu__item
-                    a(href="#").mobile-menu__link Цены
+                    button(type="button" aria-expanded="false").mobile-menu__button 
+                        span Услуги
+                        include icons/_chevron-down
                     ul.mobile-menu__sub-list
                         li
-                            a(href="#") Прайс на услуги
+                            a(href="#")
+                                include icons/_circle
+                                span Цифровая стоматология
                         li
-                            a(href="#") Акции и скидки
+                            a(href="#")
+                                include icons/_circle
+                                span Внутриротовое сканирование зубов
+                        li
+                            a(href="#")
+                                include icons/_circle
+                                span Цифровая стоматология
+                        li
+                            a(href="#")
+                                include icons/_circle
+                                span Внутриротовое сканирование зубов
+
+                li.mobile-menu__item
+                    button(type="button" aria-expanded="false").mobile-menu__button
+                        span Цены
+                        include icons/_chevron-down
+                    ul.mobile-menu__sub-list
+                        li
+                            a(href="#")
+                                include icons/_circle
+                                span Цифровая стоматология
+                        li
+                            a(href="#")
+                                include icons/_circle
+                                span Внутриротовое сканирование зубов
+                        li
+                            a(href="#")
+                                include icons/_circle
+                                span Цифровая стоматология
+                        li
+                            a(href="#")
+                                include icons/_circle
+                                span Внутриротовое сканирование зубов
+
                 li.mobile-menu__item
                     a(href="#").mobile-menu__link Акции
+
                 li.mobile-menu__item
-                    a(href="#").mobile-menu__link Врачи
+                    button(type="button" aria-expanded="false").mobile-menu__button
+                        span Врачи
+                        include icons/_chevron-down
                     ul.mobile-menu__sub-list
                         li
-                            a(href="#") Стоматологи-терапевты
+                            a(href="#")
+                                include icons/_circle
+                                span Цифровая стоматология   
                         li
-                            a(href="#") Ортопеды
+                            a(href="#")
+                                include icons/_circle
+                                span Внутриротовое сканирование зубов
                         li
-                            a(href="#") Хирурги
+                            a(href="#")
+                                include icons/_circle
+                                span Цифровая стоматология
+                        li
+                            a(href="#")
+                                include icons/_circle
+                                span Внутриротовое сканирование зубов
+
                 li.mobile-menu__item
                     a(href="#").mobile-menu__link Наши работы
+
                 li.mobile-menu__item
                     a(href="#").mobile-menu__link Отзывы
-                li.mobile-menu__item
-                    a(href="#").mobile-menu__link О нас
-                    ul.mobile-menu__sub-list
-                        li
-                            a(href="#") О клинике
-                        li
-                            a(href="#") Лицензии
-                        li
-                            a(href="#") Оборудование
-                li.mobile-menu__item
-                    a(href="#").mobile-menu__link Контакты
-                    ul.mobile-menu__sub-list
-                        li
-                            a(href="#") Как добраться
-                        li
-                            a(href="#") Время работы
 
-        .mobile-menu__contacts(role="complementary" aria-label="Контактная информация")
-            .mobile-menu__phones
-                a(href="tel:+79130020317" aria-label="Позвонить по номеру +7 (913) 002-03-17").mobile-menu__phone
-                    include icons/_phone
-                    span +7 (913) 002-03-17
-                a(href="tel:+79125175847" aria-label="Позвонить по номеру +7 (912) 517-58-47").mobile-menu__phone
-                    include icons/_phone
-                    span +7 (912) 517-58-47
-            
-            .mobile-menu__schedule(aria-label="График работы") Ежедневно с 8:00 до 22:00 
+                li.mobile-menu__item
+                    button(type="button" aria-expanded="false").mobile-menu__button
+                        span О нас
+                        include icons/_chevron-down
+
+                li.mobile-menu__item
+                    button(type="button" aria-expanded="false").mobile-menu__button
+                        span Контакты
+                        include icons/_chevron-down
+
+        .mobile-menu__contacts
+            a(href="tel:+78123175847").mobile-menu__phone
+                include icons/_phone
+                span +7 (812) 317-58-47
+            a(href="tel:+79130020317").mobile-menu__phone
+                include icons/_phone
+                span +7 (913) 002-03-17 

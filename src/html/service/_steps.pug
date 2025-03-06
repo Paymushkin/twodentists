@@ -1,0 +1,52 @@
+section.service-steps
+    .service-steps__container
+        h2.service-steps__title Этапы установки<br>виниров
+
+        .service-steps__grid
+            -
+                var serviceSteps = [
+                    {
+                        number: '01',
+                        title: 'Консультация, диагностика',
+                        subtitle: 'и осмотр врача-ортопеда'
+                    },
+                    {
+                        number: '02',
+                        title: 'Установка',
+                        subtitle: 'брекет системы'
+                    },
+                    {
+                        number: '03',
+                        title: 'Хирургия',
+                        subtitle: 'и имплантация'
+                    },
+                    {
+                        number: '04',
+                        title: 'Санация',
+                        subtitle: 'полости рта'
+                    },
+                    {
+                        number: '05',
+                        title: 'Установка',
+                        subtitle: 'брекет системы'
+                    },
+                    {
+                        number: '06',
+                        title: 'Хирургия',
+                        subtitle: 'и имплантация'
+                    }
+                ]
+
+            each step in serviceSteps
+                .service-steps__item
+                    span.service-steps__number= step.number
+                    .service-steps__text
+                        if step.subtitle
+                            | #{step.title}
+                            br
+                            | #{step.subtitle}
+                        else
+                            | #{step.title}
+
+        .service-steps__image
+            img(src="@img/service/steps-big.png" alt="Этапы установки виниров")

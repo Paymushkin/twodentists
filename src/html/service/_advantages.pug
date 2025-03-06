@@ -1,0 +1,48 @@
+section.service-advantages
+    .service-advantages__container
+        h2.service-advantages__title 
+            | Преимущества
+            br
+            | керамических виниров
+
+        ul.service-advantages__grid
+            -
+                const serveiceAdvantages = [
+                    {
+                        icon: 'advantage-icon-1.png',
+                        title: 'Надежность',
+                        text: 'Керамические виниры имеют высокую прочность и долговечность.'
+                    },
+                    {
+                        icon: 'advantage-icon-2.png',
+                        title: 'Безопасность',
+                        text: 'Минимальная щадящая подготовка.'
+                    },
+                    {
+                        icon: 'advantage-icon-3.png',
+                        title: 'Естественность',
+                        text: 'Точная имитация натурального цвета и рельефа с воссозданием прозрачного края'
+                    },
+                    {
+                        icon: 'advantage-icon-4.png',
+                        title: 'Функциональность',
+                        text: 'Керамические виниры по своим свойствам схожи с тканями натуральных зубов.'
+                    },
+                    {
+                        icon: 'advantage-icon-5.png',
+                        title: 'Точность',
+                        text: 'Изготавливаются по индивидуальным слепкам, что гарантирует идеальную точность при установке.'
+                    },
+                    {
+                        icon: 'advantage-icon-6.png',
+                        title: 'Простота ухода',
+                        text: 'Достаточно соблюдать гигиену полости рта и посещать стоматолога'
+                    }
+                ]
+                
+            each advantage in serveiceAdvantages
+                li.service-advantages__item
+                    .service-advantages__icon
+                        img(src=`@img/service/${advantage.icon}` alt=advantage.title)
+                    h3.service-advantages__item-title= advantage.title
+                    p.service-advantages__text= advantage.text

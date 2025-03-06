@@ -1,0 +1,115 @@
+.what {
+
+    &__title {
+        margin-bottom: 20px;
+    }
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+
+        @media (max-width: $tablet) {
+            gap: 10px;
+        }
+    }
+    
+    &__item {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+
+        @media (max-width: $tablet) {
+            grid-template-columns: repeat(7, 1fr);
+            gap: 10px;
+        }
+
+        @media (max-width: $mobileSmall) {
+            grid-template-columns: 1fr;
+        }
+        
+
+        &:nth-child(even) {
+
+            .what__item-content {
+                background-color: $bgColorBlueLight;
+
+                @media (max-width: $mobileSmall) {
+                    order: -1;
+                }
+            }
+        }
+
+        &-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 20px;
+            padding: 30px;
+            background-color: $bgColorGrey;
+            border-radius: 10px;
+
+            @media (max-width: $tablet) {
+                grid-column: span 3;
+                gap: 70px;
+                padding: 15px;
+            }
+
+            @media (max-width: $mobileSmall) {
+                grid-column: span 1;
+                gap: 22px;
+            }
+        }
+
+        &-image {
+            grid-column: span 2;
+            border-radius: 10px;
+            overflow: hidden;
+
+            @media (max-width: $tablet) {
+                grid-column: span 4;
+            }
+
+            @media (max-width: $mobileSmall) {
+                grid-column: span 1;
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        &-icon {
+            width: 120px;
+            height: 120px;
+
+            @media (max-width: $mobileSmall) {
+                width: 87px;
+                height: 87px;
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        &-text {
+            font-size: 26px;
+
+            @media (max-width: $tablet) {
+                font-size: 20px;
+            }
+
+            @media (max-width: $mobileSmall) {
+                font-size: 14px;
+            }
+        }
+        
+    }   
+    
+}

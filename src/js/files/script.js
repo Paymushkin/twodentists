@@ -53,9 +53,6 @@ function initServicesAccordion() {
   });
 }
 
-// Вызываем функцию после загрузки DOM
-document.addEventListener('DOMContentLoaded', initServicesAccordion);
-
 function hideReviewsSection() {
     const reviewsSection = document.querySelector('#reviews'); // или другой селектор вашей секции
     if (reviewsSection) {
@@ -381,6 +378,12 @@ if (compareSliders.length) {
     console.log('Слайдеры сравнения не найдены на странице');
 }
 
-// Инициализация при загрузке страницы
-document.addEventListener('DOMContentLoaded', checkCookieConsent,);
+document.querySelectorAll('.mobile-menu__button').forEach(button => {
+    button.addEventListener('click', () => {
+        const expanded = button.getAttribute('aria-expanded') === 'true';
+        button.setAttribute('aria-expanded', !expanded);
+    });
+});
 
+// Инициализация при загрузке страницы
+document.addEventListener('DOMContentLoaded', initServicesAccordion,  checkCookieConsent,);

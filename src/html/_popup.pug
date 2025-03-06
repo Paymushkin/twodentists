@@ -1,4 +1,4 @@
-#appointment-request(aria-hidden="true").popup
+#callback-request(aria-hidden="true").popup
 	.popup__wrapper
 		.popup__content
 			.popup__header
@@ -17,16 +17,43 @@
 					.form__fields
 						input#name(type="text", name="name", placeholder="Ваше имя", required)
 						input#phone(type="tel", name="phone", placeholder="Ваш номер телефона", required)
-						textarea#message(name="message", placeholder="Какая услуга вас интересует?", rows="1", required)
 					
 					.popup__checkbox.policy-checkbox
 						input(type="checkbox" id=`appointment-policy-${index}` required)
-						label(for=`appointment-policy-${index}`) 
+						label.popup__checkbox-label(for=`appointment-policy-${index}`) 
 							| Заполняя форму, вы соглашаетесь с 
 							a(href="#", target="_blank").checkbox__link Политикой конфиденциальности
 
 					button(type="submit").button
 						span Отправить
+
+
+#appointment-request(aria-hidden="true").popup
+	.popup__wrapper
+		.popup__content
+			.popup__header
+				button(data-close type="button").popup__close 
+					svg(xmlns='http://www.w3.org/2000/svg' width='21' height='22' viewbox='0 0 21 22' fill='none')
+						path(fill-rule='evenodd' clip-rule='evenodd' d='M0.469783 20.5303C0.17689 20.2374 0.17689 19.7626 0.469783 19.4697L19.4698 0.469669C19.7627 0.176776 20.2376 0.176775 20.5304 0.469669C20.8233 0.762562 20.8233 1.23744 20.5304 1.53033L1.53044 20.5303C1.23755 20.8232 0.762676 20.8232 0.469783 20.5303Z' fill='#ffffff')
+						path(fill-rule='evenodd' clip-rule='evenodd' d='M0.46967 1.0849C0.762563 0.792002 1.23744 0.792002 1.53033 1.0849L20.5303 20.0849C20.8232 20.3778 20.8232 20.8527 20.5303 21.1456C20.2374 21.4385 19.7626 21.4384 19.4697 21.1456L0.46967 2.14556C0.176777 1.85266 0.176777 1.37779 0.46967 1.0849Z' fill='#ffffff')
+				h3.popup__title 
+					| Записаться на прием
+			.popup__body
+				form(action="#", method="post").popup__form
+					.form__fields
+						input#name(type="text", name="name", placeholder="Ваше имя", required)
+						input#phone(type="tel", name="phone", placeholder="Ваш номер телефона", required)
+						textarea#message(name="message", placeholder="Какая услуга вас интересует?", rows="1", required)
+					
+					.popup__checkbox.policy-checkbox
+						input(type="checkbox" id=`appointment-policy-${index}` required)
+						label.popup__checkbox-label(for=`appointment-policy-${index}`) 
+							| Заполняя форму, вы соглашаетесь с 
+							a(href="#", target="_blank").checkbox__link Политикой конфиденциальности
+
+					button(type="submit").button
+						span Отправить
+
 
 #video-popup(aria-hidden="true").popup.popup-video
 	.popup__wrapper

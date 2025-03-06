@@ -1,11 +1,22 @@
 section.service-hero#hero
     .service-hero__container
+        style.
+            @media (min-width: 1025px) {
+                .service-hero__body {
+                    background-image: url('@img/service/hero-1.png');
+                }
+            }
+            @media (max-width: 1024px) {
+                .service-hero__body {
+                    background-image: url('@img/service/hero-1-tablet.png');
+                }
+            }
         .service-hero__body
             .service-hero__content
                 .service-hero__header
                     h1.service-hero__title Стоматологический туризм
                     p.service-hero__text Как путешествовать с пользой для здоровья? И речь совершенно не про «целебный морской воздух». Сегодня становится все более популярным особый вид путешествий — стоматологический туризм. Это возможность поехать в другой город или даже страну, чтобы обрести красивую и здоровую улыбку. Такой способ лечения становится всё популярнее, и уже появились компании, которые готовы его предложить.
-                    button.button.hero__button(href="#")
+                    button.button.hero__button(href="#" data-popup="appointment-request")
                         span Записаться
 
                 .service-hero__advantages

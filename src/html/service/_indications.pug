@@ -1,0 +1,22 @@
+section.indications
+    .indications__container
+        .indications__body
+            h2.indications__title 
+                | Показания к установке виниров
+
+            .indications__grid
+                -
+                    var indications = [
+                        'Изменение цвета эмали, пятна',
+                        'Промежутки между зубами',
+                        'Эстетические пожелания пациента',
+                        'Небольшие дефекты положения передних зубов',
+                        'Генерализованная стираемость, сколы, трещины',
+                        'Флюороз и гипоплазия'
+                    ]
+
+                each text in indications
+                    .indications__item
+                        .indications__icon
+                            img(src="@img/logo-mini.png" alt="Иконка")
+                        p.indications__text= text

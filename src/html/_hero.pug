@@ -9,10 +9,10 @@ section.hero#hero
             .hero__buttons
                 button.button.hero__button(type="button", data-popup="appointment-request")
                     span Записаться на прием
-                button.button.button__transparent.hero__button-callback(type="button")
+                button.button.button__transparent.hero__button-callback(type="button" data-popup="appointment-request")
                     span Обратный звонок
         
-        .hero__examples
+        .hero__examples.hero__examples-main
             img.hero__examples-image(src="@img/hero/avatars.png" width="132" height="42" alt="Примеры работ")
             .hero__examples-content
                 h2.hero__examples-title Примеры<br>работ

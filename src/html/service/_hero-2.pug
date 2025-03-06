@@ -1,0 +1,52 @@
+section.service-hero#hero
+    .service-hero__container
+        style.
+            @media (min-width: 1025px) {
+                .service-hero__body {
+                    background-image: url('@img/service/hero-2.png');
+                }
+            }
+            @media (max-width: 1024px) {
+                .service-hero__body {
+                    background-image: url('@img/service/hero-2-tablet.png');
+                }
+            }
+        .service-hero__body
+            .service-hero__content
+                .service-hero__header
+                    h1.service-hero__title Виниры - красивая улыбка на всю жизнь!
+                    p.service-hero__text Тонкие керамические пластинки фиксируются на передней поверхности зубов, чтобы скорректировать форму, цвет или скрыть мелкие повреждения
+                    button.button.hero__button(href="#" data-popup="appointment-request")
+                        span Записаться на прием
+
+                .service-hero__advantages
+                    -
+                        const advantages = [
+                            {
+                                title: 'Процедура',
+                                text: 'Ортодонтическое лечение на элайнерах'
+                            },
+                            {
+                                title: 'Срок',
+                                text: '1 год'
+                            },
+                            {
+                                title: 'Стоимость',
+                                text: 'от 300 000 руб.'
+                            }
+                        ]
+
+                    each item in advantages
+                        .service-hero__advantage
+                            .service-hero__advantage-icon
+                                img(src='@img/logo-mini.png' alt="лого" loading='lazy')
+                            h3.service-hero__advantage-title= item.title
+                            p.service-hero__advantage-text= item.text
+            .service-hero__image
+                img(src='@img/service/hero-2-mobile.png' alt="картинка" loading='lazy')
+            .hero__examples.hero__examples-service
+                img.hero__examples-image(src="@img/hero/avatars.png" width="132" height="42" alt="Примеры работ")
+                .hero__examples-content
+                    h2.hero__examples-title Примеры<br>работ
+                    button.button.button--small.hero__examples-button(type="button")
+                        span Смотреть

@@ -1,0 +1,36 @@
+section.service-price
+    .service-price__container
+        h2.service-price__title Цены на услуги
+
+        .service-price__cards
+            - for (let i = 0; i < 3; i++)
+                .service-price__card
+                    .service-price__card-icon
+                        img(src="@img/service/about-mini-1.png" alt="Иконка")
+                    h3.service-price__card-title Виниры E.max
+                    p.service-price__card-text Авторская клиника эстетической стоматологии с собственной зуботехнической лабораторией
+                    .service-price__card-price от 160.000₽
+                    button(type="button" data-popup="appointment-request").button.service-price__card-button 
+                        span Записаться
+
+        .service-price__table
+            .service-price__table-header
+                .service-price__table-col Типы виниров
+                .service-price__table-col Стоимость, руб.
+
+            .service-price__table-body
+                .service-price__table-row
+                    .service-price__table-col Керамические виниры
+                    .service-price__table-col от 25000
+
+                .service-price__table-row
+                    .service-price__table-col Виниры E.max
+                    .service-price__table-col от 25000
+
+                .service-price__table-row
+                    .service-price__table-col Виниры Empress
+                    .service-price__table-col от 25000
+
+                .service-price__table-row
+                    .service-price__table-col Композитные виниры
+                    .service-price__table-col от 25000

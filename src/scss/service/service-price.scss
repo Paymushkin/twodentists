@@ -1,0 +1,163 @@
+.service-price {
+
+    &__title {
+        margin-bottom: 20px;
+    }
+
+    &__cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 27px;
+        margin-bottom: 100px;
+
+        @media (max-width: $tablet) {
+            grid-template-columns: repeat(3, 1fr);
+            gap: 13px;
+            margin-bottom: 70px;
+        }
+
+        @media (max-width: em(767)) {
+            grid-template-columns: repeat(2, 1fr);
+            margin-bottom: 50px;
+        }
+
+        @media (max-width: $mobileSmall) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__card {
+        padding: 30px;
+        background: $bgColorBlueLight;
+        border-radius: 10px;
+        overflow: hidden;
+
+        @media (max-width: $tablet) {
+            padding: 15px;
+        }   
+
+
+        &-icon {
+            width: 52px;
+            height: 52px;
+            margin-bottom: 38px;
+
+            @media (max-width: $tablet) {
+                margin-bottom: 20px;
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+
+        &-title {
+            margin-bottom: 5px;
+            font-size: 32px;
+
+            @media (max-width: $tablet) {
+                font-size: 22px;
+            }
+
+            @media (max-width: $mobileSmall) {
+                font-size: 20px;
+            }
+            
+        }
+
+        &-text {
+            margin-bottom: 15px;
+            color: $textColorAdd;
+            font-size: 16px;
+            line-height: 1.5;
+
+            @media (max-width: $tablet) {
+                margin-bottom: 20px;
+                font-size: 14px;
+            }
+        }
+
+        &-price {
+            margin-bottom: 25px;
+            font-size: 32px;
+
+            @media (max-width: $tablet) {
+                margin-bottom: 20px;
+                font-size: 22px;
+            }
+        }
+    }
+
+    &__table {
+        background: #F8FAFF;
+        border-radius: 7px;
+        overflow: hidden;
+        font-size: 20px;
+
+        @media (max-width: $mobileSmall) {
+            font-size: 14px;
+        }
+
+        &-header {
+            display: grid;
+            grid-template-columns: 25% 1fr;
+            color: #fff;
+            background: $highlightColor;
+
+            @media (max-width: $tablet) {
+                grid-template-columns: 40% 1fr;
+            }
+
+            @media (max-width: $mobile) {
+                grid-template-columns: 60% 1fr;
+            }
+        }
+
+        &-body {
+            background: $bgColorBlueLight;
+        }
+
+        &-row {
+            display: grid;
+            grid-template-columns: 25% 1fr;
+
+            @media (max-width: $tablet) {
+                grid-template-columns: 40% 1fr;
+            }
+            
+            @media (max-width: $mobile) {
+                grid-template-columns: 60% 1fr;
+            }
+
+            &:not(:last-child) {
+               
+                .service-price__table-col {
+                    border-bottom: 4px solid #fff;
+
+                    @media (max-width: $mobileSmall) {
+                        border-width: 2px;
+                    }
+                }
+            }
+        }
+
+        &-col {
+            padding: 30px;
+
+            &:not(:last-child) {
+                border-right: 4px solid #fff;
+
+                @media (max-width: $mobileSmall) {
+                    border-width: 2px;
+                }
+            }
+        
+
+            @media (max-width: $mobileSmall) {
+                padding: 24px 12px ;
+            }
+        }
+    }
+}

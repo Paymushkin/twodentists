@@ -53,6 +53,9 @@ function initServicesAccordion() {
   });
 }
 
+// Вызываем функцию после загрузки DOM
+document.addEventListener('DOMContentLoaded', initServicesAccordion);
+
 function hideReviewsSection() {
     const reviewsSection = document.querySelector('#reviews'); // или другой селектор вашей секции
     if (reviewsSection) {
@@ -386,4 +389,5 @@ document.querySelectorAll('.mobile-menu__button').forEach(button => {
 });
 
 // Инициализация при загрузке страницы
-document.addEventListener('DOMContentLoaded', initServicesAccordion,  checkCookieConsent,);
+document.addEventListener('DOMContentLoaded', checkCookieConsent,);
+

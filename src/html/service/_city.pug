@@ -48,6 +48,6 @@ section.city#city
                 each item in cityItems
                     .city__item
                         .city__image
-                            img(src=`@img/service/${item.image}` alt=item.title)
+                            img(src=`@img/service/${item.image}` alt=item.title loading="lazy")
                         h3.city__subtitle!= item.title
                         p.city__description= item.description

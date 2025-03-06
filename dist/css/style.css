@@ -739,6 +739,10 @@ svg * {
   aspect-ratio: 292/317;
 }
 
+.slider-compare--case {
+  aspect-ratio: 346/339;
+}
+
 .slider-compare__img {
   position: absolute;
   top: 0;
@@ -2510,6 +2514,10 @@ svg * {
      object-fit: cover;
 }
 
+.case-card__compare {
+  margin-bottom: 15px;
+}
+
 .case-card__title {
   -ms-flex-positive: 1;
       flex-grow: 1;
@@ -2526,6 +2534,11 @@ svg * {
 
 .case-card__title:hover a {
   color: #06AEEF;
+}
+
+.case-card__description {
+  font-size: 14px;
+  line-height: 1.2;
 }
 
 .case-card__link {
@@ -3913,6 +3926,148 @@ svg * {
   display: block;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.service-price__title {
+  margin-bottom: 20px;
+}
+
+.service-price__cards {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+  grid-template-columns: repeat(3, 1fr);
+  gap: 27px;
+  margin-bottom: 100px;
+}
+
+.service-price__card {
+  padding: 30px;
+  background: #EFF9FD;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.service-price__card-icon {
+  width: 52px;
+  height: 52px;
+  margin-bottom: 38px;
+}
+
+.service-price__card-icon img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.service-price__card-title {
+  margin-bottom: 5px;
+  font-size: 32px;
+}
+
+.service-price__card-text {
+  margin-bottom: 15px;
+  color: #4E4E4E;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.service-price__card-price {
+  margin-bottom: 25px;
+  font-size: 32px;
+}
+
+.service-price__table {
+  background: #F8FAFF;
+  border-radius: 7px;
+  overflow: hidden;
+  font-size: 20px;
+}
+
+.service-price__table-header {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 25% 1fr;
+  grid-template-columns: 25% 1fr;
+  color: #fff;
+  background: #06AEEF;
+}
+
+.service-price__table-body {
+  background: #EFF9FD;
+}
+
+.service-price__table-row {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 25% 1fr;
+  grid-template-columns: 25% 1fr;
+}
+
+.service-price__table-row:not(:last-child) .service-price__table-col {
+  border-bottom: 4px solid #fff;
+}
+
+.service-price__table-col {
+  padding: 30px;
+}
+
+.service-price__table-col:not(:last-child) {
+  border-right: 4px solid #fff;
+}
+
+.service-why-us__body {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 30% 1fr;
+  grid-template-columns: 30% 1fr;
+  gap: 10px;
+}
+
+.service-why-us__grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.service-why-us__item {
+  padding: 15px;
+  background: #EFF9FD;
+  border-radius: 10px;
+}
+
+.service-why-us__item-icon {
+  width: 21px;
+  height: 21px;
+  margin-bottom: 15px;
+}
+
+.service-why-us__item-icon img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.service-why-us__item-title {
+  line-height: 1.4;
+  font-weight: 700;
+}
+
+.service-why-us__item-text {
+  line-height: 1.4;
+}
+
+.service-why-us__image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 20px;
 }
 
 .campaign-hero__body {
@@ -5705,6 +5860,54 @@ svg * {
     font-size: 20px;
   }
 
+  .service-price__cards {
+    -ms-grid-columns: (1fr)[3];
+    grid-template-columns: repeat(3, 1fr);
+    gap: 13px;
+    margin-bottom: 70px;
+  }
+
+  .service-price__card {
+    padding: 15px;
+  }
+
+  .service-price__card-icon {
+    margin-bottom: 20px;
+  }
+
+  .service-price__card-title {
+    font-size: 22px;
+  }
+
+  .service-price__card-text {
+    margin-bottom: 20px;
+    font-size: 14px;
+  }
+
+  .service-price__card-price {
+    margin-bottom: 20px;
+    font-size: 22px;
+  }
+
+  .service-price__table-header {
+    -ms-grid-columns: 40% 1fr;
+    grid-template-columns: 40% 1fr;
+  }
+
+  .service-price__table-row {
+    -ms-grid-columns: 40% 1fr;
+    grid-template-columns: 40% 1fr;
+  }
+
+  .service-why-us__body {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+
+  .service-why-us__item {
+    padding: 20px;
+  }
+
   .campaign-hero__body {
     -ms-flex-direction: column;
         flex-direction: column;
@@ -6078,6 +6281,16 @@ svg * {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .service-price__table-header {
+    -ms-grid-columns: 60% 1fr;
+    grid-template-columns: 60% 1fr;
+  }
+
+  .service-price__table-row {
+    -ms-grid-columns: 60% 1fr;
+    grid-template-columns: 60% 1fr;
+  }
+
   .footer {
     padding: 50px 0 80px;
     border-radius: 20px 20px 0 0;
@@ -6197,6 +6410,17 @@ svg * {
 
   .why-us__subtitle {
     font-size: 28px;
+  }
+
+  .service-price__cards {
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 50px;
+  }
+
+  .service-why-us__grid {
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .why__item {
@@ -6929,6 +7153,40 @@ svg * {
 
   .service-steps__number {
     font-size: 36px;
+  }
+
+  .service-price__cards {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+
+  .service-price__card-title {
+    font-size: 20px;
+  }
+
+  .service-price__table {
+    font-size: 14px;
+  }
+
+  .service-price__table-row:not(:last-child) .service-price__table-col {
+    border-width: 2px;
+  }
+
+  .service-price__table-col:not(:last-child) {
+    border-width: 2px;
+  }
+
+  .service-price__table-col {
+    padding: 24px 12px;
+  }
+
+  .service-why-us__grid {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+
+  .service-why-us__item-text {
+    font-size: 14px;
   }
 
   .campaign-hero__content {

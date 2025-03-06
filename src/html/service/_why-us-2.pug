@@ -1,0 +1,59 @@
+section.service-why-us
+    .service-why-us__container
+        .service-why-us__body
+            h2.service-why-us__title Почему наша клиника?
+
+            .service-why-us__content
+
+                .service-why-us__grid
+                    -
+                        const items = [
+                            {
+                                title: 'Сервис',
+                                text: 'Всегда на связи с пациентами, решаем любые возникшие вопросы в течение суток'
+                            },
+                            {
+                                title: 'Гарантия',
+                                text: 'Гарантия на работу зубов до 5 лет'
+                            },
+                            {
+                                title: 'Безопасность',
+                                text: 'Стерильность, использование передовыми институтами'
+                            },
+                            {
+                                title: 'Европейское оборудование',
+                                text: 'Используем передовое стоматологическое оборудование'
+                            },
+                            {
+                                title: 'Лучшие лаборатории',
+                                text: 'Работаем только с лучшими техниками, потому что от их квалификации зависит результат'
+                            },
+                            {
+                                title: 'Тщательная диагностика',
+                                text: 'Применяем цифровые технологии для моделирования будущей улыбки'
+                            },
+                            {
+                                title: 'Специалисты',
+                                text: 'Врачи с огромным опытом помогли более 1000 пациентам вернуть здоровую улыбку'
+                            },
+                            {
+                                title: 'Лучшие лаборатории',
+                                text: 'Работаем только с лучшими техниками, потому что от их квалификации зависит результат'
+                            }
+                        ]
+
+                    each item in items
+                        .service-why-us__item
+                            .service-why-us__item-icon
+                                img(src='@img/logo-mini.png' alt='иконка' loading='lazy')
+                            h3.service-why-us__item-title= item.title
+                            p.service-why-us__item-text= item.text
+
+                    .service-why-us__image
+                        picture
+                            source(media="(max-width: 576px)" srcset="@img/service/why-us-1-mobile.png")
+                            source(media="(max-width: 1024px)" srcset="@img/service/why-us-1-tablet.png")
+                            img(src="@img/service/why-us-1.png" alt="Почему наша клиника" loading="lazy")   
+
+                button(type="button" data-popup="appointment-request").button.service-why-us__button 
+                    span Записаться

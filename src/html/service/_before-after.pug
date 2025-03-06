@@ -1,0 +1,89 @@
+section.cases#cases
+    .cases-header__container
+        h2.cases__title До/после
+    
+    .cases__container
+        .cases__inner
+            .cases__slider.swiper
+                .cases__wrapper.swiper-wrapper
+                    -
+                        const cases = [
+                            {
+                                image1: 'before-after-1-1.png',
+                                image2: 'before-after-1-2.png',
+                                title: `Керамические<br>виниры`,
+                                description: 'Врач - Кубус Анастас Юрьевич',
+                                alt: 'Лечение на элайнерах'
+                            },
+                            {
+                                image1: 'before-after-2-1.png',
+                                image2: 'before-after-2-2.png',
+                                title: `Керамические<br>виниры`,
+                                description: 'Врач - Кубус Анастас Юрьевич',
+                                alt: 'Керамические виниры и циркониевые коронки'
+                            },
+                            {
+                                image1: 'before-after-3-1.png',
+                                image2: 'before-after-3-2.png',
+                                title: `Керамические<br>виниры`,
+                                description: 'Врач - Кубус Анастас Юрьевич',
+                                alt: 'Комплексное лечение'
+                            },
+                            {
+                                image1: 'before-after-4-1.png',
+                                image2: 'before-after-4-2.png',
+                                title: `Керамические<br>виниры`,
+                                description: 'Врач - Кубус Анастас Юрьевич',
+                                alt: 'Комплексная реабилитация'
+                            },
+                            {
+                                image1: 'before-after-1-1.png',
+                                image2: 'before-after-1-2.png',
+                                title: `Керамические<br>виниры`,
+                                description: 'Врач - Кубус Анастас Юрьевич',
+                                alt: 'Лечение на элайнерах'
+                            },
+                            {
+                                image1: 'before-after-2-1.png',
+                                image2: 'before-after-2-2.png',
+                                title: `Керамические<br>виниры`,
+                                description: 'Врач - Кубус Анастас Юрьевич',
+                                alt: 'Керамические виниры и циркониевые коронки'
+                            },
+                            {
+                                image1: 'before-after-3-1.png',
+                                image2: 'before-after-3-2.png',
+                                title: `Керамические<br>виниры`,
+                                description: 'Врач - Кубус Анастас Юрьевич',
+                                alt: 'Комплексное лечение'
+                            },
+                            {
+                                image1: 'before-after-4-1.png',
+                                image2: 'before-after-4-2.png',
+                                title: `Керамические<br>виниры`,
+                                description: 'Врач - Кубус Анастас Юрьевич',
+                                alt: 'Комплексная реабилитация'
+                            }
+                        ]
+
+                    each item in cases
+                        .cases__slide.swiper-slide
+                            .case-card
+                                .case-result__compare.slider-compare.slider-compare--case.case-card__compare
+                                    img.slider-compare__img.slider-compare__img--before(src=`@img/service/${item.image1}` alt='До' loading="lazy")
+                                    img.slider-compare__img.slider-compare__img--after(src=`@img/service/${item.image2}` alt='После' loading="lazy")
+                                    input#slider-range-1.slider-compare__range-js(type='range' min='0' max='100' value='50' step='1')
+                                    label.visually-hidden(for='slider-range-1')
+                                .slider__range-visible
+                                h3.case-card__title
+                                    a(href="./case.html")!= item.title
+                                .case-card__description
+                                    p!= item.description
+
+            .cases__pagination.swiper-pagination
+
+            .cases__navigation.swiper-navigation
+                button(type="button").prev
+                    include ../icons/_prev-icon
+                button(type="button").next
+                    include ../icons/_next-icon

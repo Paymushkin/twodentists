@@ -48,6 +48,11 @@
         }
     }
 
+    // .case-card__compare
+    &__compare {
+        margin-bottom: 15px;
+    }
+
     // .case-card__title
     &__title {
         flex-grow: 1;
@@ -68,6 +73,12 @@
                 color: $highlightColor;
             }
         }
+    }
+
+    // .case-card__description
+    &__description {
+        font-size: 14px;
+        line-height: 1.2;
     }
 
     // .case-card__link

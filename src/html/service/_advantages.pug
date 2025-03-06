@@ -43,6 +43,6 @@ section.service-advantages
             each advantage in serveiceAdvantages
                 li.service-advantages__item
                     .service-advantages__icon
-                        img(src=`@img/service/${advantage.icon}` alt=advantage.title)
+                        img(src=`@img/service/${advantage.icon}` alt=advantage.title loading="lazy")
                     h3.service-advantages__item-title= advantage.title
                     p.service-advantages__text= advantage.text

@@ -18,7 +18,8 @@ section.single-slider
 					each item in slides
 						.swiper-slide.single-slider__slide
 							.single-slider__slide-image
-								img(src=`@img/${item.img}` alt="innovation" loading="lazy")
+								a(href=`@img/${item.img}` data-fancybox="slider-1" data-caption="Слайд 1")
+									img(src=`@img/${item.img}` alt="innovation" loading="lazy")
 
 			.single-slider__navigation.swiper-navigation
 				button.prev

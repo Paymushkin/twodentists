@@ -8,8 +8,12 @@ h1 {
 	font-size: 78px;
 	line-height: 0.9;
 
-	@media (max-width: em(1280)) {
+	@media (max-width: $desktop1440) {
 		font-size: 64px;
+	}
+
+	@media (max-width: $desktop1280) {
+		font-size: 58px;
 	}
 
 	@media (max-width:$tablet) {
@@ -31,9 +35,14 @@ h2 {
     line-height: 1.1;
 	text-align: left;
 
-	@media (max-width: em(1280)) {
+	@media (max-width: $desktop1440) {
 		font-size: 48px;
 	}
+
+	@media (max-width: $desktop1280) {
+		font-size: 44px;
+	}
+
 	@media (max-width:$mobile) {
 		font-size: 40px;
 	}
@@ -47,10 +56,20 @@ h2 {
 h3 {
 	font-size: 28px;
 	line-height: 1.1;
+
+	@media (max-width: $desktop1440) {
+		font-size: 24px;
+	}
+	
+	
 }
 
 h4 {
 	font-size: 24px;
+
+	@media (max-width: $desktop1440) {
+		font-size: 20px;
+	}
 }
 
 h5 {
@@ -612,9 +631,11 @@ summary::-webkit-details-marker {
 }
 
 .accordion-item {
+	
 	&-content {
 		overflow: hidden;
 		transition: height 0.3s ease-out;
+		transition-behavior: allow-discrete;
 	}
 }
 
@@ -832,7 +853,7 @@ a.link {
 
 		@media (max-width: $tablet) {
 			flex-direction: column;
-			gap: 20px;
+			gap: 10px;
 			font-size: 16px;
 		}
 
@@ -844,6 +865,16 @@ a.link {
 
 	&-text {
 		flex: 0 0 50%;
+
+		&.highlight {
+			padding: 20px;
+			background-color: $bgColorBlueLight;
+			border-radius: 10px;
+
+			@media (max-width: $tablet) {
+				padding: 15px;
+			}
+		}
 		p {
 			&:not(:last-child) {
 				margin-bottom: 15px;

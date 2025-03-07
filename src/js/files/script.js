@@ -6,17 +6,29 @@ import { flsModules } from "./modules.js";
 // Обработка аккордеона для мобильной версии services
 function initServicesAccordion() {
   const accordionItems = document.querySelectorAll('.accordion-item');
-  
-  if (!accordionItems.length) return;
+  console.log(isMobile)
+  if (!accordionItems.length && isMobile) return;
 
   // Функция для установки высоты контента
   function setContentHeight(content, isOpen) {
-    if (isOpen) {
-      const height = content.scrollHeight;
-      content.style.height = `${height}px`;
-    } else {
-      content.style.height = '0px';
-    }
+    // Сначала устанавливаем высоту текущего состояния
+    content.style.height = isOpen ? '0px' : `${content.scrollHeight}px`;
+    
+    // Форсируем reflow
+    content.offsetHeight;
+    
+    // Устанавливаем новую высоту с transition
+    content.style.transition = 'height 0.3s ease-out';
+    content.style.height = isOpen ? `${content.scrollHeight}px` : '0px';
+    
+    // Очищаем стили после завершения анимации
+    content.addEventListener('transitionend', function handler() {
+      if (isOpen) {
+        content.style.height = 'auto';
+      }
+      content.style.transition = '';
+      content.removeEventListener('transitionend', handler);
+    }, { once: true });
   }
 
   // Инициализация первого элемента

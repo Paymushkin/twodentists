@@ -80,18 +80,23 @@
         &-text {
             font-size: 18px;
             line-height: 1.5;
+            transition-behavior: allow-discrete;
 
             .active-item & {
                     display: flex;
                 }
             
                 @media (max-width: $mobileSmall) {
-                    display: none;
+                    // display: none;
                     font-size: 14px;
                 }
 
             @media (max-width: $tablet) {
                 font-size: 16px;
+            }
+
+            @media (min-width: $mobileSmall) {
+                height: auto!important;
             }
         }
 

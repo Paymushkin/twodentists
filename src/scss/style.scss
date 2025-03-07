@@ -45,7 +45,7 @@ $maxWidth: 1920px;
 $maxWidthContainer: 1440;
 // Общий отступ у контейнера
 // 30 = по 15px слева и справа, 0 = нет отступа
-$containerPadding: 40;
+$containerPadding: 100;
 // Тип адаптива:
 // 1 = отзывчивость (у контейнера нет брейк-поинтов)
 // 2 = по брейк-поинтам (контейнер меняет свою ширину по брейк-поинтам)
@@ -133,18 +133,29 @@ body {
 	}
 }
 
-// [class*=__container] {
-// 	max-width: 1440px!important;
-// 	padding: 0 40px!important;
+[class*=__container] {
+	padding: 0 80px!important;
 
-// 	@media (max-width: $tablet) {
-// 		padding: 0 20px!important;
-// 	}
+	@media (max-width: $desktop1440) {
+		padding: 0 60px!important;
+	}
 
-// 	@media (max-width: $mobile) {
-// 		padding: 0 10px!important;
-// 	}
-// }
+	@media (max-width: $desktop1280) {
+		padding: 0 40px!important;
+	}
+
+	@media (max-width: $tablet) {
+		padding: 0 30px!important;
+	}
+
+	@media (max-width: $mobile) {
+		padding: 0 20px!important;
+	}
+
+	@media (max-width: $mobileSmall) {
+		padding: 0 10px!important;
+	}
+}
 
 // Ограничения контейнера ================================================
 

@@ -1,5 +1,11 @@
 .city {
 
+    &__container {
+        @media (max-width: $mobileSmall) {
+            overflow: hidden;
+        }
+    }
+
     &__content {
         position: relative;
         display: flex;

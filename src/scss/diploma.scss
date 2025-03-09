@@ -1,5 +1,11 @@
 .diploma {
 
+    &__container {
+        @media (max-width: $mobileSmall) {
+            overflow: hidden;  
+        }
+    }
+
 	&__header {
 		margin-bottom: 32px;
 	}

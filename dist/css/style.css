@@ -7030,6 +7030,10 @@ ol.list .list__item::before {
     display: none;
   }
 
+  .diploma__container {
+    overflow: hidden;
+  }
+
   .services__content {
     gap: 20px;
   }
@@ -7427,6 +7431,10 @@ ol.list .list__item::before {
 
   .about__subtitle {
     font-size: 20px;
+  }
+
+  .city__container {
+    overflow: hidden;
   }
 
   .city__grid {

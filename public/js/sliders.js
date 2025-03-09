@@ -1,4 +1,3 @@
-
 function bildSliders() {
 	console.log("свайпер")
 	// BildSlider
@@ -367,9 +366,6 @@ function initSliders() {
 
 }
 
-window.addEventListener("load", function (e) {
-	// Запуск инициализации слайдеров
+document.addEventListener("DOMContentLoaded", function(e) {
 	initSliders();
-	// Запуск инициализации скролла на базе слайдера (по классу swiper_scroll)
-	//initSlidersScroll();
 });

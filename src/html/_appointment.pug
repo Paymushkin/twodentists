@@ -10,7 +10,7 @@ mixin appointment(desktopImage, tabletImage, mobileImage, doctor, index)
               .appointment__label-image
                 img(src="@img/logo-mini.png" loading="lazy" alt="лого")
               .appointment__label-content
-                h4.appointment__label-title= doctor.name
+                h3.appointment__label-title= doctor.name
                 span.appointment__label-text= doctor.position
           form.appointment__form(action="#")
             .appointment__title Запишитесь на прием

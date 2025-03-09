@@ -72,8 +72,17 @@ section.cases#cases
                                 .case-result__compare.slider-compare.slider-compare--case.case-card__compare
                                     img.slider-compare__img.slider-compare__img--before(src=`@img/service/${item.image1}` alt='До' loading="lazy")
                                     img.slider-compare__img.slider-compare__img--after(src=`@img/service/${item.image2}` alt='После' loading="lazy")
-                                    input#slider-range-1.slider-compare__range-js(type='range' min='0' max='100' value='50' step='1')
-                                    label.visually-hidden(for='slider-range-1')
+                                    label.visually-hidden(for=`slider-range-${index + 1}`) Ползунок сравнения изображений #{index + 1}
+                                    input(
+                                        id=`slider-range-${index + 1}`
+                                        class="slider-compare__range-js"
+                                        type='range'
+                                        min='0'
+                                        max='100'
+                                        value='50'
+                                        step='1'
+                                        aria-label=`Ползунок сравнения изображений ${index + 1}`
+                                    )
                                 .slider__range-visible
                                 h3.case-card__title
                                     a(href="./case.html")!= item.title

@@ -5,8 +5,8 @@ section.case-result
             .case-result__compare.slider-compare
                 img.slider-compare__img.slider-compare__img--before(src='@img/case/result-big-1.png' alt='До')
                 img.slider-compare__img.slider-compare__img--after(src='@img/case/result-big-2.png' alt='После')
+                label.visually-hidden(for='slider-range' aria-label='Ползунок сравнения изображений')
                 input#slider-range.slider-compare__range-js(type='range' min='0' max='100' value='50' step='1')
-                label.visually-hidden(for='slider-range')
                 .slider__range-visible
 
             .case-result__gallery

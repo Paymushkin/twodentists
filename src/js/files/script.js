@@ -304,11 +304,10 @@ function popupClose(element) {
     const popup = element.closest('.popup');
     if (!popup) return;
 
-    if(popup.querySelector('iframe')) {
-        const iframe = popup.querySelector('iframe');
-        // Останавливаем видео путем перезагрузки iframe
-        const iframeSrc = iframe.src;
-        iframe.src = iframeSrc;
+    // Находим iframe и очищаем его src
+    const iframe = popup.querySelector('iframe');
+    if (iframe && iframe.src) {
+        iframe.src = '';
     }
 
     if (popup.dataset.single === "true" || element.classList.contains("popup__close")) {
@@ -321,35 +320,26 @@ function popupClose(element) {
 }
 
 function popupShow(element) {
-    
     let popupId = element.getAttribute("data-popup");
     const currentPopup = document.querySelector(`#${popupId}`);
-    console.log(currentPopup)
+    
+    // Проверяем наличие iframe и загружаем его
+    const iframe = currentPopup.querySelector('iframe');
+    if (iframe && iframe.dataset.src) {
+        iframe.src = iframe.dataset.src;
+    }
+    
     currentPopup.classList.add('popup_show')
     document.documentElement.classList.add('lock');
     document.documentElement.classList.add('popup-show');
-    const nextPopup = currentPopup.querySelectorAll("[data-popup]") || null
 
     // Обработчик клика на wrapper
     const wrapper = currentPopup.querySelector('.popup__wrapper');
     if (wrapper) {
         wrapper.addEventListener('click', function(e) {
-            // Проверяем, что клик был именно по wrapper, а не по его содержимому
             if (e.target === wrapper) {
                 popupClose(currentPopup.querySelector(".popup__close"));
             }
-        });
-    }
-
-    if (nextPopup.length) {
-        nextPopup.forEach(el => {
-            el.addEventListener("click", (event) => {
-                event.preventDefault()
-
-                const nextPopupId = el.getAttribute("data-popup")
-                popupClose(currentPopup)
-                popupShow(document.querySelector(`[data-popup="${nextPopupId}"]`))
-            })
         });
     }
 }

@@ -1973,12 +1973,28 @@ ol.list .list__item::before {
 
 .hero__examples-main {
   right: 20px;
-  bottom: 184px;
+  bottom: 228px;
 }
 
 .hero__examples-service {
   right: 20px;
   bottom: 55px;
+}
+
+.hero__examples-content {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-pack: center;
+      justify-content: center;
+  width: 100%;
+}
+
+.hero__examples-button {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 .hero__examples-image {
@@ -4149,7 +4165,7 @@ ol.list .list__item::before {
 }
 
 .service-advantages__icon {
-  margin-bottom: 57px;
+  margin-bottom: 24px;
   width: 88px;
   height: 88px;
 }

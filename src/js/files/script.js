@@ -82,11 +82,22 @@ function showReviewsSection() {
     }
 }
 
-// Обновляем функцию проверки согласия
+// Определяем, нужно ли использовать куки
+const useCookie = false;
+
+// Функция проверки согласия
 function checkCookieConsent() {
     const consent = localStorage.getItem('cookieConsent');
     const cookieBanner = document.querySelector('.cookie-banner');
     
+    if (!useCookie) {
+        // Если куки не используются, сразу показываем все виджеты
+        if (cookieBanner) cookieBanner.style.display = 'none';
+        showReviewsSection();
+        manageThirdPartyScripts(true);
+        return;
+    }
+
     if (consent === null) {
         cookieBanner.style.display = 'flex';
         hideReviewsSection();
@@ -100,7 +111,7 @@ function checkCookieConsent() {
     }
 }
 
-// Обновляем функцию принятия куки
+// Функция принятия куки
 window.acceptCookies = function() {
     localStorage.setItem('cookieConsent', 'true');
     const cookieBanner = document.querySelector('.cookie-banner');
@@ -234,7 +245,7 @@ function loadScript(scriptConfig) {
 
 // Функция для управления скриптами
 function manageThirdPartyScripts(enable) {
-    if (enable) {
+    if (!useCookie || enable) {
         return thirdPartyScripts.reduce((promise, scriptConfig) => {
             return promise.then(() => loadScript(scriptConfig));
         }, Promise.resolve());
@@ -444,10 +455,15 @@ document.querySelectorAll('.mobile-menu__button').forEach(button => {
 //     });
 // });
 
-
-
-
 // Инициализация при загрузке страницы
-document.addEventListener('DOMContentLoaded', checkCookieConsent,);
+document.addEventListener('DOMContentLoaded', () => {
+    if (!useCookie) {
+        // Если куки не используются, сразу загружаем все виджеты
+        showReviewsSection();
+        manageThirdPartyScripts(true);
+    } else {
+        checkCookieConsent();
+    }
+});
 
 

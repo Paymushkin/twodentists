@@ -90,7 +90,7 @@
 
         &-main {
             right: 20px;
-            bottom: 184px;
+            bottom: 228px;
 
             @media (max-width: em(1280)) {
                 right: 60px;
@@ -105,6 +105,17 @@
         &-service {
             right: 20px;
             bottom: 55px;
+        }
+
+        &-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 100%;
+        }
+
+        &-button {
+            align-self: center;
         }
 	}
 
